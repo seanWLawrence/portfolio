@@ -1,0 +1,28 @@
+body {
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  font: 18px 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+  color: cornflowerblue;
+  border-bottom: 2px solid transparent;
+}
+
+a:hover {
+  border-bottom: 2px solid cornflowerblue;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 0;
+}
+
+header a:hover {
+  color: #999;
+  border-bottom: 0;
+}
