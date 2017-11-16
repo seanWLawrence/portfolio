@@ -47,7 +47,7 @@ const Description = styled.p`
 
 const ArrowWrapper = TextWrapper.extend`
   align-items: center;
-  height: 250px;
+  height: 175px;
   @media(max-width: 860px){
     display: none;
   }
