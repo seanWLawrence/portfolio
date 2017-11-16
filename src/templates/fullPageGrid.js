@@ -17,6 +17,13 @@ const TextWrapper = styled.div`
   width: 50%;
   height: 50vh;
 `
+const Title = styled.a`
+  color: #333;
+  text-decoration: none;
+  font-size: 48px;
+  font-weight: 700;
+  cursor: pointer;
+`
 
 const ArrowWrapper = styled.i`
   width: 50%;
@@ -45,9 +52,7 @@ const Iframe = styled.iframe`
 const FullPageGrid = props => (
   <GridWrapper id={props.title}>
     <TextWrapper>
-      <h2>
-        <a href={props.url}>{props.title}</a>
-      </h2>
+      <Title href={props.url}>{props.title}</Title>
       <p>{props.description}</p>
     </TextWrapper>
     <ArrowWrapper>
