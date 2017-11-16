@@ -5,28 +5,33 @@ import CANVAS from '../data/canvas'
 import styled from 'styled-components'
 import Form from '../templates/form'
 
-const ParticlesWrapper = styled.div`
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
+const Home = styled.section`
   background-color: rgba(0, 0, 0, .9);
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  z-index: -1;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
+  z-index: -1;
 `
 
+const particlesStyle = {
+  position: 'fixed',
+  top: '0',
+  left: '0',
+  right: '0',
+  bottom: '0',
+  zIndex: -1,
+}
+
 const IndexPage = () => (
-  <section id='home'>
-    <ParticlesWrapper>
-      <Particles params={CANVAS} />
-      <Form />
-    </ParticlesWrapper>
-  </section>
+  <Home id='home'>
+    <Particles
+      params={CANVAS}
+      style={particlesStyle}
+    />
+    <Form />
+  </Home>
 )
 
 export default IndexPage
