@@ -7,15 +7,22 @@ const GridWrapper = styled.section`
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
+  margin-bottom: 50px;
+  @media(max-width: 860px){
+    flex-direction: column;
+  }
 `
 
-const TextWrapper = styled.div`
-  display: flex;
+const TextWrapper = GridWrapper.extend`
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
+  flex-wrap: nowrap;
   width: 50%;
-  height: 50vh;
+  margin-bottom: 0;
+  @media(max-width: 860px){
+    flex-direction: column;
+    width: 80vw;
+  }
 `
 const Title = styled.a`
   color: #333;
@@ -23,15 +30,26 @@ const Title = styled.a`
   font-size: 48px;
   font-weight: 700;
   cursor: pointer;
+  @media(max-width: 450px){
+    font-size: 36px;
+  }
+  @media(min-width: 2000px){
+    font-size: 64px;
+  }
 `
 
-const ArrowWrapper = styled.i`
-  width: 50%;
-  height: 50vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+const Description = styled.p`
+  @media(min-width: 2000px){
+    font-size: 30px;
+    line-height: 50px;
+  }
+`
+
+const ArrowWrapper = TextWrapper.extend`
   align-items: center;
+  @media(max-width: 860px){
+    display: none;
+  }
 `
 
 const Arrow = styled.i`
@@ -43,17 +61,17 @@ const Arrow = styled.i`
 `
 
 const Iframe = styled.iframe`
-  max-height: 80vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  box-shadow: 0 1px 9px #999;
+  width: 80vw;
+  height: 500px;
+  margin: 36px auto;
 `
 
 const FullPageGrid = props => (
   <GridWrapper id={props.title}>
     <TextWrapper>
       <Title href={props.url}>{props.title}</Title>
-      <p>{props.description}</p>
+      <Description>{props.description}</Description>
     </TextWrapper>
     <ArrowWrapper>
       <Arrow />

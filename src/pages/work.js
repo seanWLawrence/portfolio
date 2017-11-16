@@ -6,7 +6,7 @@ import WORK_DATA from '../data/work'
 const projects = WORK_DATA.projects
 
 const WorkWrapper = styled.section`
-  margin-top: 100px;
+  margin-top: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
