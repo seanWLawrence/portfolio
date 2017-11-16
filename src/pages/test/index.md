@@ -8,4 +8,4 @@ title: "Test"
 Whoa this is soooo easy to write a blog post now
 
 * list 
-** list 2
+* list 2

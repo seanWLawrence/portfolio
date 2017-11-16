@@ -1,7 +1,7 @@
-const CANVAS = {
+const CANVAS_DATA = {
   particles: {
     number: {
-      value: 25,
+      value: 10,
       density:
       {
         enable: true,
@@ -110,4 +110,4 @@ const CANVAS = {
   retina_detect: true
 }
 
-export default CANVAS
+export default CANVAS_DATA
