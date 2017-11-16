@@ -16,12 +16,12 @@ p {
 
 a {
   cursor: pointer;
-  color: cornflowerblue;
+  color: #2D9CDB;
   border-bottom: 2px solid transparent;
 }
 
 a:hover {
-  border-bottom: 2px solid cornflowerblue;
+  border-bottom: 2px solid #2D9CDB;
 }
 
 

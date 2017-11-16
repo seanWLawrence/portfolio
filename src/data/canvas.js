@@ -1,7 +1,7 @@
 const CANVAS_DATA = {
   particles: {
     number: {
-      value: 10,
+      value: 80,
       density:
       {
         enable: true,

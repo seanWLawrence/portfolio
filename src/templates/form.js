@@ -7,28 +7,40 @@ const FormWrapper = styled.form`
   background-color: transparent;
   padding: 0.5rem 2rem;
   border-radius: .5rem;
+  @media (max-width: 1325px) {
+    width: 100%;
+    align-items: flex-start;
+    padding: 0;
+  }
 `
+
 const Input = styled.input`
   background-color: transparent;
-  padding: .5rem;
-  font-size: 1.25rem;
-  font-weight: 100;
+  padding: 8px;
+  font-size: 22px;
+  font-weight: 200;
   color: #eee;
-  width: 80vw;
+  width: 500px;
   max-width: 30rem;
-  margin: auto;
+  margin: 15px 0;
   border: 0;
-  border-bottom: .1rem solid cornflowerblue;
-  outline: none;
-  letter-spacing: .75px;
+  border-bottom: 2px solid #2D9CDB;
+  outline: 0;
+  letter-spacing: 1.5px;
+  @media (max-width: 1325px) {
+    width: 70vw;
+  }
 `
-const TextArea = Input.extend`
+const inputStyles = Input.withComponent('textarea')
+
+const TextArea = inputStyles.extend`
   height: 75px;
 `
 
 const PrimaryButton = styled.button`
-  background-color: cornflowerblue;
+  background-color: #2D9CDB;
   color: #fff;
+  cursor: pointer;
 `
 
 const Form = () => (
