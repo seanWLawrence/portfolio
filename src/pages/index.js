@@ -1,8 +1,9 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Particles from 'react-particles-js'
-import CANVAS from '../templates/canvas'
+import CANVAS from '../data/canvas'
 import styled from 'styled-components'
+import Form from '../templates/form'
 
 const ParticlesWrapper = styled.div`
   position: absolute;
@@ -23,6 +24,7 @@ const IndexPage = () => (
   <section id='home'>
     <ParticlesWrapper>
       <Particles params={CANVAS} />
+      <Form />
     </ParticlesWrapper>
   </section>
 )
