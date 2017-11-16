@@ -52,7 +52,7 @@ const ArrowWrapper = TextWrapper.extend`
     display: none;
   }
    @media(min-width: 1999px){
-    height: 500px;
+    height: 275px;
   }
 `
 
