@@ -12,6 +12,9 @@ const FormWrapper = styled.form`
     align-items: flex-start;
     padding: 0;
   }
+  @media (max-width: 750px) {
+    margin-bottom: 100px;
+  }
 `
 
 const Input = styled.input`

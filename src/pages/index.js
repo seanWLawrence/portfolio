@@ -13,7 +13,7 @@ const Home = styled.section`
   align-items: center;
   @media (max-width: 1325px) {
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
   }
 `
 
@@ -33,6 +33,7 @@ const BannerWrapper = styled.section`
   justify-content: center;
   align-items: flex-start;
   width: 50vw;
+  margin-top: 40px;
   }
   @media (max-width: 1325px) {
     height: 30%;
@@ -59,7 +60,7 @@ const Header = styled.h1`
   width: 40vw;
   @media (max-width: 1325px) {
     width: 100%;
-    margin: 0;
+    margin: 175px 0 0 0;
     font-size: 36px;
   }
   @media (max-width: 750px) {

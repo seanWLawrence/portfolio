@@ -15,10 +15,6 @@ const NAVIGATION_DATA = [
     title: 'Work',
     url: '/work'
   },
-  {
-    title: 'Contact',
-    url: '/contact'
-  },
 ]
 
 export default NAVIGATION_DATA;
