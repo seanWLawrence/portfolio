@@ -1,62 +1,86 @@
-/* import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react'
 import styled from "styled-components"
+import Layout from '../layouts/layout'
+import ABOUT_DATA from '../data/about'
 
-const PageWrapper = styled.div`
-display: flex;
-justify-content: center;
-margin: 0;
+const IMAGE_URL = 'https://media.graphcms.com/k8oLYZxyR1ieU22tfZ9d'
+
+const AboutWrapper = styled.section`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80vw;
+  margin-top: 25px;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
+const ProfileImage = styled.img`
+  width: 50%;
+  height: 100%;
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+`
+
+const profileImageStyle = ProfileImage.withComponent('section')
+
+const TextWrapper = profileImageStyle.extend`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+`
+
+const Text = styled.p`
+  color: #555;
+  width: 80%;
+  margin-bottom: 0;
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+`
+
+const LogoWrapper = styled.div`
+  width: 80%;
+  margin: 20px 0 ;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+`
+
+const Logo = styled.img`
+  height: 30px;
+  margin-right: 20px;
+`
 
 const About = () => (
-  <section id='about'>
-    <PageWrapper>
-      <h1>About</h1>
-      <Link to='/'>
-        <button>Home</button>
-      </Link>
-    </PageWrapper>
-  </section>
+  <Layout title='About'>
+    <AboutWrapper>
+      <TextWrapper>
+        {ABOUT_DATA.description.map(paragraph =>
+          <Text key={paragraph.id}>{paragraph.text}</Text>
+        )}
+        <LogoWrapper>
+          {ABOUT_DATA.socialLinks.map(profile =>
+            <a href={profile.profile_url}
+              title={profile.title}
+              target='_blank'
+              rel='nofollow noreferrer noopener'
+              key={profile.title}
+            >
+              <Logo src={profile.logo_url}
+                alt={profile.title}
+              />
+            </a>
+          )}
+        </LogoWrapper>
+      </TextWrapper>
+      <ProfileImage src={IMAGE_URL} />
+    </AboutWrapper>
+  </Layout>
 )
 
 export default About
- */
-
-import React from "react"
-
-export default ({ data }) => {
-  console.log(data.allMarkdownRemark.edges)
-  return (
-    <div>
-      {data.allMarkdownRemark.edges.map(({ node }) =>
-        <div key={node.id}>
-          <h3>
-            {node.frontmatter.title}{" "} - {node.frontmatter.date}
-          </h3>
-          <p>
-            {node.excerpt}
-          </p>
-        </div>
-      )}
-    </div>
-  )
-}
-
-export const query = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`
