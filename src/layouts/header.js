@@ -7,7 +7,7 @@ const HeaderWrapper = styled.header`
 display: flex;
 justify-content: center;
 padding: 5px 0;
-background-color: rgba(0, 0, 0, .95);
+background-color: rgba(0, 0, 0, .9);
 position: fixed;
 top: 0;
 left: 0;
@@ -22,12 +22,20 @@ list-style-type: none;
 `
 const NavigationItem = styled.li`
 padding: 10px 20px;
+margin: auto 30px;
+:hover {
+  border-bottom: 0;
+  color: #eee;
+}
+@media (max-width: 525px) {
+  margin: auto 2.5vw;
+  padding: 10px 10px;
+}
 `
 
 const HeaderLink = styled(Link) `
   color: #fff;
   text-decoration: none;
-  border-bottom: 0;
 `
 
 const Header = () => (

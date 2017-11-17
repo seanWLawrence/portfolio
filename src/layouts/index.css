@@ -21,7 +21,7 @@ a {
 }
 
 a:hover {
-  border-bottom: 2px solid #2D9CDB;
+  opacity: .8;
 }
 
 
@@ -37,10 +37,10 @@ textarea:focus {
   border-bottom : .1rem solid #eee;
 }
 
-input:placeholder,
-textarea:placeholder {
-  color: rgba(255, 255, 255, 1);
-  font-weight: 400;
+input::placeholder,
+textarea::placeholder {
+  color: #eee;
+  font-weight: 200;
  } 
 
 button {
