@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
-import Layout from '../layouts/layout'
+import TitleWrapper from '../templates/titleWrapper'
 import ABOUT_DATA from '../data/about'
 
 const IMAGE_URL = 'https://media.graphcms.com/k8oLYZxyR1ieU22tfZ9d'
@@ -57,7 +57,7 @@ const Logo = styled.img`
 `
 
 const About = () => (
-  <Layout title='About'>
+  <TitleWrapper title='About'>
     <AboutWrapper>
       <TextWrapper>
         {ABOUT_DATA.description.map(paragraph =>
@@ -80,7 +80,7 @@ const About = () => (
       </TextWrapper>
       <ProfileImage src={IMAGE_URL} />
     </AboutWrapper>
-  </Layout>
+  </TitleWrapper>
 )
 
 export default About
