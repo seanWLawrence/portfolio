@@ -12,7 +12,7 @@ const Title = styled.h1`
 
 const GIF = styled.iframe`
   height: 300px;
-  width: 100%;
+  max-width: 100%;
 `
 
 const Summary = Title.extend`
