@@ -33,12 +33,20 @@ margin: auto 30px;
 }
 `
 
+const ActiveNavigationItem = NavigationItem.extend`
+  border-bottom: 2px solid #2D9CDB;
+  :hover {
+  border-bottom: 2px solid #2D9CDB;
+  color: #fff;
+}
+`
+
 const HeaderLink = styled(Link) `
   color: #fff;
   text-decoration: none;
 `
 
-const Header = () => (
+const Header = props => (
   <HeaderWrapper>
     <Navigation>
       {
@@ -46,7 +54,12 @@ const Header = () => (
           <HeaderLink to={page.url}
             key={page.title}
           >
-            <NavigationItem>{page.title}</NavigationItem>
+            {
+              (window.location.pathname === page.url)
+                ? <NavigationItem className='active'>{page.title}</NavigationItem>
+                : <NavigationItem>{page.title}</NavigationItem>
+            }
+
           </HeaderLink>
         )
       }

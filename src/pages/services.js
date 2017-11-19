@@ -8,29 +8,15 @@ const ServicesWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 50vw;
-`
-
-const IframeWrapper = styled.section`
-  position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-`
-
-const Iframe = styled.iframe`
-  position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+  width: 80vw;
 `
 
 const Services = () => (
-  <TitleWrapper title='Services'>
+  <TitleWrapper title='Services'
+    description={SERVICES_DATA.description}>
     <ServicesWrapper>
       {
-        SERVICES_DATA.map(service =>
+        SERVICES_DATA.services.map(service =>
           <Service
             title={service.title}
             summary={service.summary}

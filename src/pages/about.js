@@ -78,7 +78,7 @@ const About = () => (
           )}
         </LogoWrapper>
       </TextWrapper>
-      <ProfileImage src={IMAGE_URL} />
+      <ProfileImage src={IMAGE_URL} alt='Profile image of Sean Lawrence' />
     </AboutWrapper>
   </TitleWrapper>
 )

@@ -96,7 +96,7 @@ const IndexPage = () => (
         Beautiful, modern websites for businesses, non-profits and open source projects.
       </Header>
       <Description>
-        Tell me about your project for free advice and quotes.
+        Tell me about your project for free advice or a pricing quote.
       </Description>
     </BannerWrapper>
     <FormWrapper id='form-wrapper'>
