@@ -44,6 +44,7 @@ const PrimaryButton = styled.button`
   background-color: #2D9CDB;
   color: #fff;
   cursor: pointer;
+  border-radius: 5px;
 `
 
 const Form = () => (

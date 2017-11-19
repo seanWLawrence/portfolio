@@ -11,6 +11,9 @@ const GridWrapper = styled.section`
   @media(max-width: 860px){
     flex-direction: column;
   }
+  @media(max-width: 450px){
+    align-items: flex-start;
+  }
 `
 
 const TextWrapper = GridWrapper.extend`
@@ -69,6 +72,15 @@ const Iframe = styled.iframe`
   width: 80vw;
   height: 500px;
   margin: 36px auto;
+  @media (max-width: 450px) {
+    display: none;
+  }
+`
+const Button = styled.button`
+  background-color: #ddd;
+  border-radius: 5px;
+  margin: 10px 10px 10px 0;
+  font-size: 14px;
 `
 
 const FullPageGrid = props => (
@@ -81,6 +93,7 @@ const FullPageGrid = props => (
       <Arrow />
     </ArrowWrapper>
     <Iframe src={props.url} title={props.title} frameBorder="0" allowFullScreen></Iframe>
+    <Button type='button'>Visit</Button>
   </GridWrapper>
 )
 

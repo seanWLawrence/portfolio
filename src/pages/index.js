@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Particles from 'react-particles-js'
 import CANVAS from '../data/canvas'
+import CANVAS_MOBILE_DATA from '../data/canvasMobile'
 import styled from 'styled-components'
 import Form from '../templates/form'
 
@@ -88,7 +89,7 @@ const Description = Header.extend`
 const IndexPage = () => (
   <Home id='home'>
     <Particles
-      params={CANVAS}
+      params={window.innerWidth > 450 ? CANVAS : CANVAS_MOBILE_DATA}
       style={particlesStyle}
     />
     <BannerWrapper id='banner-wrapper'>
