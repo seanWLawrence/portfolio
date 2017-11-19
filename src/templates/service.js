@@ -3,27 +3,49 @@ import styled from 'styled-components'
 
 const ServiceWrapper = styled.section`
   margin-top: 50px;
+  width: 100%;
 `
 
 const Title = styled.h1`
-  font-size: 48px;
+  font-size: 40px;
   margin-bottom: 0;
-`
-
-const GIF = styled.iframe`
-  height: 300px;
-  max-width: 100%;
+  @media (max-width: 450px) {
+    font-size: 28px;
+  }
 `
 
 const Summary = Title.extend`
   color: #555;
   font-size: 24px;
   font-style: oblique;
+  @media (max-width: 450px) {
+    font-size: 20px;
+  }
 `
 
 const Description = Title.extend`
   color: #555;
   font-size: 20px;
+  @media (max-width: 450px) {
+    font-size: 16px;
+  }
+`
+
+const GIFWrapper = styled.section`
+  position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+  margin-bottom: 75px;
+`
+
+const GIF = styled.iframe`
+  position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  z-index: -1;
 `
 
 const Service = props => (
@@ -31,7 +53,9 @@ const Service = props => (
     <Title>
       {props.title}
     </Title>
-    <GIF src={props.gif_url}></GIF>
+    <GIFWrapper>
+      <GIF src={props.gif_url} frameBorder='0' allowFullScreen></GIF>
+    </GIFWrapper>
     <Summary>
       {props.summary}
     </Summary>

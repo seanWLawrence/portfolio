@@ -30,7 +30,7 @@ const TextWrapper = GridWrapper.extend`
 const Title = styled.a`
   color: #333;
   text-decoration: none;
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 700;
   cursor: pointer;
   @media(max-width: 450px){

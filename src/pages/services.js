@@ -8,14 +8,15 @@ const ServicesWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 50vw;
+  width: 80vw;
 `
 
 const Services = () => (
-  <TitleWrapper title='Services'>
+  <TitleWrapper title='Services'
+    description={SERVICES_DATA.description}>
     <ServicesWrapper>
       {
-        SERVICES_DATA.map(service =>
+        SERVICES_DATA.services.map(service =>
           <Service
             title={service.title}
             summary={service.summary}

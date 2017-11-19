@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import FullPageGrid from '../templates/fullPageGrid'
 import WORK_DATA from '../data/work'
+import TitleWrapper from '../templates/titleWrapper'
 
 const projects = WORK_DATA.projects
 
@@ -14,18 +15,21 @@ const WorkWrapper = styled.section`
 `
 
 const Work = () => (
-  <WorkWrapper id='work'>
-    {
-      projects.map(project =>
-        <FullPageGrid
-          title={project.title}
-          description={project.description}
-          url={project.url}
-          key={project.id}
-        />
-      )
-    }
-  </WorkWrapper>
+  <TitleWrapper title='Work'
+    description={WORK_DATA.description}>
+    <WorkWrapper id='work'>
+      {
+        projects.map(project =>
+          <FullPageGrid
+            title={project.title}
+            description={project.description}
+            url={project.url}
+            key={project.id}
+          />
+        )
+      }
+    </WorkWrapper>
+  </TitleWrapper>
 )
 
 
