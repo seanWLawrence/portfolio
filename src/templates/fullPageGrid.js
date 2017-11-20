@@ -87,7 +87,6 @@ const Button = styled.a`
   cursor: pointer;
   :hover {
     background-color: #ccc;
-  }
 `
 
 const FullPageGrid = props => (
