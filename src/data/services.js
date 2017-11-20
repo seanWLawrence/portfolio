@@ -1,5 +1,5 @@
 const SERVICES_DATA = {
-  description: `I'm fluent in the big three web development languages (HTML5, CSS3 and JavaScript ES5/ES6) as well as React.js and jQuery. Take a look below to see what I can bring to your project.`,
+  description: `I'm fluent in the "Big Three" web development languages (HTML5, CSS3 and JavaScript ES5/ES6) as well as React.js and jQuery. Take a look below to see what I can bring to your project.`,
   services: [
     {
       title: 'Designing',

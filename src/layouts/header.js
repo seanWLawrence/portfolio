@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import NAVIGATION_DATA from '../data/navigation'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
@@ -46,25 +46,49 @@ const HeaderLink = styled(Link) `
   text-decoration: none;
 `
 
-const Header = props => (
-  <HeaderWrapper>
-    <Navigation>
-      {
-        NAVIGATION_DATA.map(page =>
-          <HeaderLink to={page.url}
-            key={page.title}
-          >
-            {
-              (window.location.pathname === page.url)
-                ? <NavigationItem className='active'>{page.title}</NavigationItem>
-                : <NavigationItem>{page.title}</NavigationItem>
-            }
+class Header extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      activePage: 'Contact'
+    }
+  }
 
-          </HeaderLink>
-        )
-      }
-    </Navigation>
-  </HeaderWrapper>
-)
+  componentDidMount() {
+    this.setState({
+      activePage: window.location.pathname
+    })
+  }
+
+  handleClick(e) {
+    this.setState({
+      activePage: e.target.pathname
+    })
+  }
+
+  render() {
+    return (
+      <HeaderWrapper>
+        <Navigation>
+          {
+            NAVIGATION_DATA.map(page =>
+              <NavigationItem
+                key={page.title}
+              >
+                <HeaderLink
+                  to={page.url}
+                  onClick={this.handleClick.bind(this)}
+                  className={this.state.activePage === page.url ? 'active' : null}
+                >
+                  {page.title}
+                </HeaderLink>
+              </NavigationItem>
+            )
+          }
+        </Navigation>
+      </HeaderWrapper>
+    )
+  }
+}
 
 export default Header

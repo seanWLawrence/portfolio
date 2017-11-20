@@ -50,13 +50,13 @@ const PrimaryButton = styled.button`
 const Form = () => (
   <FormWrapper id='contact-form' method='post' data-netlify="true" data-netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="contact" />
-    <label for='name'>
+    <label>
       <Input type="text" name="name" placeholder="Name" required />
     </label>
-    <label for='email'>
+    <label>
       <Input type="email" name="email" placeholder="Email" required />
     </label>
-    <label for='message'>
+    <label>
       <TextArea name="message" placeholder="Message" required></TextArea>
     </label>
     <PrimaryButton type="submit">Send</PrimaryButton>
