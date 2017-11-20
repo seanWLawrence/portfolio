@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import Particles from 'react-particles-js'
 import CANVAS_DATA from '../data/canvas'
-import CANVAS_MOBILE_DATA from '../data/canvasMobile'
+import CANVAS_MOBILE_DATA from '../data/canvas'
 import styled from 'styled-components'
 import Form from '../templates/form'
 
@@ -89,21 +89,23 @@ class Contact extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      particles: CANVAS_DATA
+      canvas: CANVAS_MOBILE_DATA
     }
   }
+
   componentDidMount() {
-    window.innerWidth > 450
-      ? null
-      : this.setState({
-        particles: CANVAS_MOBILE_DATA
+    (window.innerWidth > 750)
+      ? this.setState({
+        canvas: CANVAS_DATA
       })
+      : null
   }
+
   render() {
     return (
       <Home id='home'>
         <Particles
-          params={this.state.particles}
+          params={this.state.canvas}
           style={particlesStyle}
         />
         <BannerWrapper id='banner-wrapper'>
@@ -121,5 +123,6 @@ class Contact extends Component {
     )
   }
 }
+
 
 export default Contact
