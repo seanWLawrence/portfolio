@@ -3,10 +3,10 @@ const CANVAS_DATA = {
     number: {
       value: 80,
       density:
-      {
-        enable: true,
-        value_area: 800
-      }
+        {
+          enable: true,
+          value_area: 800
+        }
     },
     color: {
       value: '#f9f9f9'

@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import Particles from 'react-particles-js'
-import CANVAS from '../data/canvas'
+import CANVAS_DATA from '../data/canvas'
 import CANVAS_MOBILE_DATA from '../data/canvasMobile'
 import styled from 'styled-components'
 import Form from '../templates/form'
@@ -85,25 +85,41 @@ const Description = Header.extend`
     font-size: 20px;
   }
 `
-
-const IndexPage = () => (
-  <Home id='home'>
-    <Particles
-      params={window.innerWidth > 450 ? CANVAS : CANVAS_MOBILE_DATA}
-      style={particlesStyle}
-    />
-    <BannerWrapper id='banner-wrapper'>
-      <Header>
-        Beautiful, modern websites for businesses, non-profits and open source projects.
+class Contact extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      particles: CANVAS_DATA
+    }
+  }
+  componentDidMount() {
+    window.innerWidth > 450
+      ? null
+      : this.setState({
+        particles: CANVAS_MOBILE_DATA
+      })
+  }
+  render() {
+    return (
+      <Home id='home'>
+        <Particles
+          params={this.state.particles}
+          style={particlesStyle}
+        />
+        <BannerWrapper id='banner-wrapper'>
+          <Header>
+            Beautiful, modern websites for businesses, non-profits and open source projects.
       </Header>
-      <Description>
-        Tell me about your project for free advice or a pricing quote.
+          <Description>
+            Tell me about your project for free advice or a pricing quote.
       </Description>
-    </BannerWrapper>
-    <FormWrapper id='form-wrapper'>
-      <Form />
-    </FormWrapper >
-  </Home >
-)
+        </BannerWrapper>
+        <FormWrapper id='form-wrapper'>
+          <Form />
+        </FormWrapper >
+      </Home >
+    )
+  }
+}
 
-export default IndexPage
+export default Contact

@@ -79,8 +79,12 @@ const Iframe = styled.iframe`
 const Button = styled.button`
   background-color: #ddd;
   border-radius: 5px;
-  margin: 10px 10px 10px 0;
+  margin: 0;
   font-size: 14px;
+  cursor: pointer;
+  :hover {
+    background-color: #bbb;
+  }
 `
 
 const FullPageGrid = props => (
@@ -92,8 +96,8 @@ const FullPageGrid = props => (
     <ArrowWrapper>
       <Arrow />
     </ArrowWrapper>
-    <Iframe src={props.url} title={props.title} frameBorder="0" allowFullScreen></Iframe>
     <Button type='button'>Visit</Button>
+    <Iframe src={props.url} title={props.title} frameBorder="0" allowFullScreen></Iframe>
   </GridWrapper>
 )
 
