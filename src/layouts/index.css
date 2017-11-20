@@ -50,3 +50,9 @@ button {
   padding: 10px 20px;
   font-size: 18px;
 }
+
+.active,
+.active:hover,
+.active:active {
+  border-bottom: 2px solid #2D9CDB;
+}
