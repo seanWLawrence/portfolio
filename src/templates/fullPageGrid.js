@@ -76,27 +76,44 @@ const Iframe = styled.iframe`
     display: none;
   }
 `
-const Button = styled.button`
+const Button = styled.a`
+  padding: 10px 20px;
+  color: #222;
+  text-decoration: none;
   background-color: #ddd;
   border-radius: 5px;
   margin: 0;
   font-size: 14px;
   cursor: pointer;
   :hover {
-    background-color: #bbb;
+    background-color: #ccc;
   }
 `
 
 const FullPageGrid = props => (
   <GridWrapper id={props.title}>
     <TextWrapper>
-      <Title href={props.url}>{props.title}</Title>
+      <Title
+        href={props.url}
+        title={props.title}
+        rel='noreferrer nofollow noopener'
+        target='_blank'
+      >
+        {props.title}
+      </Title>
       <Description>{props.description}</Description>
     </TextWrapper>
     <ArrowWrapper>
       <Arrow />
     </ArrowWrapper>
-    <Button type='button'>Visit</Button>
+    <Button
+      href={props.url}
+      title={props.title}
+      rel='noreferrer nofollow noopener'
+      target='_blank'
+    >
+      Visit
+      </Button>
     <Iframe src={props.url} title={props.title} frameBorder="0" allowFullScreen></Iframe>
   </GridWrapper>
 )
