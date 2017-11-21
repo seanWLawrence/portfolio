@@ -87,10 +87,13 @@ const Button = styled.a`
   cursor: pointer;
   :hover {
     background-color: #ccc;
+<<<<<<< HEAD
   }
   @media (min-width: 750px) {
     display: none;
   }
+=======
+>>>>>>> 757bb7a0b445e2481642fe087eb9eca32ae80083
 `
 
 const FullPageGrid = props => (
