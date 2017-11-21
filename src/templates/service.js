@@ -13,21 +13,31 @@ const Title = styled.h1`
     font-size: 28px;
   }
 `
+const titleStyle = Title.withComponent('blockquote')
 
-const Summary = Title.extend`
-  color: #555;
+const Summary = titleStyle.extend`
+  color: #6a6a6a;
   font-size: 24px;
   font-style: oblique;
-  @media (max-width: 450px) {
+  border-left: 5px solid #555;
+  padding: 25px;
+  line-height: 35px;
+  @media (max-width: 750px) {
+    line-height: 30px;
     font-size: 20px;
+    padding: 0;
+    border-left: 0;
+    margin: 0;
   }
 `
 
 const Description = Title.extend`
   color: #555;
   font-size: 20px;
+  line-height: 35px;
   @media (max-width: 450px) {
     font-size: 16px;
+    line-height: 30px;
   }
 `
 

@@ -88,6 +88,9 @@ const Button = styled.a`
   :hover {
     background-color: #ccc;
   }
+  @media (min-width: 750px) {
+    display: none;
+  }
 `
 
 const FullPageGrid = props => (
