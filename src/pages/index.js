@@ -100,7 +100,7 @@ class Contact extends Component {
       })
       : null
   }
-
+  
   render() {
     return (
       <Home id='home'>
@@ -123,6 +123,5 @@ class Contact extends Component {
     )
   }
 }
-
 
 export default Contact
