@@ -1,10 +1,10 @@
 const CANVAS_MOBILE_DATA = {
   particles: {
     number: {
-      value: 1,
+      value: 10,
       density:
         {
-          enable: true,
+          enable: false,
           value_area: 800
         }
     },

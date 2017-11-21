@@ -33,14 +33,6 @@ margin: auto 30px;
 }
 `
 
-const ActiveNavigationItem = NavigationItem.extend`
-  border-bottom: 2px solid #2D9CDB;
-  :hover {
-  border-bottom: 2px solid #2D9CDB;
-  color: #fff;
-}
-`
-
 const HeaderLink = styled(Link) `
   color: #fff;
   text-decoration: none;

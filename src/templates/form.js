@@ -30,6 +30,7 @@ const Input = styled.input`
   border-bottom: 2px solid #2D9CDB;
   outline: 0;
   letter-spacing: 1.5px;
+  border-radius: 0;
   @media (max-width: 1325px) {
     width: 70vw;
   }
