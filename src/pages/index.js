@@ -16,17 +16,10 @@ const Home = styled.section`
     flex-direction: column;
     justify-content: flex-start;
   }
+  @media (max-width: 750px) {
+    background-color: #000;
+  }
 `
-
-const particlesStyle = {
-  position: 'fixed',
-  top: '0',
-  left: '0',
-  right: '0',
-  bottom: '0',
-  zIndex: -1,
-  backgroundColor: 'rgba(0, 0, 0, .9)',
-}
 
 const BannerWrapper = styled.section`
   display: flex;
@@ -51,6 +44,22 @@ const FormWrapper = BannerWrapper.extend`
     align-items: flex-start;
     justify-content: flex-start;
     height: 50%;
+  }
+`
+const particlesStyle = {
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  zIndex: -1,
+  backgroundColor: 'rgb(0, 0, 0)',
+}
+
+const ParticlesWrapper = styled.section`
+  @media (max-width: 750px) {
+    display: none;
+    background-color: black;
   }
 `
 
@@ -85,43 +94,27 @@ const Description = Header.extend`
     font-size: 20px;
   }
 `
-class Contact extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      canvas: CANVAS_MOBILE_DATA
-    }
-  }
-
-  componentDidMount() {
-    (window.innerWidth > 750)
-      ? this.setState({
-        canvas: CANVAS_DATA
-      })
-      : null
-  }
-  
-  render() {
-    return (
-      <Home id='home'>
-        <Particles
-          params={this.state.canvas}
-          style={particlesStyle}
-        />
-        <BannerWrapper id='banner-wrapper'>
-          <Header>
-            Beautiful, modern websites for businesses, non-profits and open source projects.
+const Contact = () => (
+  <Home id='home'>
+    <ParticlesWrapper>
+      <Particles
+        params={CANVAS_DATA}
+        style={particlesStyle}
+      />
+    </ParticlesWrapper>
+    <BannerWrapper id='banner-wrapper'>
+      <Header>
+        Beautiful, modern websites for businesses, non-profits and open source projects.
       </Header>
-          <Description>
-            Tell me about your project for free advice or a pricing quote.
+      <Description>
+        Tell me about your project for free advice or a pricing quote.
       </Description>
-        </BannerWrapper>
-        <FormWrapper id='form-wrapper'>
-          <Form />
-        </FormWrapper >
-      </Home >
-    )
-  }
-}
+    </BannerWrapper>
+    <FormWrapper id='form-wrapper'>
+      <Form />
+    </FormWrapper >
+  </Home >
+)
+
 
 export default Contact

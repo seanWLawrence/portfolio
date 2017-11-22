@@ -31,7 +31,7 @@ const Summary = titleStyle.extend`
   }
 `
 
-const Description = Title.extend`
+const Description = titleStyle.extend`
   color: #555;
   font-size: 20px;
   line-height: 35px;
