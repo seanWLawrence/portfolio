@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import FullPageGrid from '../templates/fullPageGrid'
+import WorkProject from '../templates/workProject'
 import WORK_DATA from '../data/work'
 import TitleWrapper from '../templates/titleWrapper'
 
@@ -20,7 +20,7 @@ const Work = () => (
     <WorkWrapper id='work'>
       {
         projects.map(project =>
-          <FullPageGrid
+          <WorkProject
             title={project.title}
             description={project.description}
             url={project.url}
