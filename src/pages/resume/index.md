@@ -7,6 +7,7 @@ title: "Resume"
 ## Summary
 
 I'm a front end JavaScript Developer that designs and creates UI/UX for websites and applications using modern tools and libraries, like React.js, Express.js, Node.js, Webpack, jQuery, HTML5 and CSS3. 
+<section id='skills-table'>
 
 | Languages      | Libraries               | Tools       | Misc.                 |
 | :------------: | :---------------------: | :---------: | :-------------------: |
@@ -18,6 +19,8 @@ I'm a front end JavaScript Developer that designs and creates UI/UX for websites
 |                | GraphQl                 | Yaml        | AJAX                  |
 
 *Stands for - Single Page Applications/Progressive Web Applications
+
+</section>
 
 ## Experience
 

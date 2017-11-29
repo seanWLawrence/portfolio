@@ -4,6 +4,10 @@ import styled from 'styled-components'
 const Post = styled.section`
   width: 50vw;
   margin: 100px 25vw 50px 25vw;
+  @media (max-width: 750px) {
+    width: 90vw;
+    margin: 100px 5vw;
+  }
 `
 
 export default ({ data }) => {

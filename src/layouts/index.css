@@ -82,3 +82,9 @@ tr:hover {
 #resume h3 a {
   color: #444;
 }
+
+@media (max-width: 750px) {
+  #skills-table {
+    display: none;
+  }
+}
