@@ -7,20 +7,17 @@ const Post = styled.section`
 `
 
 export default ({ data }) => {
-  const post = data.markdownRemark
+  const resume = data.markdownRemark
   return (
     <Post id='resume'>
-      <section dangerouslySetInnerHTML={{ __html: post.html }} />
+      <section dangerouslySetInnerHTML={{ __html: resume.html }} />
     </Post>
   )
 }
 
 export const query = graphql`
-  query ResumePageQuery($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+  query ResumePageQuery {
+    markdownRemark {
       html
-      frontmatter {
-        title
-      }
     }
   }`
