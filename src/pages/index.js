@@ -25,7 +25,7 @@ const particlesStyle = {
   right: '0',
   bottom: '0',
   zIndex: -1,
-  backgroundColor: 'rgba(0, 0, 0, .9)',
+  backgroundColor: 'rgba(0, 0, 0, .96)',
 }
 
 const BannerWrapper = styled.section`
@@ -100,7 +100,7 @@ class Contact extends Component {
       })
       : null
   }
-  
+
   render() {
     return (
       <Home id='home'>
