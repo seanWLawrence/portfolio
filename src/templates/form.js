@@ -49,8 +49,8 @@ const PrimaryButton = styled.button`
 `
 
 const Form = () => (
-  <FormWrapper id='contact-form' method='post' data-netlify="true" data-netlify-honeypot="bot-field">
-    <input type="hidden" name="form-name" value="contact" />
+  <FormWrapper id='contact-form' name='contact' action='/thank-you' method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+    <input type="hidden" name="contact" value="contact" />
     <label>
       <Input type="text" name="name" placeholder="Name" required />
     </label>
