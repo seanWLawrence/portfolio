@@ -2,6 +2,7 @@ import React from 'react'
 import styled from "styled-components"
 import TitleWrapper from '../templates/titleWrapper'
 import ABOUT_DATA from '../data/about'
+import Link from 'gatsby-link'
 
 const IMAGE_URL = 'https://media.graphcms.com/k8oLYZxyR1ieU22tfZ9d'
 
@@ -49,11 +50,19 @@ const LogoWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
 `
 
 const Logo = styled.img`
   height: 30px;
   margin-right: 20px;
+`
+
+const ResumeButton = styled.button`
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: #2D9CDB;
+  color: #fff;
 `
 
 const About = () => (
@@ -76,6 +85,9 @@ const About = () => (
               />
             </a>
           )}
+          <Link to='/resume'>
+            <ResumeButton>Resume</ResumeButton>
+          </Link>
         </LogoWrapper>
       </TextWrapper>
       <ProfileImage src={IMAGE_URL} alt='Profile image of Sean Lawrence' />

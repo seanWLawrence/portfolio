@@ -18,6 +18,7 @@ a {
   cursor: pointer;
   color: #2D9CDB;
   border-bottom: 2px solid transparent;
+  text-decoration: none;
 }
 
 a:hover {
@@ -55,4 +56,29 @@ button {
 .active:hover,
 .active:active {
   border-bottom: 2px solid #2D9CDB;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: left;
+  margin: 30px 0;
+}
+
+thead {
+  background-color: #2D9CDB;
+  color: #fff;
+}
+
+td,
+th {
+  padding: 10px;
+}
+
+tr:hover {
+  background-color: #eee;
+  color: #333;
+}
+
+#resume h3 a {
+  color: #444;
 }
