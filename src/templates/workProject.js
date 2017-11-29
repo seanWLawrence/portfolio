@@ -93,7 +93,7 @@ const Button = styled.a`
   }
 `
 
-const FullPageGrid = props => (
+const WorkProject = props => (
   <GridWrapper id={props.title}>
     <TextWrapper>
       <Title
@@ -121,4 +121,4 @@ const FullPageGrid = props => (
   </GridWrapper>
 )
 
-export default FullPageGrid
+export default WorkProject
