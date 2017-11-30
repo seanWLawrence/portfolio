@@ -7,11 +7,10 @@ import TitleWrapper from '../templates/titleWrapper'
 const projects = WORK_DATA.projects
 
 const WorkWrapper = styled.section`
-  margin-top: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 100px 10vw 0 10vw;
+  margin: 50px 10vw 0 10vw;
 `
 
 const Work = () => (

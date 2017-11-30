@@ -63,6 +63,7 @@ const ResumeButton = styled.button`
   cursor: pointer;
   background-color: #2D9CDB;
   color: #fff;
+  border-radius: 5px;
 `
 
 const About = () => (

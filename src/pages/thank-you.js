@@ -18,6 +18,7 @@ const ThankYouCard = styled.section`
   border: 0;
   border-radius: 5px;
   box-shadow: 0 1px 9px #999;
+  margin: 100px 10vw 20px 10vw; 
 `
 
 const Button = styled.button`

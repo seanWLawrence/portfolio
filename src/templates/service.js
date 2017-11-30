@@ -2,13 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 
 const ServiceWrapper = styled.section`
-  margin-top: 50px;
+  margin-top: 20px;
   width: 100%;
 `
 
 const Title = styled.h1`
   font-size: 40px;
-  margin-bottom: 0;
+  margin: 20px 0 0 0;
   @media (max-width: 450px) {
     font-size: 28px;
   }
@@ -36,14 +36,14 @@ const Description = styled.p`
   font-size: 20px;
   line-height: 35px;
   @media (max-width: 450px) {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 30px;
   }
 `
 
 const GIFWrapper = styled.section`
   position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
+	padding-bottom: 56.25%;
 	padding-top: 25px;
 	height: 0;
   margin-bottom: 75px;
