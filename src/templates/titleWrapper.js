@@ -25,23 +25,12 @@ const HorizontalRule = styled.div`
   border-bottom: 5px solid #2D9CDB;
 `
 
-const Description = styled.p`
-  color: #616161;
-  width: 80vw;
-  margin-bottom: -75px;
-`
-
 const TitleWrapper = props => (
   <Wrapper id={props.title}>
     <Title>
       {props.title}
     </Title>
     <HorizontalRule />
-    {
-      (props.description)
-        ? <Description>{props.description}</Description>
-        : null
-    }
     {props.children}
   </Wrapper>
 )

@@ -1,5 +1,4 @@
 const WORK_DATA = {
-  description: `These are the latest projects that I've had the pleasure of working on. I'm proud of each one and am happy to do the same for you.`,
   projects: [
     {
       title: 'Beastgrip',
