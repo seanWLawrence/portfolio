@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import Particles from 'react-particles-js'
 import CANVAS_DATA from '../data/canvas'
-import CANVAS_MOBILE_DATA from '../data/canvas'
 import styled from 'styled-components'
 import Form from '../templates/form'
 
@@ -12,6 +11,7 @@ const Home = styled.section`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  background-color: rgba(0, 0, 0, .99);
   @media (max-width: 1325px) {
     flex-direction: column;
     justify-content: flex-start;
@@ -86,17 +86,14 @@ const Description = Header.extend`
   }
 `
 class Contact extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      canvas: CANVAS_MOBILE_DATA
-    }
+  state = {
+    canvasShown: false
   }
 
   componentDidMount() {
     (window.innerWidth > 750)
       ? this.setState({
-        canvas: CANVAS_DATA
+        canvasShown: true
       })
       : null
   }
@@ -104,10 +101,16 @@ class Contact extends Component {
   render() {
     return (
       <Home id='home'>
-        <Particles
-          params={this.state.canvas}
-          style={particlesStyle}
-        />
+        {
+          (this.state.canvas === true)
+            ? <Particles
+              params={CANVAS_DATA}
+              style={particlesStyle}
+            />
+            : console.log(this.state.canvasShown)
+        }
+        }
+
         <BannerWrapper id='banner-wrapper'>
           <Header>
             Beautiful, modern websites for businesses, non-profits and open source projects.
