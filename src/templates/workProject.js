@@ -72,7 +72,7 @@ const Iframe = styled.iframe`
   width: 80vw;
   height: 500px;
   margin: 36px auto;
-  @media (max-width: 450px) {
+  @media (max-width: 750px) {
     display: none;
   }
 `
