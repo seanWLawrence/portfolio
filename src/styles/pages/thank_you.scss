@@ -1,0 +1,19 @@
+#thank_you {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2D9CDB;
+}
+
+#thank_you_card {
+  padding: 25px;
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 1px 9px #999;
+  margin: 100px 10vw 20px 10vw; 
+}
+  

@@ -1,0 +1,43 @@
+#site_navigation {
+  display: flex;
+  justify-content: center;
+  padding: 5px 0;
+  background-color: rgba(0, 0, 0, .9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  ul {
+    display: flex;
+    flex-wrap: no-wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+    
+  li {
+    padding: 10px 20px;
+    margin: auto 30px;
+    &:hover {
+      border-bottom: 0;
+      color: #eee;
+    } 
+    @media (max-width: 525px) {
+      margin: auto 2.5vw;
+      padding: 10px 10px;
+    }
+  }
+    
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+    
+  .active,
+  .active:hover,
+  .active:active {
+    border-bottom: 2px solid #2D9CDB;
+  }
+}

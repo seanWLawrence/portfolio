@@ -31,7 +31,7 @@ I'm a front end JavaScript Developer that designs and creates UI/UX for websites
 
 Beastgrip is a mobile photography and film making gear startup. I focus on scaling the business by creating web applications.
 
-* [**Inspiration page**](https://beastgrip.com/pages/inspiration) - an Instagram-style feed, that pulls images from an Instagram feed and displays a list of products shown in the photo and links to purchase them. Tools/libraries used: Snappt, CSS3.
+* [**Inspiration page**](https://beastgrip.com/pages/inspiration-2) - an Instagram-style feed, that pulls images from an Instagram feed and displays a list of products shown in the photo and links to purchase them. Tools/libraries used: Snappt, CSS3.
 
 * **E-commerce admin panel** - (in progress) - admin page that accepts data for the Media page (below), writes/edits/deletes it to a PostgreSQL database for the Media page to use. Tools/libraries used: React.js, Express.js, Webpack.
 

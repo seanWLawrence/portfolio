@@ -1,9 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Header from './header'
-import './index.css'
-require("prismjs/themes/prism.css")
+import Header from './Header'
+
+import '../styles/index.scss'
+import 'prismjs/themes/prism.css'
 
 const TemplateWrapper = ({ children }) => (
   <section id='app'>
@@ -20,9 +20,5 @@ const TemplateWrapper = ({ children }) => (
     </main>
   </section >
 )
-
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
-}
 
 export default TemplateWrapper

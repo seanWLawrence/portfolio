@@ -1,77 +1,20 @@
 import React from 'react'
-import styled from 'styled-components'
-
-const ServiceWrapper = styled.section`
-  margin-top: 20px;
-  width: 100%;
-`
-
-const Title = styled.h1`
-  font-size: 40px;
-  margin: 20px 0 0 0;
-  @media (max-width: 450px) {
-    font-size: 28px;
-  }
-`
-const titleStyle = Title.withComponent('blockquote')
-
-const Summary = titleStyle.extend`
-  color: #6a6a6a;
-  font-size: 24px;
-  font-style: oblique;
-  border-left: 5px solid #555;
-  padding: 25px;
-  line-height: 35px;
-  @media (max-width: 750px) {
-    line-height: 30px;
-    font-size: 20px;
-    padding: 0;
-    border-left: 0;
-    margin: 0;
-  }
-`
-
-const Description = styled.p`
-  color: #555;
-  font-size: 20px;
-  line-height: 35px;
-  @media (max-width: 450px) {
-    font-size: 18px;
-    line-height: 30px;
-  }
-`
-
-const GIFWrapper = styled.section`
-  position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 25px;
-	height: 0;
-  margin-bottom: 75px;
-`
-
-const GIF = styled.iframe`
-  position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-`
 
 const ServiceSection = props => (
-  <ServiceWrapper>
-    <Title>
+  <section id='service'>
+    <h2 className='service_title'>
       {props.title}
-    </Title>
-    <GIFWrapper>
-      <GIF src={props.gif_url} frameBorder='0' allowFullScreen></GIF>
-    </GIFWrapper>
-    <Summary>
+    </h2>
+    <div className='service_video'>
+      <iframe src={props.gif_url} frameBorder='0' allowFullScreen></iframe>
+    </div>
+    <blockquote className='service_summary'>
       {props.summary}
-    </Summary>
-    <Description>
+    </blockquote>
+    <p className='service_description'>
       {props.description}
-    </Description>
-  </ServiceWrapper>
+    </p>
+  </section>
 )
 
 export default ServiceSection

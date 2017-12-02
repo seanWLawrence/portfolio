@@ -1,22 +1,16 @@
 import React from 'react'
-import styled from 'styled-components'
 import WorkProject from '../components/WorkProject'
 import WORK_DATA from '../data/work'
 import PageTitle from '../components/PageTitle'
 
-const projects = WORK_DATA.projects
+import '../styles/pages/work.scss'
 
-const WorkWrapper = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 50px 10vw 0 10vw;
-`
+const projects = WORK_DATA.projects
 
 const Work = () => (
   <PageTitle title='Work'
     description={WORK_DATA.description}>
-    <WorkWrapper id='work'>
+    <section id='work_wrapper'>
       {
         projects.map(project =>
           <WorkProject
@@ -27,7 +21,7 @@ const Work = () => (
           />
         )
       }
-    </WorkWrapper>
+    </section>
   </PageTitle>
 )
 
