@@ -8,8 +8,9 @@ template: "post"
 ### yoyoyo
 
 ```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
+const { function: post } = data;
+const functionTest = () => data.map( x => x + 10)
+const string = `string`
 ```
 
 > TL;DR yoyoyo

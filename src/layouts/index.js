@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from './header'
 import './index.css'
+require("prismjs/themes/prism.css")
 
 const TemplateWrapper = ({ children }) => (
   <section id='app'>
