@@ -26,8 +26,8 @@ const particlesStyle = {
   left: '0',
   right: '0',
   bottom: '0',
-  zIndex: -1,
-  backgroundColor: 'rgba(0, 0, 0, .96)',
+  zIndex: 0,
+  backgroundColor: 'rgba(10, 10, 10, .9)',
 }
 
 const BannerWrapper = styled.section`
@@ -37,6 +37,7 @@ const BannerWrapper = styled.section`
   align-items: flex-start;
   width: 50vw;
   margin-top: 40px;
+  z-index: 1;
   }
   @media (max-width: 1325px) {
     height: 30%;
@@ -89,13 +90,13 @@ const Description = Header.extend`
 `
 class Contact extends Component {
   state = {
-    canvasShown: false
+    showCanvas: false
   }
 
   componentDidMount() {
     (window.innerWidth > 750)
       ? this.setState({
-        canvasShown: true
+        showCanvas: true
       })
       : null
   }
@@ -104,13 +105,12 @@ class Contact extends Component {
     return (
       <Home id='home'>
         {
-          (this.state.canvasShown === true)
+          this.state.showCanvas === true
             ? <Particles
               params={CANVAS_DATA}
               style={particlesStyle}
             />
-            : console.log(this.state.canvasShown)
-        }
+            : <Header>{this.state.showCanvas}</Header>
         }
 
         <BannerWrapper id='banner-wrapper'>
