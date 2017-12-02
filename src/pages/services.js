@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from "styled-components"
 import SERVICES_DATA from '../data/services'
-import Service from '../templates/service'
-import TitleWrapper from '../templates/titleWrapper'
+import ServiceSection from '../Components/ServiceSection'
+import PageTitle from '../components/PageTitle'
 
 const ServicesWrapper = styled.section`
   display: flex;
@@ -12,12 +12,12 @@ const ServicesWrapper = styled.section`
 `
 
 const Services = () => (
-  <TitleWrapper title='Services'
+  <PageTitle title='Services'
     description={SERVICES_DATA.description}>
     <ServicesWrapper>
       {
         SERVICES_DATA.services.map(service =>
-          <Service
+          <ServiceSection
             title={service.title}
             summary={service.summary}
             description={service.description}
@@ -27,7 +27,7 @@ const Services = () => (
         )
       }
     </ServicesWrapper>
-  </TitleWrapper>
+  </PageTitle>
 )
 
 export default Services

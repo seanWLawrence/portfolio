@@ -3,7 +3,9 @@ import Link from 'gatsby-link'
 import Particles from 'react-particles-js'
 import CANVAS_DATA from '../data/canvas'
 import styled from 'styled-components'
-import Form from '../templates/form'
+import Form from '../components/Form'
+
+require("prismjs/themes/prism-solarizedlight.css")
 
 const Home = styled.section`
   min-height: 100vh;
@@ -102,7 +104,7 @@ class Contact extends Component {
     return (
       <Home id='home'>
         {
-          (this.state.canvas === true)
+          (this.state.canvasShown === true)
             ? <Particles
               params={CANVAS_DATA}
               style={particlesStyle}

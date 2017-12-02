@@ -25,7 +25,7 @@ const HorizontalRule = styled.div`
   border-bottom: 5px solid #2D9CDB;
 `
 
-const TitleWrapper = props => (
+const PageTitle = props => (
   <Wrapper id={props.title}>
     <Title>
       {props.title}
@@ -35,4 +35,4 @@ const TitleWrapper = props => (
   </Wrapper>
 )
 
-export default TitleWrapper
+export default PageTitle

@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import WorkProject from '../templates/workProject'
+import WorkProject from '../components/WorkProject'
 import WORK_DATA from '../data/work'
-import TitleWrapper from '../templates/titleWrapper'
+import PageTitle from '../components/PageTitle'
 
 const projects = WORK_DATA.projects
 
@@ -14,7 +14,7 @@ const WorkWrapper = styled.section`
 `
 
 const Work = () => (
-  <TitleWrapper title='Work'
+  <PageTitle title='Work'
     description={WORK_DATA.description}>
     <WorkWrapper id='work'>
       {
@@ -28,7 +28,7 @@ const Work = () => (
         )
       }
     </WorkWrapper>
-  </TitleWrapper>
+  </PageTitle>
 )
 
 

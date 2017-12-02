@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
-import TitleWrapper from '../templates/titleWrapper'
+import PageTitle from '../components/PageTitle'
 import ABOUT_DATA from '../data/about'
 import Link from 'gatsby-link'
 
@@ -67,7 +67,7 @@ const ResumeButton = styled.button`
 `
 
 const About = () => (
-  <TitleWrapper title='About'>
+  <PageTitle title='About'>
     <AboutWrapper>
       <TextWrapper>
         {ABOUT_DATA.description.map(paragraph =>
@@ -93,7 +93,7 @@ const About = () => (
       </TextWrapper>
       <ProfileImage src={IMAGE_URL} alt='Profile image of Sean Lawrence' />
     </AboutWrapper>
-  </TitleWrapper>
+  </PageTitle>
 )
 
 export default About

@@ -20,8 +20,8 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query ResumePageQuery {
-    markdownRemark {
+  query ResumePageQuery($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
     }
-  }`
+}`
