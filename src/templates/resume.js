@@ -1,7 +1,5 @@
 import React from "react"
 
-import '../styles/pages/resume.scss'
-
 export default ({ data }) => {
   const resume = data.markdownRemark
   return (

@@ -1,8 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Header from './Header'
+import Header from './header'
 
-import '../styles/index.scss'
+import './index.scss'
 import 'prismjs/themes/prism.css'
 
 const TemplateWrapper = ({ children }) => (

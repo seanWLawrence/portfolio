@@ -2,8 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 
-import '../styles/pages/thank_you.scss'
-
 const ThankYou = () => (
   <section id='thank-you'>
     <section id='thank_you_card'>

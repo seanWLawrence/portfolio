@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import NAVIGATION_DATA from '../data/navigation'
 import Link from 'gatsby-link'
 
-import '../styles/components/navigation.scss'
-
 class Header extends Component {
   constructor(props) {
     super(props)
@@ -33,13 +31,13 @@ class Header extends Component {
               <li
                 key={page.title}
               >
-                <a
+                <Link
                   to={page.url}
                   onClick={this.handleClick.bind(this)}
                   className={this.state.activePage === page.url ? 'active' : null}
                 >
                   {page.title}
-                </a>
+                </Link>
               </li>
             )
           }

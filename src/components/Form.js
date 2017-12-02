@@ -1,9 +1,7 @@
 import React from 'react'
 
-import '../styles/components/form.scss'
-
 const Form = () => (
-  <form id='contact-form' name='contact' action='https://seanlawrence.co/thank-you' method="post" data-netlify="true" data-netlify-honeypot="bot-field" netlify>
+  <form id='contact_form' name='contact' action='https://seanlawrence.co/thank-you' method="post" data-netlify="true" data-netlify-honeypot="bot-field" >
     <input type="hidden" name="contact" value="contact" />
     <label>
       <input type="text" name="name" placeholder="Name" required />
@@ -15,7 +13,7 @@ const Form = () => (
       <textarea name="message" placeholder="Message" required></textarea>
     </label>
     <button
-      className='primary'
+      className='button_primary'
       type="submit"
     >
       Send

@@ -1,15 +1,55 @@
-import React from 'react'
+import React from "react"
 import PageTitle from '../components/PageTitle'
+import ABOUT_DATA from '../data/about'
 import Link from 'gatsby-link'
 
-import '../styles/pages/about.scss'
+const { PROFILE_IMAGE, SOCIAL_LINKS } = ABOUT_DATA
 
-
-const About = () => (
-  <PageTitle title='About'>
-    <section id='#about_wrapper'>
+export default ({ data }) => {
+  const about = data.markdownRemark
+  return (
+    <section className='page_wrapper'>
+      <PageTitle title='About' id='about' />
+      <section id='about_wrapper'>
+        <section id='bio_wrapper'>
+          <section id='bio' dangerouslySetInnerHTML={{ __html: about.html }} />
+          <section className='social_logos_wrapper'>
+            {
+              SOCIAL_LINKS.map(platform =>
+                <a href={platform.profile_url}
+                  title={platform.title}
+                  target='_blank'
+                  rel='nofollow norefferer noopenner'
+                  key={platform.title}
+                >
+                  <img src={platform.logo_url}
+                    alt={platform.title}
+                    className='social_logo'
+                  />
+                </a>
+              )
+            }
+            <Link to='/resume'>
+              <button className='button_primary'>Resume</button>
+            </Link>
+          </section>
+        </section>
+        <img
+          src={PROFILE_IMAGE}
+          id='profile_image'
+          alt='Profile picture of Sean Lawrence'
+        />
+      </section>
     </section>
-  </PageTitle>
-)
+  )
+}
 
-export default About
+export const query = graphql`
+  query AboutPageQuery($path: String!) {
+        markdownRemark(frontmatter: {path: {eq: $path } }) {
+        html
+      frontmatter {
+        title
+      }
+      }
+}`

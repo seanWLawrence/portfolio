@@ -1,32 +1,12 @@
 ---
 path: "/about"
 date: "2017-08-10"
-title: "Resume"
-template: "resume"
+title: "About"
+template: "about"
+
 ---
-['https://media.graphcms.com/k8oLYZxyR1ieU22tfZ9d']
-      
-      
-      <section id='bio_wrapper'>
-          <p 
-            key={paragraph.id}>{paragraph.text}
-            id='bio'
-          >
-          </p>
-        <LogoWrapper>
-            <a href={profile.profile_url}
-              title={profile.title}
-              target='_blank'
-              rel='nofollow noreferrer noopener'
-              key={profile.title}
-            >
-              <Logo src={profile.logo_url}
-                alt={profile.title}
-              />
-            </a>
-          <Link to='/resume'>
-            <ResumeButton>Resume</ResumeButton>
-          </Link>
-        </LogoWrapper>
-      </section id='text_wrapper'>
-      <ProfileImage src={IMAGE_URL} alt='Profile image of Sean Lawrence' />
+
+  I'm passionate about building high performance websites and applications. By using the latest HTML, CSS and JavaScript technologies on a daily basis, I've cultivated a deep understanding of SEO (Search Engine Optimization), user experience, and design best practices to increase engagement, sales and brand recognition.
+
+  Whether you're a business, non-profit organization, open source project or blogger, I'd love to learn more about your project and help bring it to life - I'm even happy to offer free advice. Let's talk!
+

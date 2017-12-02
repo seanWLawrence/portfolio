@@ -4,15 +4,15 @@ import Particles from 'react-particles-js'
 import CANVAS_DATA from '../data/canvas'
 import Form from '../components/Form'
 
-import 'prismjs/themes/prism-solarizedlight.css'
-
 const particlesStyle = {
   position: 'fixed',
   top: '0',
   left: '0',
   right: '0',
   bottom: '0',
-  zIndex: 0,
+  width: '100vw',
+  height: '100vh',
+  zIndex: -1,
   backgroundColor: 'rgba(10, 10, 10, .9)',
 }
 
@@ -41,7 +41,7 @@ class Contact extends Component {
             : console.log('yo')
         }
 
-        <section id='banner-wrapper'>
+        <section id='banner_wrapper'>
           <h1 id='banner_title'>
             Beautiful, modern websites for businesses, non-profits and open source projects.
       </h1>

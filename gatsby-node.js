@@ -1,13 +1,10 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-// Implement the Gatsby API “createPages”. This is called once the
-// data layer is bootstrapped to let plugins create pages from data.
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
 
   return new Promise((resolve, reject) => {
-    // Query for markdown nodes to use in creating pages.
     resolve(
       graphql(
         `
@@ -29,7 +26,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         `
       ).then(result => {
         if (result.errors) {
-          console.log(`these are the erros:`, result.errors)
           reject(result.errors)
         }
 

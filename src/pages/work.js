@@ -3,14 +3,12 @@ import WorkProject from '../components/WorkProject'
 import WORK_DATA from '../data/work'
 import PageTitle from '../components/PageTitle'
 
-import '../styles/pages/work.scss'
-
 const projects = WORK_DATA.projects
 
 const Work = () => (
-  <PageTitle title='Work'
-    description={WORK_DATA.description}>
-    <section id='work_wrapper'>
+  <section id='page_wrapper'>
+    <PageTitle title='Work' id='work' />
+    <section id='work'>
       {
         projects.map(project =>
           <WorkProject
@@ -22,7 +20,7 @@ const Work = () => (
         )
       }
     </section>
-  </PageTitle>
+  </section >
 )
 
 

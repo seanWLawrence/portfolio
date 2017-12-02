@@ -1,7 +1,5 @@
 import React from "react"
 
-import '../styles/layouts/blog_post.scss'
-
 export default ({ data }) => {
   const { markdownRemark: post } = data;
   const { frontmatter: info } = post
@@ -16,7 +14,7 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query PostPageQuery($path: String!) {
+  query BlogPostQuery($path: String!) {
     markdownRemark(frontmatter: {path: {eq: $path } }) {
       html
     frontmatter {
