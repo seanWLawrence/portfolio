@@ -14,19 +14,22 @@ const WorkProject = props => (
         {props.title}
       </a>
       <p className='work_description'>{props.description}</p>
+      <a href={props.url}
+        title={props.title}
+        rel='noreferrer nofollow noopener'
+        target='_blank'
+      >
+        <button
+          className='button_primary'
+          style={{ margin: '10px 0' }}
+        >
+          Visit
+      </button>
+      </a>
     </section>
     <div className='arrow_wrapper'>
       <i className='arrow' />
     </div>
-    <button
-      href={props.url}
-      title={props.title}
-      rel='noreferrer nofollow noopener'
-      target='_blank'
-      className='button_primary'
-    >
-      Visit
-      </button>
     <iframe
       src={props.url}
       title={props.title}

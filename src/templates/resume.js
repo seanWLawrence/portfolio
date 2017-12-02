@@ -1,11 +1,12 @@
 import React from "react"
+import ContentWrapper from '../components/ContentWrapper'
 
 export default ({ data }) => {
   const resume = data.markdownRemark
   return (
-    <section id='resume'>
+    <ContentWrapper title='Resume' id='resume'>
       <section dangerouslySetInnerHTML={{ __html: resume.html }} />
-    </section>
+    </ContentWrapper>
   )
 }
 

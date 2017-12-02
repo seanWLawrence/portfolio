@@ -1,13 +1,12 @@
 import React from 'react'
 import WorkProject from '../components/WorkProject'
 import WORK_DATA from '../data/work'
-import PageTitle from '../components/PageTitle'
+import ContentWrapper from '../components/ContentWrapper'
 
 const projects = WORK_DATA.projects
 
 const Work = () => (
-  <section id='page_wrapper'>
-    <PageTitle title='Work' id='work' />
+  <ContentWrapper title='Work' id='work'>
     <section id='work'>
       {
         projects.map(project =>
@@ -20,7 +19,7 @@ const Work = () => (
         )
       }
     </section>
-  </section >
+  </ContentWrapper>
 )
 
 

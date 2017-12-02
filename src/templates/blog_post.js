@@ -1,15 +1,14 @@
 import React from "react"
-
+import ContentWrapper from '../components/ContentWrapper'
 export default ({ data }) => {
   const { markdownRemark: post } = data;
   const { frontmatter: info } = post
   console.log(post)
   return (
-    <section id='blog_post'>
-      <h1>{info.title}</h1>
-      <p>{info.date}</p>
-      <section dangerouslySetInnerHTML={{ __html: post.html }} />
-    </section>
+    <ContentWrapper title={info.title} id='blog_post' date={info.date} style={{ alignItems: 'flex-start' }}>
+
+      <section className='post_content' dangerouslySetInnerHTML={{ __html: post.html }} />
+    </ContentWrapper>
   )
 }
 

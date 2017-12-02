@@ -45,7 +45,7 @@ class Contact extends Component {
           <h1 id='banner_title'>
             Beautiful, modern websites for businesses, non-profits and open source projects.
       </h1>
-          <p id='banner_text'>
+          <p id='banner_description'>
             Tell me about your project for free advice or a pricing quote.
       </p>
         </section>

@@ -1,5 +1,5 @@
 import React from "react"
-import PageTitle from '../components/PageTitle'
+import ContentWrapper from '../components/ContentWrapper'
 import ABOUT_DATA from '../data/about'
 import Link from 'gatsby-link'
 
@@ -8,8 +8,7 @@ const { PROFILE_IMAGE, SOCIAL_LINKS } = ABOUT_DATA
 export default ({ data }) => {
   const about = data.markdownRemark
   return (
-    <section className='page_wrapper'>
-      <PageTitle title='About' id='about' />
+    <ContentWrapper title='About' id='about'>
       <section id='about_wrapper'>
         <section id='bio_wrapper'>
           <section id='bio' dangerouslySetInnerHTML={{ __html: about.html }} />
@@ -40,7 +39,7 @@ export default ({ data }) => {
           alt='Profile picture of Sean Lawrence'
         />
       </section>
-    </section>
+    </ContentWrapper>
   )
 }
 
