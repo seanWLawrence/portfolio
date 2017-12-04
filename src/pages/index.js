@@ -12,7 +12,7 @@ const particlesStyle = {
   bottom: '0',
   width: '100vw',
   height: '100vh',
-  zIndex: -1,
+  zIndex: 0,
   backgroundColor: 'rgba(10, 10, 10, .9)',
 }
 
@@ -32,14 +32,11 @@ class Contact extends Component {
   render() {
     return (
       <section id='home'>
-        {
-          this.state.showCanvas === true
-            ? <Particles
-              params={CANVAS_DATA}
-              style={particlesStyle}
-            />
-            : console.log('yo')
-        }
+        <Particles
+          params={CANVAS_DATA}
+          style={particlesStyle}
+        />
+
 
         <section id='banner_wrapper'>
           <h1 id='banner_title'>
