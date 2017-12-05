@@ -1,21 +1,25 @@
 import React from 'react'
-import styled from 'styled-components'
 import Link from 'gatsby-link'
+import ContentWrapper from '../components/ContentWrapper'
 
 const ThankYou = () => (
-  <section id='thank-you'>
-    <section id='thank_you_card'>
-      <h1>Thank you!</h1>
+  <ContentWrapper title='Thank you!' id='thank-you' style={{ alignItems: 'flex-start' }}>
+    <section id='thank_you_content'>
       <p>Your form was sent successfully and I can't wait to learn more about you and your project!</p>
       <p>Talk soon,
     <br />
         Sean W. Lawrence
     </p>
+      <section id='thank_you_button_wrapper'>
+        <Link to='/'>
+          <button className='button_secondary'>Back to home</button>
+        </Link>
+        <Link to='/blog'>
+          <button className='button_primary'>Visit blog</button>
+        </Link>
+      </section>
     </section>
-    <Link to='/'>
-      <button className='primary_button'>Back to home</button>
-    </Link>
-  </section>
+  </ContentWrapper>
 )
 
 export default ThankYou

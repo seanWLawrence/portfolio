@@ -5,7 +5,7 @@ export default ({ data }) => {
   const resume = data.markdownRemark
   return (
     <ContentWrapper title='Resume' id='resume'>
-      <section dangerouslySetInnerHTML={{ __html: resume.html }} />
+      <section id='resume_content' dangerouslySetInnerHTML={{ __html: resume.html }} />
     </ContentWrapper>
   )
 }

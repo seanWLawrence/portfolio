@@ -9,18 +9,17 @@ const WorkProject = props => (
         title={props.title}
         rel='noreferrer nofollow noopener'
         target='_blank'
-        className='work_title'
       >
-        {props.title}
+        <h2>{props.title}</h2>
       </a>
-      <p className='work_description'>{props.description}</p>
+      <p>{props.description}</p>
       <a href={props.url}
         title={props.title}
         rel='noreferrer nofollow noopener'
         target='_blank'
       >
         <button
-          className='button_primary'
+          className='button_secondary'
           style={{ margin: '10px 0' }}
         >
           Visit
