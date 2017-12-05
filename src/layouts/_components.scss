@@ -1,0 +1,70 @@
+// Site navigation component
+
+#site_navigation {
+  @include flexbox(row, center, center);
+  padding: 5px 0;
+  background-color: rgba(0, 0, 0, .9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  ul {
+    @include flexbox(row, flex-start, flex-start);
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+    
+  li {
+    padding: 10px 20px;
+    margin: auto 30px;
+    &:hover {
+      border-bottom: 0;
+      color: $color_hover;
+    } 
+    @media (max-width: 525px) {
+      margin: auto 2.5vw;
+      padding: 10px 10px;
+    }
+  }
+    
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+    
+  .active,
+  .active:hover,
+  .active:active {
+    border-bottom: 2px solid $color_primary;
+  }
+}
+
+// ContentWrapper Component
+
+.content_wrapper {
+  @include flexbox(column, flex-start, center);
+  margin: 100px 10vw 0 10vw;
+  @media (max-width: 450px) {
+    margin-top: 100px;
+  }
+
+  .page_title {
+    width: 80vw;
+  }
+
+  .page_date {
+    font-size: 18px;
+    margin-left: 25px;
+  }
+
+  .page_horizontal_rule {
+    height: 1px;
+    width: 80vw;
+    margin: 10px auto 50px auto;
+    border-bottom: 5px solid $color_primary;
+  }
+}
+  
