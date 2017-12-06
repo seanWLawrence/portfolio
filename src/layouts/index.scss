@@ -1,0 +1,151 @@
+// Colors
+
+$color_primary: #2D9CDB;
+$color_secondary: #ddd;
+$color_background: #fff;
+$color_title: #333;
+$color_title_secondary: #444;
+$color_paragraph: #555;
+$color_hover: #eee;
+
+// Fonts
+
+$font_size_title: 48px;
+$font_size_paragraph: $font_size_title - 30px;
+
+$font_line_height_title: 50px;
+$font_line-height_paragraph: 30px;
+
+$font_weight_title: 400;
+$font_weight_paragraph: 200;
+
+$font_family_title: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+$font_family_paragraph: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+
+$font_letter_spacing_title: .1px;
+$font_letter_spacing_paragraph: .03em;
+
+// Border radius
+
+$radius: 5px;
+
+
+// Mixins
+
+@mixin flexbox($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin font($color, $weight, $size, $line_height, $family, $letter_spacing) {
+  color: $color;
+  font: $weight #{$size}/#{$line_height} $family;
+  letter-spacing: $letter_spacing;
+}
+
+@mixin headings($decreaseBy: 6px) {
+   @for $i from 1 through 6 {
+      h#{$i} {
+         @include font($color_title, $font_weight_title, ($font_size_title + $decreaseBy) - ($i * $decreaseBy), $font_line_height_title, $font_family_title, $font_letter_spacing_title);
+         margin: (6px + $decreaseBy) - ($i * $decreaseBy) 0;
+         @media(max-width: 450px) {
+           font-size: ($font_size_title + $decreaseBy) - ($i * ($decreaseBy * 2));
+         }
+      }
+   }
+}
+
+// Ordinary tags
+
+body {
+  background: $color_background;
+  padding: 0;
+  margin: 0;
+  font-family: $font_family_paragraph;
+  box-sizing: border-box;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@include headings;
+
+p {
+  @include font($color_paragraph, $font_weight_paragraph, $font_size_paragraph, $font_line_height_paragraph, $font_family_paragraph, $font_letter_spacing_paragraph);
+}
+
+a {
+  cursor: pointer;
+  color: $color_primary;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+  @include font($color_paragraph, $font_weight_paragraph, %, $font_line_height_paragraph, $font_family_paragraph, $font_letter_spacing_paragraph);
+  :hover {
+  opacity: .8;
+}
+
+// Page wrapper
+
+.page_wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  @include flexbox(column, center, center);
+}
+
+// Buttons
+
+button {
+  max-width: 150px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  border-radius: $radius;
+}
+
+.button_primary {
+  background-color: $color_primary;
+  color: $color_background;
+}
+
+.button_secondary {
+  background-color: $color_secondary;
+}
+
+// Table
+
+table {
+  border-collapse: collapse;
+  text-align: left;
+  margin: 30px 0;
+  @include font($color_paragraph, $font_weight_paragraph, $font_size_paragraph, $font_line_height_paragraph, $font_family_paragraph, $font_letter_spacing_paragraph);
+  @media (max-width: 750px) {
+    display: none
+  } 
+
+  thead {
+    background-color: $color_primary;
+    color: $color_background;
+  }
+    
+  td,
+  th {
+    padding: 10px;
+  }
+
+  tr:hover {
+    background-color: $color_hover;
+    color: $color_paragraph;
+  }
+}
+}
+
+@import "components", "pages";
+ 
+
+
+
+  

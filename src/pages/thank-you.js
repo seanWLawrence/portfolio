@@ -1,50 +1,25 @@
 import React from 'react'
-import styled from 'styled-components'
 import Link from 'gatsby-link'
-
-const ThankYouWrapper = styled.section`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #2D9CDB;
-`
-
-const ThankYouCard = styled.section`
-  padding: 25px;
-  background-color: #fff;
-  border: 0;
-  border-radius: 5px;
-  box-shadow: 0 1px 9px #999;
-  margin: 100px 10vw 20px 10vw; 
-`
-
-const Button = styled.button`
-  background-color: #ddd;
-  border-radius: 5px;
-  padding: 10px 15px;
-  min-width: 200px;
-  border: 0;
-  outline: 0;
-  cursor: pointer;
-`
+import ContentWrapper from '../components/ContentWrapper'
 
 const ThankYou = () => (
-  <ThankYouWrapper id='thank-you'>
-    <ThankYouCard>
-      <h1>Thank you!</h1>
+  <ContentWrapper title='Thank you!' id='thank-you' style={{ alignItems: 'flex-start' }}>
+    <section id='thank_you_content'>
       <p>Your form was sent successfully and I can't wait to learn more about you and your project!</p>
       <p>Talk soon,
     <br />
         Sean W. Lawrence
     </p>
-    </ThankYouCard>
-    <Link to='/'>
-      <Button>Back to home</Button>
-    </Link>
-  </ThankYouWrapper>
+      <section id='thank_you_button_wrapper'>
+        <Link to='/'>
+          <button className='button_secondary'>Back to home</button>
+        </Link>
+        <Link to='/blog'>
+          <button className='button_primary'>Visit blog</button>
+        </Link>
+      </section>
+    </section>
+  </ContentWrapper>
 )
 
 export default ThankYou

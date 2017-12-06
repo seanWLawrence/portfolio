@@ -1,27 +1,18 @@
 import React from "react"
-import styled from 'styled-components'
-
-const Post = styled.section`
-  width: 50vw;
-  margin: 100px 25vw 50px 25vw;
-  @media (max-width: 750px) {
-    width: 90vw;
-    margin: 100px 5vw;
-  }
-`
+import ContentWrapper from '../components/ContentWrapper'
 
 export default ({ data }) => {
   const resume = data.markdownRemark
   return (
-    <Post id='resume'>
-      <section dangerouslySetInnerHTML={{ __html: resume.html }} />
-    </Post>
+    <ContentWrapper title='Resume' id='resume'>
+      <section id='resume_content' dangerouslySetInnerHTML={{ __html: resume.html }} />
+    </ContentWrapper>
   )
 }
 
 export const query = graphql`
-  query ResumePageQuery {
-    markdownRemark {
+  query ResumePageQuery($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
     }
-  }`
+}`

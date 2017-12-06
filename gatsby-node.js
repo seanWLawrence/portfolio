@@ -1,45 +1,50 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
-  const { createNodeField } = boundActionCreators
-  if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
-    createNodeField({
-      node,
-      name: `slug`,
-      value: slug,
-    })
-  }
-}
-
-exports.createPages = ({ graphql, boundActionCreators }) => {
+exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
+
   return new Promise((resolve, reject) => {
-    graphql(`
-      {
-        allMarkdownRemark {
-          edges {
-            node {
-              fields {
-                slug
+    resolve(
+      graphql(
+        `
+          {
+            allMarkdownRemark {
+              edges {
+                node {
+                  frontmatter {
+                    title
+                    path
+                    date
+                    template
+                  }
+                  html
+                }
               }
             }
           }
+        `
+      ).then(result => {
+        if (result.errors) {
+          reject(result.errors)
         }
-      }
-    `).then(result => {
-        result.data.allMarkdownRemark.edges.map(({ node }) => {
+
+        // Create pages for each markdown file.
+        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+          const { frontmatter } = node
           createPage({
-            path: node.fields.slug,
-            component: path.resolve(`./src/templates/resume.js`),
-            context: {
-              // Data passed to context is available in page queries as GraphQL variables.
-              slug: node.fields.slug,
-            },
+            path: frontmatter.path,
+            component: path.resolve(`src/templates/${frontmatter.template}.js`),
+            // If you have a layout component at src/layouts/blog-layout.js
+            layout: `index`,
+            // In your blog post template's graphql query, you can use path
+            // as a GraphQL variable to query for data from the markdown file.
+            /* context: {
+              path,
+            }, */
           })
         })
-        resolve()
       })
+    )
   })
 }

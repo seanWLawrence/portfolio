@@ -5,7 +5,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sass`,
     'gatsby-plugin-catch-links',
     {
       resolve: `gatsby-plugin-google-fonts`,
@@ -20,6 +20,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/pages`,
         name: 'pages',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/templates`,
+        name: 'templates',
       },
     },
     {

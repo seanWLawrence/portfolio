@@ -1,22 +1,13 @@
 import React from 'react'
-import styled from 'styled-components'
-import WorkProject from '../templates/workProject'
+import WorkProject from '../components/WorkProject'
 import WORK_DATA from '../data/work'
-import TitleWrapper from '../templates/titleWrapper'
+import ContentWrapper from '../components/ContentWrapper'
 
 const projects = WORK_DATA.projects
 
-const WorkWrapper = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 50px 10vw 0 10vw;
-`
-
 const Work = () => (
-  <TitleWrapper title='Work'
-    description={WORK_DATA.description}>
-    <WorkWrapper id='work'>
+  <ContentWrapper title='Work' id='work'>
+    <section id='work'>
       {
         projects.map(project =>
           <WorkProject
@@ -27,8 +18,8 @@ const Work = () => (
           />
         )
       }
-    </WorkWrapper>
-  </TitleWrapper>
+    </section>
+  </ContentWrapper>
 )
 
 
