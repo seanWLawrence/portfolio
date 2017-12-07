@@ -13,6 +13,9 @@ export default ({ data }) => {
         <section id='bio_wrapper'>
           <section id='bio' dangerouslySetInnerHTML={{ __html: about.html }} />
           <section className='social_logos_wrapper'>
+            <Link to='/resume'>
+              <button className='button_primary'>Resume</button>
+            </Link>
             {
               SOCIAL_LINKS.map(platform =>
                 <a href={platform.profile_url}
@@ -28,9 +31,6 @@ export default ({ data }) => {
                 </a>
               )
             }
-            <Link to='/resume'>
-              <button className='button_primary'>Resume</button>
-            </Link>
           </section>
         </section>
         <img

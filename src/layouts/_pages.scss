@@ -154,6 +154,7 @@
       width: 80%;
       margin: 20px 0 ;
       @include flexbox(row, flex-start, center);
+      flex-wrap: wrap;
     
       img {
         height: 30px;
