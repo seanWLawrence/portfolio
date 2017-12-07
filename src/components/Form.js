@@ -19,7 +19,7 @@ export default class Contact extends Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
     })
-      .then(() => alert("Message sent"))
+      .then(() => window.location = '/thank-you')
       .catch(error => alert(error));
 
     e.preventDefault();
