@@ -7,7 +7,7 @@ export default ({ data }) => {
   const { frontmatter: info } = post
 
   return (
-    <ContentWrapper title={info.title} id='blog_post' date={info.date} style={{ alignItems: 'flex-start' }}>
+    <ContentWrapper title={info.title} id='blog_post' date={info.date}>
       <Link to='/blog'>
         <button className='breadcrumb'>&#8656; All posts</button>
       </Link>
