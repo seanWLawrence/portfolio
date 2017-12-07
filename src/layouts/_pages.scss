@@ -24,16 +24,15 @@
       width: 70vw;
       margin-left: 10vw;
 
+      #banner_title {
+        line-height: 35px;
+      }
+
       #banner_description {
         width: 100%;
       }
     }
-
-    h1 {
-      line-height: 35px;
-    }
-  }
-    
+  } 
 
   #form_wrapper {
     @extend #banner_wrapper;
@@ -42,55 +41,6 @@
       align-items: flex-start;
       justify-content: flex-start;
       height: 50%;
-    }
-
-      #contact_form {
-      @include flexbox(column, flex-start, flex-start);
-      background-color: transparent;
-      padding: 0.5rem 2rem;
-      @media (max-width: 1325px) {
-        width: 100%;
-        align-items: flex-start;
-        padding: 0;
-      }
-      @media (max-width: 750px) {
-        margin-bottom: 100px;
-      }
-
-      input {
-        background-color: transparent;
-        padding: 8px;
-        font-size: 22px;
-        font-weight: 200;
-        color: $color_hover;
-        width: 500px;
-        max-width: 30rem;
-        margin: 15px 0;
-        border: 0;
-        border-bottom: 2px solid $color_primary;
-        outline: 0;
-        letter-spacing: 1.5px;
-        border-radius: 0;
-        &:focus {
-          outline: none;
-          border-bottom : .1rem solid $color_hover;
-        }
-        &::placeholder {
-          color: $color_hover;
-          font-weight: 200;
-        }
-      @media (max-width: 1325px) {
-          width: 70vw;
-        } 
-      }
-          
-      textarea {
-        @extend input;
-        height: 75px;
-        @media (max-width: 1325px) {
-          width: 70vw;
-        }
-      }
     }
   }
 
