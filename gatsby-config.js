@@ -8,14 +8,6 @@ module.exports = {
     `gatsby-plugin-sass`,
     'gatsby-plugin-catch-links',
     {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Roboto\:200, 400, 700`
-        ],
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
