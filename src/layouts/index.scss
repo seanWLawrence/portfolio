@@ -49,7 +49,7 @@ $radius: 5px;
    @for $i from 1 through 6 {
       h#{$i} {
          @include font($color_title, $font_weight_title, ($font_size_title + $decreaseBy) - ($i * $decreaseBy), $font_line_height_title, $font_family_title, $font_letter_spacing_title);
-         margin: (6px + $decreaseBy) - ($i * $decreaseBy) 0;
+         margin: (10px + $decreaseBy) - ($i * $decreaseBy) 0;
          @media(max-width: 450px) {
            font-size: ($font_size_title + $decreaseBy) - ($i * ($decreaseBy * 2));
          }
@@ -81,16 +81,9 @@ a {
   border-bottom: 2px solid transparent;
   text-decoration: none;
   @include font($color_paragraph, $font_weight_paragraph, %, $font_line_height_paragraph, $font_family_paragraph, $font_letter_spacing_paragraph);
-  :hover {
+  &:hover {
   opacity: .8;
-}
-
-// Page wrapper
-
-.page_wrapper {
-  width: 100vw;
-  min-height: 100vh;
-  @include flexbox(column, center, center);
+  }
 }
 
 // Buttons
@@ -121,10 +114,9 @@ table {
   border-collapse: collapse;
   text-align: left;
   margin: 30px 0;
+  width: 100%;
+  max-width: 700px;
   @include font($color_paragraph, $font_weight_paragraph, $font_size_paragraph, $font_line_height_paragraph, $font_family_paragraph, $font_letter_spacing_paragraph);
-  @media (max-width: 750px) {
-    display: none
-  } 
 
   thead {
     background-color: $color_primary;
@@ -141,42 +133,22 @@ table {
     color: $color_paragraph;
   }
 }
-}
-
-.page_skinny {
-  width: 50vw;
-
-  p {
-    margin-bottom: 50px;
-  } 
-
-  blockquote {
-    margin: 30px 0 0 0;
-    
-    p {
-      font-size: $font_size_paragraph + 6px;
-      margin-bottom: 20px;
-      font-style: italic;
-    }
-  }
-
-  @media (max-width: 450px) {
-    width: 90vw;
-  }
-}
-
-.page_wide {
-  width: 80vw;
-  @media (max-width: 450px) {
-    width: 90vw;
-  }
-}
 
 .gatsby-resp-iframe-wrapper {
   margin: 20px 0;
 }
 
-@import "components", "pages";
+.image_large {
+  width: 50%;
+  height: 100%;
+  @media (max-width: 1200px) {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+@import "components";
+@import "pages";
  
 
 

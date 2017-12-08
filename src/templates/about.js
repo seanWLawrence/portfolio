@@ -1,45 +1,40 @@
 import React from "react"
-import ContentWrapper from '../components/ContentWrapper'
+import PageWrapperSlim from '../components/PageWrapperSlim'
 import ABOUT_DATA from '../data/about'
 import Link from 'gatsby-link'
 
-const { PROFILE_IMAGE, SOCIAL_LINKS } = ABOUT_DATA
+const { SOCIAL_LINKS } = ABOUT_DATA
 
 export default ({ data }) => {
-  const about = data.markdownRemark
+  const { html } = data.markdownRemark
   return (
-    <ContentWrapper title='About' id='about'>
-      <section id='about_wrapper'>
-        <section id='bio_wrapper'>
-          <section id='bio' dangerouslySetInnerHTML={{ __html: about.html }} />
-          <section className='social_logos_wrapper'>
-            <Link to='/resume'>
-              <button className='button_primary'>Resume</button>
-            </Link>
-            {
-              SOCIAL_LINKS.map(platform =>
-                <a href={platform.profile_url}
-                  title={platform.title}
-                  target='_blank'
-                  rel='nofollow norefferer noopenner'
-                  key={platform.title}
-                >
-                  <img src={platform.logo_url}
-                    alt={platform.title}
-                    className='social_logo'
-                  />
-                </a>
-              )
-            }
-          </section>
+    <PageWrapperSlim title='About' id='about'>
+      <section id='bio'>
+        <section dangerouslySetInnerHTML={{ __html: html }} />
+        <section id='social_media_links'>
+          <Link to='/resume'>
+            <button className='button_primary'>Resume</button>
+          </Link>
+          {
+            SOCIAL_LINKS.map(platform => {
+              const { profile_url, title, logo_url } = platform;
+              <a
+                title={title}
+                href={profile_url}
+                target='_blank'
+                rel='nofollow norefferer noopenner'
+                key={title}
+              >
+                <img src={logo_url}
+                  alt={title}
+                  className='social_media_logo'
+                />
+              </a>
+            })
+          }
         </section>
-        <img
-          src={PROFILE_IMAGE}
-          id='profile_image'
-          alt='Profile picture of Sean Lawrence'
-        />
       </section>
-    </ContentWrapper>
+    </PageWrapperSlim>
   )
 }
 

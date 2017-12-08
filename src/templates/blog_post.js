@@ -1,14 +1,35 @@
 import React from "react"
-import BlogWrapper from '../components/BlogWrapper'
+import PageWrapperSlim from '../components/PageWrapperSlim'
+import Link from 'gatsby-link'
 
 export default ({ data }) => {
-  const { markdownRemark: post } = data;
-  const { frontmatter: info } = post
+  const { html, frontmatter } = data.markdownRemark
+  const { title, date } = frontmatter
 
   return (
-    <BlogWrapper title={info.title} className='blog_post' id={info.title} date={info.date} titleStyle={{fontSize: '34px', lineHeight: '35px'}}>
-      <section className='page_skinny' dangerouslySetInnerHTML={{ __html: post.html }} />
-    </BlogWrapper>
+    <PageWrapperSlim
+      title={title}
+      id={title}
+      className='blog_post'
+      date={date}
+      titleStyle={{ fontSize: '34px', lineHeight: '35px' }}
+    >
+      <Link to='/blog'>
+        <button
+          className='breadcrumb'
+        >
+          &#8656; All posts
+        </button>
+      </Link>
+      <section dangerouslySetInnerHTML={{ __html: html }} />
+      <Link to='/blog'>
+        <button
+          className='breadcrumb'
+        >
+          &#8656; All posts
+        </button>
+      </Link>
+    </PageWrapperSlim>
   )
 }
 

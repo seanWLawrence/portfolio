@@ -1,12 +1,12 @@
 import React from "react"
-import ContentWrapper from '../components/ContentWrapper'
+import PageWrapperSlim from '../components/PageWrapperSlim'
 
 export default ({ data }) => {
-  const resume = data.markdownRemark
+  const { html } = data.markdownRemark
   return (
-    <ContentWrapper title='Resume' id='resume'>
-      <section id='resume_content' dangerouslySetInnerHTML={{ __html: resume.html }} />
-    </ContentWrapper>
+    <PageWrapperSlim title='Resume' id='resume'>
+      <section dangerouslySetInnerHTML={{ __html: html }} />
+    </PageWrapperSlim>
   )
 }
 

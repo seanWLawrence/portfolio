@@ -1,5 +1,5 @@
 const ABOUT_DATA = {
-  PROFILE_IMAGE: `https://media.graphcms.com/k8oLYZxyR1ieU22tfZ9d`,
+  PROFILE_IMAGE: `/img/sean_lawrence.jpg`,
   SOCIAL_LINKS: [
     {
       title: 'LinkedIn profile',

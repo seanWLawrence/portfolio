@@ -1,25 +1,26 @@
 import React from 'react'
 import WorkProject from '../components/WorkProject'
 import WORK_DATA from '../data/work'
-import ContentWrapper from '../components/ContentWrapper'
+import PageWrapperWide from '../components/PageWrapperWide'
 
 const projects = WORK_DATA.projects
 
 const Work = () => (
-  <ContentWrapper title='Work' id='work'>
-    <section id='work'>
-      {
-        projects.map(project =>
+  <PageWrapperWide title='Work' id='work'>
+    {
+      projects.map(project => {
+        const { title, description, url, id } = project;
+        return (
           <WorkProject
-            title={project.title}
-            description={project.description}
-            url={project.url}
-            key={project.id}
+            title={title}
+            description={description}
+            url={url}
+            key={id}
           />
         )
-      }
-    </section>
-  </ContentWrapper>
+      })
+    }
+  </PageWrapperWide>
 )
 
 
