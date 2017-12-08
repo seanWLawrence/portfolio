@@ -15,7 +15,7 @@ I'm a front end JavaScript Developer that designs and creates UI/UX for websites
 | CSS3           | Express.js              | Hugo/Gatsby | Linux/Mac/Windows     |
 | HTML5          | Node.js                 | Git/GitHub  | Photoshop/GIMP/Moqups |
 | Markdown       | Jade/Pug/EJS/Handlebars | Shopify     | Figma/Inkscape        |
-|                | jQuery                  | WordPress   | REST APIs             |
+|                | jQuery                  | WordPress   | REST APIs/GraphQL             |
 |                | GraphQl                 | Yaml        | AJAX                  |
 
 *Stands for - Single Page Applications/Progressive Web Applications
@@ -35,12 +35,7 @@ Beastgrip is a mobile photography and film making gear startup. I focus on scali
 
 * **Product bundler** - (in progress) - a SPA that walks a customer through the experience of creating their own custom camera rig. When clicked, a modal displays product information and an image gallery. Tools/libraries used: Express.js w/ ES6, Handlebars, REST API, and AJAX.
 
-### [Chicago Web Developers](https://chicagowebdevelopers.co)
-(August 2016 - Current) - Lead developer
-
-This is a freelance web development agency I started to work on projects in my free time.
-
-* [**Mail For Good**](https://mail-for-good.netlify.com) - (pending review) - An open source contribution - a static website for the [Mail For Good](https://github.com/freecodecamp/mail-for-good) repository by Free Code Camp. Tools/libraries used: Hugo, Material Design Docs theme, Yaml, and Sass.
+* [**Mail For Good**](https://mail-for-good.netlify.com) - An open source contribution - a static website for the [Mail For Good](https://github.com/freecodecamp/mail-for-good) repository by Free Code Camp. Tools/libraries used: Hugo, Material Design Docs theme, Yaml, and Sass.
 
 * [**Mobile Innovation Network Australasia**](http://mina.pro) - An informational website for a non-profit mobile film festival in Australia. Includes a Facebook and Twitter feed, Embedded LinkedIn cards, YouTube videos and Scribd iframes, as well as a film submission form. Tools/libraries used: WordPress, Shapely theme, and Twitter/Facebook/LinkedIn APIs.
 
