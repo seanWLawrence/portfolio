@@ -50,9 +50,6 @@
   margin: 100px auto;
   width: 80vw;
   max-width: 1000px;
-  @media (max-width: 450px) {
-    width: 90vw;
-  }
 
   .page_title {
     font-size: 48px;
@@ -67,7 +64,7 @@
 
 .page_wrapper_slim {
   @extend .page_wrapper_wide;
-  width: 80vw;
+  width: 90vw;
   max-width: 700px;
 
   .date {

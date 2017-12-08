@@ -134,6 +134,15 @@ table {
   }
 }
 
+blockquote {
+  margin: 20px 0;
+  
+  p {
+    font-size: $font_size_paragraph + 6px;
+    font-style: italic;
+  }
+}
+
 .gatsby-resp-iframe-wrapper {
   margin: 20px 0;
 }

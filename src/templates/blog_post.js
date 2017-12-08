@@ -10,7 +10,6 @@ export default ({ data }) => {
     <PageWrapperSlim
       title={title}
       id={title}
-      className='blog_post'
       date={date}
       titleStyle={{ fontSize: '34px', lineHeight: '35px' }}
     >
@@ -21,7 +20,7 @@ export default ({ data }) => {
           &#8656; All posts
         </button>
       </Link>
-      <section dangerouslySetInnerHTML={{ __html: html }} />
+      <section className='blog_post' dangerouslySetInnerHTML={{ __html: html }} />
       <Link to='/blog'>
         <button
           className='breadcrumb'

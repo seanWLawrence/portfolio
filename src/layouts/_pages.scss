@@ -63,21 +63,20 @@
 
 // About page
 
-  .social_media_links {
-    width: 80%;
-    margin: 20px 0 ;
-    @include flexbox(row, flex-start, center);
-    flex-wrap: wrap;
-  
-    img {
-      height: 30px;
-      margin-right: 20px;
-    }
-    
-    button {
-      margin-right: 20px;
-    }
+.social_media_links {
+  margin: 20px 0;
+  @include flexbox(row, flex-start, center);
+  flex-wrap: wrap;
+
+  img {
+    height: 30px;
+    margin-right: 20px;
   }
+  
+  button {
+    margin-right: 20px;
+  }
+}
 
 // Work page
 
@@ -151,13 +150,35 @@
     line-height: 35px;
   }
 
+  .post_preview_meta {
+    margin: 10px 0;
+  }
+
   p {
-    margin: 0;
+    margin: 20px 0 10px 0;
   }
 
   .post_preview_meta {
     color: $color_paragraph - 20%;
   }
+}
+
+// Blog post template 
+
+.blog_post {
+  p {
+    margin-bottom: 35px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.breadcrumb {
+  background-color: $color_background;
+  color: $color_primary;
+  margin: 40px 0 10px 0;
+  padding: 0;
 }
 
 // Resume page
