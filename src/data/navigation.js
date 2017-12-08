@@ -15,10 +15,10 @@ const NAVIGATION_DATA = [
     title: 'Work',
     url: '/work'
   },
-/*   {
+  {
     title: 'Blog',
     url: '/blog'
-  }, */
+  },
 ]
 
 export default NAVIGATION_DATA;

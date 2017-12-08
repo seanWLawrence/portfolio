@@ -9,6 +9,10 @@
   left: 0;
   right: 0;
   z-index: 2;
+  @media (max-width: 450px) {
+    bottom: 0;
+    top: 93vh;
+  }
 
   ul {
     @include flexbox(row, flex-start, flex-start);
@@ -48,8 +52,11 @@
 .page_wrapper_wide {
   @include flexbox(column, flex-start, flex-start);
   margin: 100px auto;
-  width: 80vw;
+  width: 90vw;
   max-width: 1000px;
+  @media (max-width: 450px) {
+    margin-top: 25px;
+  }
 
   .page_title {
     font-size: 48px;
