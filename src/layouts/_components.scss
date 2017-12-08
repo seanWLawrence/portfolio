@@ -68,6 +68,58 @@
     border-bottom: 5px solid $color_primary;
   }
 }
+
+// Blog wrapper 
+
+.blog_post_wrapper {
+  @include flexbox(column, flex-start, flex-start);
+  margin: 100px auto;
+  width: 50vw;
+  @media (max-width: 450px) {
+    margin-top: 100px;
+    width: 90vw;
+  }
+
+  .post_title {
+    font-size: 36px;
+  }
+
+  .post_date {
+    font-size: 18px;
+    margin-top: 10px;
+    color: $color_paragraph;
+  }
+
+  .post_horizontal_rule {
+    height: 1px;
+    width: 50vw;
+    margin: 10px auto 10px auto;
+    border-bottom: 5px solid $color_primary;
+    @media (max-width: 450px) {
+      width: 90vw;
+    }
+  }
+
+  .breadcrumb {
+    color: $color_primary;
+    padding: 0;
+    font-size: 20px;
+    margin: 30px 0 20px 0;
+    background-color: #fff;
+  }
+
+  blockquote {
+    margin-left: 0;
+    
+    p {
+      font-size: $font_size_paragraph + 6px;
+    }
+  }
+
+  p {
+    margin-bottom: 50px;
+  }
+}
   
 // Form 
 

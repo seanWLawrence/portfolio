@@ -5,7 +5,7 @@ export default ({ data }) => {
   const { markdownRemark: services } = data
   return (
     <ContentWrapper title='Services' id='services'>
-      <section id='service_content' dangerouslySetInnerHTML={{ __html: services.html }} />
+      <section className='page_skinny' dangerouslySetInnerHTML={{ __html: services.html }} />
     </ContentWrapper>
   )
 }

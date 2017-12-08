@@ -1,8 +1,9 @@
 import React from 'react'
 
-const PageTitle = props => (
+const ContentWrapper = props => (
   <section className='content_wrapper' id={props.id} style={props.style}>
-    <h1 className='page_title'>{props.title}
+    <h1 className='page_title'>
+      {props.title}
       {props.date ? <span className='page_date'>{props.date}</span> : null}
     </h1>
     <div className='page_horizontal_rule' />
@@ -10,4 +11,4 @@ const PageTitle = props => (
   </section>
 )
 
-export default PageTitle
+export default ContentWrapper
