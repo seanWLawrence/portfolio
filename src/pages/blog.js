@@ -40,7 +40,7 @@ export const query = graphql`
       edges {
         node {
           html
-          excerpt
+          excerpt(pruneLength: 300)
           timeToRead
           frontmatter {
             title

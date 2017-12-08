@@ -1,12 +1,12 @@
 import React from 'react'
 import WorkProject from '../components/WorkProject'
 import WORK_DATA from '../data/work'
-import PageWrapperWide from '../components/PageWrapperWide'
+import PageWrapperSlim from '../components/PageWrapperSlim'
 
 const projects = WORK_DATA.projects
 
 const Work = () => (
-  <PageWrapperWide title='Work' id='work'>
+  <PageWrapperSlim title='Work' id='work'>
     {
       projects.map(project => {
         const { title, description, url, id } = project;
@@ -20,7 +20,7 @@ const Work = () => (
         )
       })
     }
-  </PageWrapperWide>
+  </PageWrapperSlim>
 )
 
 

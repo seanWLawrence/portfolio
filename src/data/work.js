@@ -12,12 +12,12 @@ const WORK_DATA = {
       url: 'http://mail-for-good.netlify.com',
       id: 4,
     },
-    {
+    /* {
       title: 'Chicago Web Developers',
       description: 'A landing page website for Chicago Web Developers, an innovative local web development consultancy.',
       url: 'https://chicagowebdevelopers.co',
       id: 3,
-    },
+    }, */
     {
       title: 'Mobile Innovation Network Australasia',
       description: 'A full-featured website and blog for an influential mobile filmmaking non-profit organization in Australia.',

@@ -45,10 +45,10 @@ $radius: 5px;
   letter-spacing: $letter_spacing;
 }
 
-@mixin headings($decreaseBy: 6px) {
+@mixin headings($decreaseBy: 4px) {
    @for $i from 1 through 6 {
       h#{$i} {
-         @include font($color_title, $font_weight_title, ($font_size_title + $decreaseBy) - ($i * $decreaseBy), $font_line_height_title, $font_family_title, $font_letter_spacing_title);
+         @include font($color_title, $font_weight_title, ($font_size_title + $decreaseBy) - ($i * $decreaseBy), ($font_line_height_title + $decreaseBy) - ($i * $decreaseBy), $font_family_title, $font_letter_spacing_title);
          margin: (10px + $decreaseBy) - ($i * $decreaseBy) 0;
          @media(max-width: 450px) {
            font-size: ($font_size_title + $decreaseBy) - ($i * ($decreaseBy * 2));

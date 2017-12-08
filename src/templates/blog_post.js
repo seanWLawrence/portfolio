@@ -11,7 +11,7 @@ export default ({ data }) => {
       title={title}
       id={title}
       date={date}
-      titleStyle={{ fontSize: '34px', lineHeight: '35px' }}
+      titleStyle={{ fontSize: '34px', lineHeight: '40px' }}
     >
       <Link to='/blog'>
         <button
