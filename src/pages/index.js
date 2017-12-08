@@ -18,39 +18,39 @@ const particlesStyle = {
 
 class Contact extends Component {
   state = {
-    showCanvas: false
+    showCanvas: false,
   }
 
   componentDidMount() {
-    (window.innerWidth > 750)
-      ? this.setState({
-        showCanvas: true
+    if (window.innerWidth > 750) {
+      this.setState({
+        showCanvas: true,
       })
-      : null
+    }
+  }
+
+  mountParticles() {
+    return (
+      <Particles
+        params={CANVAS_DATA}
+        style={particlesStyle}
+      />
+    )
   }
 
   render() {
     return (
-      <section id='home'>
-      {
-        (this.state.showCanvas === true)
-        ? <Particles
-            params={CANVAS_DATA}
-            style={particlesStyle}
-          />
-        : null
-      }
-        <section id='banner_wrapper'>
-          <h1 id='banner_title'>
+      <section id='contact'>
+        {(this.state.showCanvas === true) ? this.mountParticles() : null}
+        <section className='hero_wrapper'>
+          <h1>
             Beautiful, modern websites for businesses, non-profits and open source projects.
-      </h1>
-          <p id='banner_description'>
+          </h1>
+          <p>
             Tell me about your project for free advice or a pricing quote.
-      </p>
+          </p>
         </section>
-        <section id='form_wrapper'>
-          <Form />
-        </section>
+        <Form />
       </section>
     )
   }

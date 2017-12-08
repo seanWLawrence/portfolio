@@ -3,11 +3,8 @@ import NAVIGATION_DATA from '../data/navigation'
 import Link from 'gatsby-link'
 
 class Header extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      activePage: 'Contact'
-    }
+  state = {
+    activePage: 'Contact'
   }
 
   componentDidMount() {
@@ -27,19 +24,22 @@ class Header extends Component {
       <nav id='site_navigation'>
         <ul>
           {
-            NAVIGATION_DATA.map(page =>
-              <li
-                key={page.title}
-              >
-                <Link
-                  to={page.url}
-                  onClick={this.handleClick.bind(this)}
-                  className={this.state.activePage === page.url ? 'active' : null}
+            NAVIGATION_DATA.map(page => {
+              const { title, url } = page;
+              return (
+                <li
+                  key={title}
                 >
-                  {page.title}
-                </Link>
-              </li>
-            )
+                  <Link
+                    to={url}
+                    onClick={this.handleClick.bind(this)}
+                    className={this.state.activePage === url ? 'active' : null}
+                  >
+                    {title}
+                  </Link>
+                </li>
+              )
+            })
           }
         </ul>
       </nav>

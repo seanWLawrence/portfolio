@@ -27,36 +27,37 @@ export default class Contact extends Component {
 
   render() {
     return (
-        <form
-          name="contact"
-          method="post"
-          action="/thank-you/"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          onSubmit={this.handleSubmit}
-          id='contact_form'
+      <form
+        id='contact_form'
+        name="contact"
+        method="post"
+        action="/thank-you/"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit={this.handleSubmit}
+      >
+        <input name="bot-field" hidden />
+        <input
+          name="name"
+          placeholder='Name'
+          type="text"
+          onChange={this.handleChange} required />
+        <input
+          name="email"
+          placeholder='Email'
+          type="email"
+          onChange={this.handleChange} required />
+        <textarea
+          name="message"
+          placeholder='Message'
+          onChange={this.handleChange} required />
+        <button
+          type="submit"
+          className='button_primary'
         >
-          <input name="bot-field" hidden/>
-          <input 
-            type="text" 
-            name="name" 
-            placeholder='Name'
-            onChange={this.handleChange} />
-          <input 
-            type="email" 
-            name="email" 
-            placeholder='Email'
-            onChange={this.handleChange} />
-          <textarea 
-            name="message" 
-            placeholder='Message'
-            onChange={this.handleChange} />
-          <button
-            className='button_primary'
-            type="submit">
-              Send
+          Send
           </button>
-        </form>
+      </form>
     );
   }
 }

@@ -1,43 +1,45 @@
 import React from 'react'
-import Link from 'gatsby-link'
 
-const WorkProject = props => (
-  <section id={props.title} className='work_wrapper'>
-    <section className='work_text_wrapper'>
-      <a
-        href={props.url}
-        title={props.title}
-        rel='noreferrer nofollow noopener'
-        target='_blank'
-      >
-        <h2>{props.title}</h2>
-      </a>
-      <p>{props.description}</p>
-      <a href={props.url}
-        title={props.title}
-        rel='noreferrer nofollow noopener'
-        target='_blank'
-      >
-        <button
-          className='button_secondary'
-          style={{ margin: '10px 0' }}
+const WorkProject = props => {
+  const { title, url, description } = props;
+  return (
+    <section id={title} className='work_project'>
+      <section className='description'>
+        <a
+          title={title}
+          href={url}
+          rel='noreferrer nofollow noopener'
+          target='_blank'
         >
-          Visit
+          <h2>{title}</h2>
+        </a>
+        <p>{description}</p>
+        <a
+          title={title}
+          href={url}
+          rel='noreferrer nofollow noopener'
+          target='_blank'
+        >
+          <button
+            className='button_secondary'
+            style={{ margin: '10px 0' }}
+          >
+            Visit
       </button>
-      </a>
+        </a>
+      </section>
+      <section className='arrow'>
+        <i />
+      </section>
+      <iframe
+        title={title}
+        src={url}
+        frameBorder="0"
+        allowFullScreen
+      >
+      </iframe>
     </section>
-    <div className='arrow_wrapper'>
-      <i className='arrow' />
-    </div>
-    <iframe
-      src={props.url}
-      title={props.title}
-      frameBorder="0"
-      allowFullScreen
-      className='work_website'
-    >
-    </iframe>
-  </section>
-)
+  )
+}
 
 export default WorkProject

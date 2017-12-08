@@ -5,7 +5,7 @@ $color_secondary: #ddd;
 $color_background: #fff;
 $color_title: #333;
 $color_title_secondary: #444;
-$color_paragraph: #555;
+$color_paragraph: #444;
 $color_hover: #eee;
 
 // Fonts
@@ -23,7 +23,7 @@ $font_family_title: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto
 $font_family_paragraph: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 
 $font_letter_spacing_title: .1px;
-$font_letter_spacing_paragraph: .03em;
+$font_letter_spacing_paragraph: .02em;
 
 // Border radius
 
@@ -45,11 +45,11 @@ $radius: 5px;
   letter-spacing: $letter_spacing;
 }
 
-@mixin headings($decreaseBy: 6px) {
+@mixin headings($decreaseBy: 4px) {
    @for $i from 1 through 6 {
       h#{$i} {
-         @include font($color_title, $font_weight_title, ($font_size_title + $decreaseBy) - ($i * $decreaseBy), $font_line_height_title, $font_family_title, $font_letter_spacing_title);
-         margin: (6px + $decreaseBy) - ($i * $decreaseBy) 0;
+         @include font($color_title, $font_weight_title, ($font_size_title + $decreaseBy) - ($i * $decreaseBy), ($font_line_height_title + $decreaseBy) - ($i * $decreaseBy), $font_family_title, $font_letter_spacing_title);
+         margin: (10px + $decreaseBy) - ($i * $decreaseBy) 0;
          @media(max-width: 450px) {
            font-size: ($font_size_title + $decreaseBy) - ($i * ($decreaseBy * 2));
          }
@@ -81,16 +81,9 @@ a {
   border-bottom: 2px solid transparent;
   text-decoration: none;
   @include font($color_paragraph, $font_weight_paragraph, %, $font_line_height_paragraph, $font_family_paragraph, $font_letter_spacing_paragraph);
-  :hover {
+  &:hover {
   opacity: .8;
-}
-
-// Page wrapper
-
-.page_wrapper {
-  width: 100vw;
-  min-height: 100vh;
-  @include flexbox(column, center, center);
+  }
 }
 
 // Buttons
@@ -121,10 +114,9 @@ table {
   border-collapse: collapse;
   text-align: left;
   margin: 30px 0;
+  width: 100%;
+  max-width: 700px;
   @include font($color_paragraph, $font_weight_paragraph, $font_size_paragraph, $font_line_height_paragraph, $font_family_paragraph, $font_letter_spacing_paragraph);
-  @media (max-width: 750px) {
-    display: none
-  } 
 
   thead {
     background-color: $color_primary;
@@ -141,9 +133,31 @@ table {
     color: $color_paragraph;
   }
 }
+
+blockquote {
+  margin: 20px 0;
+  
+  p {
+    font-size: $font_size_paragraph + 6px;
+    font-style: italic;
+  }
 }
 
-@import "components", "pages";
+.gatsby-resp-iframe-wrapper {
+  margin: 20px 0;
+}
+
+.image_large {
+  width: 50%;
+  height: 100%;
+  @media (max-width: 1200px) {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+@import "components";
+@import "pages";
  
 
 
