@@ -32,12 +32,14 @@ class Contact extends Component {
   render() {
     return (
       <section id='home'>
-        <Particles
-          params={CANVAS_DATA}
-          style={particlesStyle}
-        />
-
-
+      {
+        (this.state.showCanvas === true)
+        ? <Particles
+            params={CANVAS_DATA}
+            style={particlesStyle}
+          />
+        : null
+      }
         <section id='banner_wrapper'>
           <h1 id='banner_title'>
             Beautiful, modern websites for businesses, non-profits and open source projects.

@@ -69,3 +69,66 @@
   }
 }
   
+// Form 
+
+#contact_form {
+  @include flexbox(column, flex-start, flex-start);
+  background-color: transparent;
+  padding: 0.5rem 2rem;
+  @media (max-width: 1325px) {
+    width: 100%;
+    align-items: flex-start;
+    padding: 0;
+  }
+  @media (max-width: 750px) {
+    margin-bottom: 100px;
+  }
+}
+
+input {
+  background-color: transparent;
+  padding: 8px;
+  font-size: 22px;
+  font-weight: 200;
+  color: $color_hover;
+  width: 500px;
+  max-width: 30rem;
+  margin: 15px 0;
+  border: 0;
+  border-bottom: 2px solid $color_primary;
+  outline: 0;
+  letter-spacing: 1.5px;
+  border-radius: 0;
+  &:focus {
+    outline: none;
+    border-bottom : .1rem solid $color_hover;
+  }
+  &::placeholder {
+    color: $color_hover;
+    font-weight: 200;
+  }
+  @media (max-width: 1325px) {
+    width: 70vw;
+  } 
+}
+    
+textarea {
+  @extend input;
+  height: 75px;
+  @media (max-width: 1325px) {
+    width: 70vw;
+  }
+}
+
+.button_primary {
+  max-width: 150px;
+  margin: 10px 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  border-radius: $radius;
+  background-color: $color_primary;
+  color: $color_background;
+}
