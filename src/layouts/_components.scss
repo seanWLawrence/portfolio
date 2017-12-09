@@ -11,11 +11,11 @@
   z-index: 2;
   @media (max-width: 450px) {
     bottom: 0;
-    top: 93vh;
+    top: 92vh;
   }
 
   ul {
-    @include flexbox(row, flex-start, flex-start);
+    @include flexbox(row, center, flex-start);
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -38,6 +38,9 @@
   a {
     color: #fff;
     text-decoration: none;
+    @media (max-width: 525px) {
+      font-size: 14px;
+    }
   }
     
   .active,

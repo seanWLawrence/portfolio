@@ -7,7 +7,6 @@ import 'prismjs/themes/prism.css'
 
 const TemplateWrapper = ({ children }) => (
   <section id='site_wrapper'>
-    <Helmet />
     <Header />
     <main id='site_content'>
       {children()}
