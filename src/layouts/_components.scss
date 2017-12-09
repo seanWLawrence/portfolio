@@ -2,28 +2,29 @@
 
 #site_navigation {
   @include flexbox(row, center, center);
-  padding: 5px 0;
   background-color: rgba(0, 0, 0, .9);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 2;
+  max-height: 50px; 
   @media (max-width: 450px) {
     bottom: 0;
-    top: 92vh;
+    top: unset;
   }
 
   ul {
-    @include flexbox(row, center, flex-start);
+    @include flexbox(row, space-between, center);
+    max-width: 500px;
+    width: 100%;
     margin: 0;
     padding: 0;
     list-style-type: none;
   }
     
   li {
-    padding: 10px 20px;
-    margin: auto 30px;
+    padding: 10px 0;
     &:hover {
       border-bottom: 0;
       color: $color_hover;
@@ -31,13 +32,13 @@
     @media (max-width: 525px) {
       margin: auto 2.5vw;
       padding: 10px 5px;
-      font-size: 14px;
     }
   }
     
   a {
     color: #fff;
     text-decoration: none;
+    font-size: 16px;
     @media (max-width: 525px) {
       font-size: 14px;
     }
