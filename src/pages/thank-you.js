@@ -6,7 +6,6 @@ const ThankYou = () => (
   <PageWrapperSlim
     title='Thank you!'
     id='thank_you'
-    style={{ alignItems: 'flex-start' }}
   >
     <p>Your form was sent successfully and I can't wait to learn more about you and your project!</p>
     <p>Talk soon,

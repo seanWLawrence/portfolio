@@ -15,10 +15,8 @@ I'm a front end JavaScript Developer that designs and creates UI/UX for websites
 | CSS3           | Express.js              | Hugo/Gatsby | Linux/Mac/Windows     |
 | HTML5          | Node.js                 | Git/GitHub  | Photoshop/GIMP/Moqups |
 | Markdown       | Jade/Pug/EJS/Handlebars | Shopify     | Figma/Inkscape        |
-|                | jQuery                  | WordPress   | REST APIs/GraphQL             |
+|                | jQuery                  | WordPress   | REST APIs/GraphQL     |
 |                | GraphQl                 | Yaml        | AJAX                  |
-
-*Stands for - Single Page Applications/Progressive Web Applications
 
 ## Experience
 
