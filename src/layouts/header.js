@@ -21,7 +21,7 @@ class Header extends Component {
 
   render() {
     return (
-      <nav id='site_navigation'>
+      <nav id='site_navigation' itemScope itemType='http://schema.org/SiteNavigationElement'>
         <ul>
           {
             NAVIGATION_DATA.map(page => {

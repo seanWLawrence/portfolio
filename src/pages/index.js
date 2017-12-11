@@ -40,10 +40,10 @@ class Contact extends Component {
 
   render() {
     return (
-      <section id='contact'>
+      <section id='contact' itemScope itemType='http://schema.org/ContactPage'>
         {(this.state.showCanvas === true) ? this.mountParticles() : null}
         <section className='hero_wrapper'>
-          <h1>
+          <h1 itemProp='about accessibilitySummary text'>
             Beautiful, modern websites for businesses, non-profits and open source projects.
           </h1>
           <p>
