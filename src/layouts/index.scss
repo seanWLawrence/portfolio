@@ -77,10 +77,9 @@ p {
 
 a {
   cursor: pointer;
-  color: $color_primary;
   border-bottom: 2px solid transparent;
   text-decoration: none;
-  @include font($color_paragraph, $font_weight_paragraph, $font_size_paragraph, $font_line_height_paragraph, $font_family_paragraph, $font_letter_spacing_paragraph);
+  @include font($color_primary, $font_weight_paragraph, $font_size_paragraph, $font_line_height_paragraph, $font_family_paragraph, $font_letter_spacing_paragraph);
   &:hover {
   opacity: .8;
   }

@@ -6,7 +6,7 @@ template: "about"
 
 ---
 
-![](../img/sean_lawrence.jpg)
+![](/img/sean_lawrence.jpg)
 
 I'm passionate about building high performance websites and applications. By using the latest HTML, CSS and JavaScript technologies on a daily basis, I've cultivated a deep understanding of SEO (Search Engine Optimization), user experience, and design best practices to increase engagement, sales and brand recognition.
 

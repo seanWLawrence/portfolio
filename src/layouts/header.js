@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import NAVIGATION_DATA from '../data/navigation'
+import NAVIGATION from '../data/NAVIGATION'
 import Link from 'gatsby-link'
 
 class Header extends Component {
@@ -24,7 +24,7 @@ class Header extends Component {
       <nav id='site_navigation'>
         <ul>
           {
-            NAVIGATION_DATA.map(page => {
+            NAVIGATION.map(page => {
               const { title, url } = page;
               return (
                 <li

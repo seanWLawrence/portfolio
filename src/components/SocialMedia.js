@@ -1,8 +1,6 @@
 import React from 'react'
-import ABOUT_DATA from '../data/about'
+import SOCIAL_MEDIA from '../data/SOCIAL_MEDIA'
 import Link from 'gatsby-link'
-
-const { SOCIAL_LINKS } = ABOUT_DATA
 
 const SocialMedia = () => {
     return (
@@ -11,7 +9,7 @@ const SocialMedia = () => {
                 <button className='button_primary'>Resume</button>
             </Link>
             {
-                SOCIAL_LINKS.map(platform => {
+                SOCIAL_MEDIA.map(platform => {
                     const { profile_url, title, logo_url } = platform;
                     return (
                         <a

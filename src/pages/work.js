@@ -1,9 +1,9 @@
 import React from 'react'
 import WorkProject from '../components/WorkProject'
-import WORK_DATA from '../data/work'
+import WORK from '../data/WORK'
 import PageWrapperSlim from '../components/PageWrapperSlim'
 
-const projects = WORK_DATA.projects
+const projects = WORK.projects
 
 const Work = () => (
   <PageWrapperSlim title='Work' id='work'>

@@ -1,6 +1,7 @@
 ---
 path: "/resume"
 date: "2017-08-10"
+metaDate: "2017-12-11"
 title: "Resume"
 template: "resume"
 ---
@@ -20,12 +21,12 @@ I'm a front end JavaScript Developer that designs and creates UI/UX for websites
 
 ## Experience
 
-### [Beastgrip](https://beastgrip.com)
-(January 2015 - Current) - **Front end developer / VP of Business Development** 
+[**Beastgrip**](https://beastgrip.com)
+(January 2015 - Current) - _Front end developer / VP of Business Development_
 
 Beastgrip is a mobile photography and film making gear startup. I focus on scaling the business by creating web applications.
 
-* [**Inspiration page**](https://beastgrip.com/pages/inspiration-2) - an Instagram-style feed, that pulls images from an Instagram feed and displays a list of products shown in the photo and links to purchase them. Tools/libraries used: Snappt, CSS3.
+* [Inspiration page](https://beastgrip.com/pages/inspiration-2) - an Instagram-style feed, that pulls images from an Instagram feed and displays a list of products shown in the photo and links to purchase them. Tools/libraries used: Snappt, CSS3.
 
 * **E-commerce admin panel** - (in progress) - admin page that accepts data for the Media page (below), writes/edits/deletes it to a PostgreSQL database for the Media page to use. Tools/libraries used: React.js, Express.js, Webpack.
 
@@ -33,13 +34,13 @@ Beastgrip is a mobile photography and film making gear startup. I focus on scali
 
 * **Product bundler** - (in progress) - a SPA that walks a customer through the experience of creating their own custom camera rig. When clicked, a modal displays product information and an image gallery. Tools/libraries used: Express.js w/ ES6, Handlebars, REST API, and AJAX.
 
-* [**Mail For Good**](https://mail-for-good.netlify.com) - An open source contribution - a static website for the [Mail For Good](https://github.com/freecodecamp/mail-for-good) repository by Free Code Camp. Tools/libraries used: Hugo, Material Design Docs theme, Yaml, and Sass.
+[**Mail For Good**](https://mail-for-good.netlify.com) - An open source contribution - a static website for the [Mail For Good](https://github.com/freecodecamp/mail-for-good) repository by Free Code Camp. Tools/libraries used: Hugo, Material Design Docs theme, Yaml, and Sass.
 
-* [**Mobile Innovation Network Australasia**](http://mina.pro) - An informational website for a non-profit mobile film festival in Australia. Includes a Facebook and Twitter feed, Embedded LinkedIn cards, YouTube videos and Scribd iframes, as well as a film submission form. Tools/libraries used: WordPress, Shapely theme, and Twitter/Facebook/LinkedIn APIs.
+[**Mobile Innovation Network Australasia**](http://mina.pro) - An informational website for a non-profit mobile film festival in Australia. Includes a Facebook and Twitter feed, Embedded LinkedIn cards, YouTube videos and Scribd iframes, as well as a film submission form. Tools/libraries used: WordPress, Shapely theme, and Twitter/Facebook/LinkedIn APIs.
 
-* [**Miller Street Studios**](http:millerstreetstudios.com) - An informational website for a local music recording studio. Includes embedded content from SoundCloud, Google Map iframe showing their location and an image gallery and contact form. Tools/libraries used: WordPress, Creativo theme, Google Maps and SoundCloud APIs.
+[**Miller Street Studios**](http:millerstreetstudios.com) - An informational website for a local music recording studio. Includes embedded content from SoundCloud, Google Map iframe showing their location and an image gallery and contact form. Tools/libraries used: WordPress, Creativo theme, Google Maps and SoundCloud APIs.
 
 ## Want to know more?
-Learn more about me on my [LinkedIn](https://www.linkedin.com/in/sean-lawrence-21792799/) profile.
+Learn more about me on my [LinkedIn](https://www.linkedin.com/in/sean-lawrence-21792799/) profile and/or send me a message [here](/).
 
 **References and code samples available upon request.**
