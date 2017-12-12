@@ -17,6 +17,11 @@ const particlesStyle = {
   backgroundColor: 'rgba(10, 10, 10, .9)',
 }
 
+const schema = {
+  "@context": "https://schema.org/WebPage",
+
+}
+
 class Contact extends Component {
   state = {
     particlesParams: CANVAS_MOBILE,
@@ -53,7 +58,12 @@ class Contact extends Component {
           <meta property="og:locale:alternate" content="en_US" />
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:site" content="@seanbeastgrip" />
-          <meta name="twitter:creator" content="@seanbeastgrip" />
+          <script type="application/ld+json">
+            {JSON.stringify(schema)}
+          </script>
+          <script type="application/ld+json">
+            {JSON.stringify(schema)}
+          </script>
         </Helmet>
         <Particles
           params={this.state.particlesParams}
