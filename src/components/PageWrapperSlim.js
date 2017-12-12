@@ -2,14 +2,12 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 const PageWrapperSlim = props => {
-  const { id, schemaType, description, image, imageDescription, title, date, style, titleStyle, url, children } = props;
+  const { id, style, titleStyle, date, children, title, description, image, imageDescription, url, ogType, schema } = props;
   return (
     <section
       id={id}
       className='page_wrapper_slim'
       style={style}
-      itemScope
-      itemType={schemaType}
     >
       <Helmet>
         <title> Sean Lawrence - {title}</title>
@@ -19,13 +17,9 @@ const PageWrapperSlim = props => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content={description} />
         <base href="https://seanlawrence.co/" target="_self" />
+        <meta property="og:type" content={ogType} />
         <meta property="og:title" content={title || 'Sean Lawrence - Modern web developer'} />
         <meta property="og:description" content={description} />
-        <meta property="og:type" content={type} />
-        <meta property="og:type" content={type} />
-        <meta property="og:type" content={type} />
-        <meta property="og:type" content={type} />
-        <meta property="og:type" content={type} />
         <meta property="og:url" content={url} />
         <meta property="og:image" content={image || '/img/logo.png'} />
         <meta property="og:image:alt" content={imageDescription} />
@@ -36,21 +30,18 @@ const PageWrapperSlim = props => {
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@seanbeastgrip" />
         <meta name="twitter:creator" content="@seanbeastgrip" />
+        <script type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
       </Helmet>
       <h1
         className='page_title'
         style={titleStyle}
-        itemProp='name headline'
       >
         {title}
       </h1>
-      {date ? <span itemprop="datePublished" content={date}>{date}</span> : null}
+      {date ? <span>{date}</span> : null}
       {children}
-      <meta itemprop="url" content={url} />
-      <meta itemprop="wordCount" content={words} />
-      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="Sean Lawrence" />
-      </span>
     </section>
   )
 }

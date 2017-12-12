@@ -20,6 +20,7 @@ export default ({ data }) => {
       <Link to='/blog'>
         <button
           className='breadcrumb'
+          itemProp='breadcrumb'
         >
           &#8656; All posts
         </button>
@@ -28,6 +29,7 @@ export default ({ data }) => {
       <Link to='/blog'>
         <button
           className='breadcrumb'
+          itemProp='breadcrumb'
         >
           &#8656; All posts
         </button>
