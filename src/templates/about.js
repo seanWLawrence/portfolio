@@ -1,6 +1,7 @@
 import React from "react"
 import PageWrapperSlim from '../components/PageWrapperSlim'
 import SocialMedia from '../components/SocialMedia'
+import ProfileImage from '../img/sean_lawrence.jpg'
 
 const schemaData = {
   "@context": "http://json-ld.org/contexts/person.jsonld",
@@ -24,6 +25,7 @@ export default ({ data }) => {
       url='https://seanlawrence.co/about'
     >
       <section id='bio'>
+        <img src={ProfileImage} style={{ width: '100%' }} />
         <section dangerouslySetInnerHTML={{ __html: html }} />
         <SocialMedia />
       </section>

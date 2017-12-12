@@ -1,4 +1,4 @@
-const NAVIGATION_DATA = [
+const NAVIGATION = [
   {
     title: 'SL',
     url: '/'
@@ -21,4 +21,4 @@ const NAVIGATION_DATA = [
   },
 ]
 
-export default NAVIGATION_DATA;
+export default NAVIGATION

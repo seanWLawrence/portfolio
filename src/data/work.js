@@ -1,4 +1,4 @@
-const WORK_DATA = {
+const WORK = {
   projects: [
     {
       title: 'Beastgrip',
@@ -33,4 +33,4 @@ const WORK_DATA = {
   ]
 }
 
-export default WORK_DATA
+export default WORK

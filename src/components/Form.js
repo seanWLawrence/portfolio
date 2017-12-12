@@ -20,7 +20,7 @@ export default class Contact extends Component {
       body: encode({ "form-name": "contact", ...this.state })
     })
       .then(() => window.location = '/thank-you')
-      .catch(error => alert(error));
+      .catch(error => alert('Sorry about that, you can email me directly at sean.w.lawrence@gmail.com'));
 
     e.preventDefault();
   };

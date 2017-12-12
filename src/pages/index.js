@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import Particles from 'react-particles-js'
-import CANVAS_DATA from '../data/canvas'
+import { CANVAS_DESKTOP, CANVAS_MOBILE } from '../data/CANVAS'
 import Form from '../components/Form'
 import Helmet from 'react-helmet'
 
@@ -19,24 +19,15 @@ const particlesStyle = {
 
 class Contact extends Component {
   state = {
-    showCanvas: false,
+    particlesParams: CANVAS_MOBILE,
   }
 
   componentDidMount() {
     if (window.innerWidth > 750) {
       this.setState({
-        showCanvas: true,
+        particlesParams: CANVAS_DESKTOP,
       })
     }
-  }
-
-  mountParticles() {
-    return (
-      <Particles
-        params={CANVAS_DATA}
-        style={particlesStyle}
-      />
-    )
   }
 
   render() {
@@ -64,7 +55,10 @@ class Contact extends Component {
           <meta name="twitter:site" content="@seanbeastgrip" />
           <meta name="twitter:creator" content="@seanbeastgrip" />
         </Helmet>
-        {(this.state.showCanvas === true) ? this.mountParticles() : null}
+        <Particles
+          params={this.state.particlesParams}
+          style={particlesStyle}
+        />
         <section className='hero_wrapper'>
           <h1>
             Beautiful, modern websites for businesses, non-profits and open source projects.
