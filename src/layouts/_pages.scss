@@ -205,6 +205,16 @@
   h3 {
     margin: 20px 0;
   }
+
+  a strong {
+    color: $color_primary;
+    font-size: $font_size_title - 20px;
+  }
+
+  li:nth-child(1) > p > a {
+    font-size: $font_size_paragraph;
+    font-weight: bold;
+  }
 }
 
 // Thank you page

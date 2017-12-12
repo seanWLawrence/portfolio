@@ -26,7 +26,7 @@ I'm a front end JavaScript Developer that designs and creates UI/UX for websites
 
 Beastgrip is a mobile photography and film making gear startup. I focus on scaling the business by creating web applications.
 
-* [**Inspiration page**](https://beastgrip.com/pages/inspiration-2) - an Instagram-style feed, that pulls images from an Instagram feed and displays a list of products shown in the photo and links to purchase them. Tools/libraries used: Snappt, CSS3.
+* [Inspiration page](https://beastgrip.com/pages/inspiration-2) - an Instagram-style feed, that pulls images from an Instagram feed and displays a list of products shown in the photo and links to purchase them. Tools/libraries used: Snappt, CSS3.
 
 * **E-commerce admin panel** - (in progress) - admin page that accepts data for the Media page (below), writes/edits/deletes it to a PostgreSQL database for the Media page to use. Tools/libraries used: React.js, Express.js, Webpack.
 
@@ -41,6 +41,6 @@ Beastgrip is a mobile photography and film making gear startup. I focus on scali
 [**Miller Street Studios**](http:millerstreetstudios.com) - An informational website for a local music recording studio. Includes embedded content from SoundCloud, Google Map iframe showing their location and an image gallery and contact form. Tools/libraries used: WordPress, Creativo theme, Google Maps and SoundCloud APIs.
 
 ## Want to know more?
-Learn more about me on my [LinkedIn](https://www.linkedin.com/in/sean-lawrence-21792799/) profile.
+Learn more about me on my [LinkedIn](https://www.linkedin.com/in/sean-lawrence-21792799/) profile and/or send me a message [here](/).
 
 **References and code samples available upon request.**
