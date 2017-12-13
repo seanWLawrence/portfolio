@@ -58,6 +58,7 @@ class Contact extends Component {
           <meta property="og:locale:alternate" content="en_US" />
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:site" content="@seanbeastgrip" />
+          <meta name="google-site-verification" content="tkm-v6VCHYsnUCE5-xPwIpiBMOtrxHNvrz7kSlNP5sU" />
           <script type="application/ld+json">
             {JSON.stringify(schema)}
           </script>
