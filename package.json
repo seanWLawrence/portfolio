@@ -12,6 +12,7 @@
     "gatsby-plugin-offline": "^1.0.10",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-sass": "^1.0.14",
+    "gatsby-plugin-sitemap": "^1.2.7",
     "gatsby-remark-images": "^1.5.32",
     "gatsby-remark-prismjs": "^1.2.9",
     "gatsby-remark-responsive-iframe": "^1.4.14",
