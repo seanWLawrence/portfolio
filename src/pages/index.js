@@ -33,7 +33,7 @@ export default () => (
       <meta name="keywords" content="HTML, CSS, React.js, JavaScript, Web Developer, Website Builder" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="description" content='Professional JavaScript web developer that specializes in modern design, React.js and Node.js. Contact me now for free advice or a pricing quote.' />
-      <base href="https://seanlawrence.co/" target="_self" />
+      {/* <base href="https://seanlawrence.co/" target="_self" /> */}
       <meta property="og:type" content='website' />
       <meta property="og:title" content={'Sean Lawrence - Modern web developer'} />
       <meta property="og:description" content='Professional JavaScript web developer that specializes in modern design, React.js and Node.js. Contact me now for free advice or a pricing quote.' />
