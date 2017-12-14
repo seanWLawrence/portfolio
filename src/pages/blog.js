@@ -5,7 +5,7 @@ import Link from 'gatsby-link'
 export default ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
   return (
-    <PageWrapperSlim title='Blog' id='blog' schemaType='http://schema.org/blogPosts'>
+    <PageWrapperSlim title='Blog' id='blog'>
       {
         posts.map(post => {
           const { template, title, path, date } = post.node.frontmatter;
@@ -16,18 +16,15 @@ export default ({ data }) => {
                 id={title}
                 className='blog_post_preview'
                 key={title}
-                itemScope
-                itemType='http://schema.org/BlogPosting'
               >
                 <Link to={path}>
-                  <h3 itemProp='headline name'>{title}</h3>
+                  <h3>{title}</h3>
                 </Link>
-                <p itemProp='datePublished' className='post_preview_meta'>{date}</p>
-                <p itemProp='about description'>{excerpt}</p>
-                <Link itemProp='url' to={path}>
+                <p className='post_preview_meta'>{date}</p>
+                <p>{excerpt}</p>
+                <Link to={path}>
                   <button className='button_secondary'>Read more</button>
                 </Link>
-                <meta itemProp='wordCount' content={wordCount.words} />
               </section>
             )
           }

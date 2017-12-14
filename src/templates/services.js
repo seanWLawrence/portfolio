@@ -8,15 +8,15 @@ export default ({ data }) => {
     <PageWrapperSlim
       title='Services'
       id='services'
-      schemaType='http://schema.org/Service'
       description='Professional website design, development, and consulting services.'
       image='../img/logo.png'
       imageDescription='Logo for Sean Lawrence Web Design'
       metaDate='2017-12-11'
       url='https://seanlawrence.co/services'
     >
-      <section dangerouslySetInnerHTML={{ __html: html }} />
-      <meta itemProp='logo' content='../img/logo.png' />
+      <section
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </PageWrapperSlim>
   )
 }

@@ -1,6 +1,13 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
+const defaultSchema = {
+  "@context": "https://schema.org/",
+  "@type": "Organization",
+  "url": "https://seanlawrence.co",
+  "logo": "https://seanlawrence.co/logo.svg"
+}
+
 const PageWrapperSlim = props => {
   const { id, style, titleStyle, date, children, title, description, image, imageDescription, url, ogType, schema } = props;
   return (
@@ -31,7 +38,7 @@ const PageWrapperSlim = props => {
         <meta name="twitter:site" content="@seanbeastgrip" />
         <meta name="twitter:creator" content="@seanbeastgrip" />
         <script type="application/ld+json">
-          {JSON.stringify(schema)}
+          {JSON.stringify(schema || defaultSchema)}
         </script>
       </Helmet>
       <h1

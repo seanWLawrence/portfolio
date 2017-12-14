@@ -50,9 +50,6 @@ export default () => (
       <script type="application/ld+json">
         {JSON.stringify(schema)}
       </script>
-      <script type="application/ld+json">
-        {JSON.stringify(schema)}
-      </script>
     </Helmet>
     <Particles
       style={particlesStyle}

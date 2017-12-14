@@ -1,36 +1,57 @@
 import React from "react"
 import PageWrapperSlim from '../components/PageWrapperSlim'
 import Link from 'gatsby-link'
+import Logo from '../img/logo.png'
 
 export default ({ data }) => {
   const { html, frontmatter, wordCount } = data.markdownRemark
   const { title, date, description } = frontmatter
   // props needed: id, schemaType, description, image, imageDescription, title, date, style, titleStyle, url, children
+  const schema = {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://google.com/article"
+    },
+    "headline": { title },
+    "image": Logo || { image },
+    "datePublished": { date },
+    "dateModified": { date },
+    "author": {
+      "@type": "Person",
+      "name": "Sean Lawrence"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sean Lawrence",
+      "logo": {
+        "@type": "ImageObject",
+        "url": Logo
+      }
+    },
+    "description": { description }
+  }
 
   return (
     <PageWrapperSlim
       title={title}
       id={title}
-      schemaType='http://schema.org/BlogPosting'
-      date={date}
-      wordCount={wordCount.words}
+      schema={schema}
       titleStyle={{ fontSize: '34px', lineHeight: '40px' }}
       description={description}
     >
       <Link to='/blog'>
-        <button
-          className='breadcrumb'
-          itemProp='breadcrumb'
-        >
+        <button className='breadcrumb'>
           &#8656; All posts
         </button>
       </Link>
-      <section itemprop="articleBody" className='blog_post' dangerouslySetInnerHTML={{ __html: html }} />
+      <section
+        className='blog_post'
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
       <Link to='/blog'>
-        <button
-          className='breadcrumb'
-          itemProp='breadcrumb'
-        >
+        <button className='breadcrumb'>
           &#8656; All posts
         </button>
       </Link>

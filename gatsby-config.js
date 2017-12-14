@@ -1,7 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Sean Lawrence - Modern web developer`,
-    author: `Sean Lawrence`,
+    title: `Sean Lawrence - Modern web developer`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -66,9 +65,6 @@ module.exports = {
           },
         ],
       },
-    },
-    {
-      resolve: `gatsby-plugin-sitemap`
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
