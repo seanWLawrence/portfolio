@@ -1,5 +1,6 @@
 import React from "react"
 import PageWrapperSlim from '../components/PageWrapperSlim'
+import Logo from '../img/logo.png'
 
 export default ({ data }) => {
   const { html } = data.markdownRemark
@@ -8,7 +9,7 @@ export default ({ data }) => {
       title='Resume'
       id='resume'
       description='A resume for Sean Lawrence, a modern web developer based out of Chicago, IL.'
-      image='../img/sean_lawrence.jpg'
+      image={Logo}
       imageDescription='Profile image for Sean Lawrence'
       metaDate='2017-12-11'
       url='https://seanlawrence.co/resume'

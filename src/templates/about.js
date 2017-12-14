@@ -12,7 +12,7 @@ export default ({ data }) => {
       id='about'
       ogType='article'
       description='Professional JavaScript web developer that specializes in modern design, React.js and Node.js. Contact me now for free advice or a pricing quote.'
-      image='../img/sean_lawrence.jpg'
+      image={Logo}
       imageDescription='Profile image of Sean Lawrence'
       url='https://seanlawrence.co/about'
     >
