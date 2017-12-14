@@ -44,6 +44,7 @@ export default ({ data }) => {
       schema={schema}
       titleStyle={{ fontSize: '34px', lineHeight: '40px' }}
       description={description}
+      date={date}
     >
       <Link to='/blog'>
         <button className='breadcrumb'>
