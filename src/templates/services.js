@@ -10,7 +10,7 @@ export default ({ data }) => {
       title='Services'
       id='services'
       description='Professional website design, development, and consulting services.'
-      image={Logo},
+      image={Logo}
       imageDescription='Logo for Sean Lawrence Web Design'
       metaDate='2017-12-11'
       url='https://seanlawrence.co/services'
@@ -24,7 +24,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query ServicesPageQuery($path: String!) {
-        markdownRemark(frontmatter: {path: {eq: $path } }) {
-        html
-      }
-      }`
+    markdownRemark(frontmatter: {path: {eq: $path } }) {
+    html
+  }
+}`

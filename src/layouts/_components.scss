@@ -148,3 +148,61 @@
     color: $color_background;
   }
 }
+
+// Animations 
+
+#animation-test {
+  @include flexbox(row, flex-start, center);
+  flex-wrap: wrap;
+  background-color: darken($color_primary, 50%);
+
+  .animation-1 {
+  height: 400px;
+  width: 400px;
+  border: 20px solid darken($color_primary, 30%);
+  margin: 100px 20px;
+  background-color: darken($color_primary, 100%);
+  color: $color_background;
+  @include flexbox(column, center, center);
+  &:hover {
+    background-color: #111;
+    border: 20px solid $color_primary;
+
+    h2 {
+      color: $color_background;
+      visibility: visible;
+      padding: 20px;
+      text-align: center;
+    }
+
+    img {
+      color: $color_background;
+      visibility: hidden;
+    }
+  }
+
+  h2 {
+      color: $color_background;
+      visibility: hidden;
+    }
+}
+
+.animation-2 {
+  @extend .animation-1;
+  height: 500px;
+  border: 20px solid $color_primary;
+  &:hover {
+    background-color: $color_primary;
+    color: $color_background;
+    border: 20px solid darken($color_primary, 100%);
+  }
+}
+
+
+.animation-3 {
+  @extend .animation-1;
+  border: 10px solid darken($color_primary, 50%);
+}
+}
+
+
