@@ -8,6 +8,12 @@ module.exports = {
     `gatsby-plugin-sass`,
     'gatsby-plugin-catch-links',
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-111283098-1",
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
