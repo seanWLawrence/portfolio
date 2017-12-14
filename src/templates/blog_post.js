@@ -28,7 +28,11 @@ export default ({ data }) => {
       "logo": {
         "@type": "ImageObject",
         "url": Logo
-      }
+      },
+      "sameAs": [
+        "https://www.github.com/seanwlawrence",
+        "https://www.linkedin.com/in/sean-lawrence-21792799/"
+      ]
     },
     "description": { description }
   }

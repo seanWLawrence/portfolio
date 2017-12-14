@@ -4,6 +4,7 @@ import Particles from 'react-particles-js'
 import { CANVAS_DESKTOP, CANVAS_MOBILE } from '../data/CANVAS'
 import Form from '../components/Form'
 import Helmet from 'react-helmet'
+import Logo from '../img/logo.png'
 
 const particlesStyle = {
   position: 'fixed',
@@ -21,7 +22,15 @@ const schema = {
   "@context": "https://schema.org/",
   "@type": "Organization",
   "url": "https://seanlawrence.co",
-  "logo": "https://seanlawrence.co/logo.svg"
+  "name": "Sean Lawrence",
+  "logo": {
+    "@type": "ImageObject",
+    "url": Logo
+  },
+  "sameAs": [
+    "https://www.github.com/seanwlawrence",
+    "https://www.linkedin.com/in/sean-lawrence-21792799/"
+  ]
 }
 
 export default () => (

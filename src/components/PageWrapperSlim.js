@@ -1,11 +1,20 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import Logo from '../img/logo.png'
 
 const defaultSchema = {
   "@context": "https://schema.org/",
   "@type": "Organization",
   "url": "https://seanlawrence.co",
-  "logo": "https://seanlawrence.co/logo.svg"
+  "name": "Sean Lawrence",
+  "logo": {
+    "@type": "ImageObject",
+    "url": Logo
+  },
+  "sameAs": [
+    "https://www.github.com/seanwlawrence",
+    "https://www.linkedin.com/in/sean-lawrence-21792799/"
+  ]
 }
 
 const PageWrapperSlim = props => {
