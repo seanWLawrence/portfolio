@@ -152,56 +152,61 @@
 // Animations 
 
 #animation-test {
-  @include flexbox(row, flex-start, center);
-  flex-wrap: wrap;
+  @include flexbox(column, center, center);
+  padding-top: 100px;
+  margin-bottom: -100px;
   background-color: darken($color_primary, 50%);
 
+  #menu {
+     @include flexbox(row, flex-start, center);
+     flex-wrap: wrap;
+     animation-duration: 3s;
+    animation-name: slidein;
+  }
+
   .animation-1 {
-  height: 400px;
-  width: 400px;
-  border: 20px solid darken($color_primary, 30%);
-  margin: 100px 20px;
-  background-color: darken($color_primary, 100%);
-  color: $color_background;
-  @include flexbox(column, center, center);
-  &:hover {
-    background-color: #111;
-    border: 20px solid $color_primary;
+    height: 300px;
+    width: 300px;
+    border: 20px solid darken($color_primary, 30%);
+    margin: 100px 20px;
+    background-color: darken($color_primary, 100%);
+    color: $color_background;
+    @include flexbox(column, center, center);
 
     h2 {
-      color: $color_background;
-      visibility: visible;
-      padding: 20px;
-      text-align: center;
-    }
+        color: $color_background;
+        padding: 20px;
+        text-align: center;
+      }
 
-    img {
-      color: $color_background;
-      visibility: hidden;
+    &:hover {
+      background-color: #111;
+      border: 20px solid $color_primary;
+      cursor: pointer;
     }
   }
 
-  h2 {
-      color: $color_background;
-      visibility: hidden;
-    }
-}
-
-.animation-2 {
-  @extend .animation-1;
-  height: 500px;
-  border: 20px solid $color_primary;
-  &:hover {
-    background-color: $color_primary;
-    color: $color_background;
-    border: 20px solid darken($color_primary, 100%);
+  .animation-2 {
+    @extend .animation-1;
+    height: 400px;
   }
-}
 
 
-.animation-3 {
-  @extend .animation-1;
-  border: 10px solid darken($color_primary, 50%);
+  .animation-3 {
+    @extend .animation-1;
+    border: 10px solid darken($color_primary, 50%);
+  }
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 21vw;
+    width: 100%;
+  }
 }
 }
 
