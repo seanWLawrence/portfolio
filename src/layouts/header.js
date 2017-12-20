@@ -1,6 +1,21 @@
 import React, { Component } from 'react'
 import NAVIGATION from '../data/NAVIGATION'
 import Link from 'gatsby-link'
+import Logo from '../img/logo.png'
+
+const NavListItem = props => (
+  <li
+    key={props.title}
+  >
+    <Link
+      to={props.url}
+      onClick={props.click}
+      className={props.className}
+    >
+      {props.title}
+    </Link>
+  </li>
+)
 
 class Header extends Component {
   state = {
@@ -26,18 +41,15 @@ class Header extends Component {
           {
             NAVIGATION.map(page => {
               const { title, url } = page;
-              return (
-                <li
-                  key={title}
-                >
-                  <Link
-                    to={url}
-                    onClick={this.handleClick.bind(this)}
-                    className={this.state.activePage === url ? 'active' : null}
-                  >
-                    {title}
+              if (title === 'logo') {
+                return (
+                  <Link to='/'>
+                    <img src={Logo} style={{ maxHeight: '30px' }} />
                   </Link>
-                </li>
+                )
+              }
+              return (
+                <NavListItem title={title} url={url} click={this.handleClick.bind(this)} className={this.state.activePage === url ? 'active' : null} />
               )
             })
           }

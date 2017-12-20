@@ -1,6 +1,6 @@
 const NAVIGATION = [
   {
-    title: 'SL',
+    title: 'Contact',
     url: '/'
   },
   {
@@ -8,8 +8,8 @@ const NAVIGATION = [
     url: '/about'
   },
   {
-    title: 'Services',
-    url: '/services'
+    title: 'logo',
+    url: '../img/logo.png'
   },
   {
     title: 'Work',
