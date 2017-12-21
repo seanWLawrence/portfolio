@@ -1,7 +1,7 @@
 const NAVIGATION = [
   {
     title: 'Contact',
-    url: '/'
+    url: '/contact'
   },
   {
     title: 'About',

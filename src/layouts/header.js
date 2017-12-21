@@ -7,8 +7,7 @@ const NavListItem = props => (
   <li>
     <Link
       to={props.url}
-      onClick={props.click}
-      className={props.className}
+      activeClassName="active"
     >
       {props.title}
     </Link>
@@ -17,14 +16,14 @@ const NavListItem = props => (
 
 const NestedNavListItem = props => (
   <li
-    className='nested_header'
-    onClick={props.nestedClick}
+    className='submenu_header'
+    onClick={props.click}
   >
-    <span className={props.className}>
+    <span className={props.isActive}>
       {props.title}
     </span>
     <ul
-      className={props.nestedClass}
+      className={props.className}
     >
       {
         (props.submenu).map(page => {
@@ -35,8 +34,7 @@ const NestedNavListItem = props => (
             >
               <Link
                 to={url}
-                onClick={props.click}
-                activeStyle={{}}
+                activeClassName="active"
               >
                 {title}
               </Link>
@@ -50,30 +48,16 @@ const NestedNavListItem = props => (
 
 class Header extends Component {
   state = {
-    activePage: 'Contact',
-    nestedMenuShown: false,
+    submenuShown: false,
   }
 
-  componentDidMount() {
+  toggleSubmenu() {
     this.setState({
-      activePage: window.location.pathname
-    })
-  }
-
-  handleClick(e) {
-    this.setState({
-      activePage: e.target.pathname
-    })
-  }
-
-  collapseMenu() {
-    this.setState({
-      nestedMenuShown: !this.state.nestedMenuShown
+      submenuShown: !this.state.submenuShown
     })
   }
 
   render() {
-    console.log(this.state.activePage)
     return (
       <nav id='site_navigation'>
         <ul className='nav_menu'>
@@ -83,7 +67,12 @@ class Header extends Component {
               if (title === 'logo') {
                 return (
                   <li key='contact'>
-                    <Link to='/' style={{ display: 'flex' }}>
+                    <Link
+                      exact
+                      to='/'
+                      activeStyle={{ border: 0 }}
+                      style={{ display: 'flex' }}
+                    >
                       <img
                         src={Logo}
                         style={{ maxHeight: '30px' }}
@@ -97,12 +86,8 @@ class Header extends Component {
                     key={title}
                     submenu={NAVIGATION[3].submenu}
                     title='Work'
-                    click={this.handleClick.bind(this)}
-                    nestedClick={this.collapseMenu.bind(this)}
-                    className={this.state.activePage === '/services' || '/experience' ? 'active' : null}
-                    classNameServices={this.state.activePage === '/services' ? 'active' : null}
-                    classNameExperience={this.state.activePage === '/experience' ? 'active' : null}
-                    nestedClass={this.state.nestedMenuShown === false ? 'nested_menu_hidden' : 'nested_menu_shown'}
+                    click={this.toggleSubmenu.bind(this)}
+                    className={this.state.submenuShown === false ? 'submenu_hidden' : 'submenu_shown'}
                   />
                 )
               }
@@ -111,8 +96,6 @@ class Header extends Component {
                   key={title}
                   title={title}
                   url={url}
-                  click={this.handleClick.bind(this)}
-                  className={this.state.activePage === url ? 'active' : null}
                 />
               )
             })

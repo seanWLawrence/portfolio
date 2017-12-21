@@ -50,7 +50,7 @@
     border-bottom: 2px solid $color_primary;
   }
 
-  .nested_header {
+  .submenu_header {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
@@ -65,11 +65,11 @@
     } 
   }
 
-  .nested_menu_hidden {
+  .submenu_hidden {
     display: none;
   }
 
-  .nested_menu_shown {
+  .submenu_shown {
     position: absolute;
     top: 50px;
     right: 36%;
@@ -78,7 +78,7 @@
     background-color: rgba(0, 0, 0, .9);
 
     li {
-      @extend .nested_header;
+      @extend .submenu_header;
     }
   }
 }
