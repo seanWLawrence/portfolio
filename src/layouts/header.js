@@ -36,7 +36,7 @@ const NestedNavListItem = props => (
               <Link
                 to={url}
                 onClick={props.click}
-                className={props.className}
+                activeStyle={{}}
               >
                 {title}
               </Link>
@@ -73,6 +73,7 @@ class Header extends Component {
   }
 
   render() {
+    console.log(this.state.activePage)
     return (
       <nav id='site_navigation'>
         <ul className='nav_menu'>
@@ -98,7 +99,9 @@ class Header extends Component {
                     title='Work'
                     click={this.handleClick.bind(this)}
                     nestedClick={this.collapseMenu.bind(this)}
-                    className={this.state.activePage === url ? 'active' : null}
+                    className={this.state.activePage === '/services' || '/experience' ? 'active' : null}
+                    classNameServices={this.state.activePage === '/services' ? 'active' : null}
+                    classNameExperience={this.state.activePage === '/experience' ? 'active' : null}
                     nestedClass={this.state.nestedMenuShown === false ? 'nested_menu_hidden' : 'nested_menu_shown'}
                   />
                 )
@@ -107,7 +110,8 @@ class Header extends Component {
                 <NavListItem
                   key={title}
                   title={title}
-                  url={url} click={this.handleClick.bind(this)}
+                  url={url}
+                  click={this.handleClick.bind(this)}
                   className={this.state.activePage === url ? 'active' : null}
                 />
               )
