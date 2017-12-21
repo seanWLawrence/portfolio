@@ -13,7 +13,16 @@ const NAVIGATION = [
   },
   {
     title: 'Work',
-    url: '/work'
+    submenu: [
+      {
+        title: 'Services',
+        url: '/services'
+      },
+      {
+        title: 'Experience',
+        url: '/experience'
+      },
+    ]
   },
   {
     title: 'Blog',

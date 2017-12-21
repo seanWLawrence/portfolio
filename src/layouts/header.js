@@ -4,9 +4,7 @@ import Link from 'gatsby-link'
 import Logo from '../img/logo.png'
 
 const NavListItem = props => (
-  <li
-    key={props.title}
-  >
+  <li>
     <Link
       to={props.url}
       onClick={props.click}
@@ -17,9 +15,43 @@ const NavListItem = props => (
   </li>
 )
 
+const NestedNavListItem = props => (
+  <li
+    className='nested_header'
+    onClick={props.nestedClick}
+  >
+    <span className={props.className}>
+      {props.title}
+    </span>
+    <ul
+      className={props.nestedClass}
+    >
+      {
+        (props.submenu).map(page => {
+          const { title, url } = page;
+          return (
+            <li
+              key={title}
+            >
+              <Link
+                to={url}
+                onClick={props.click}
+                className={props.className}
+              >
+                {title}
+              </Link>
+            </li>
+          )
+        })
+      }
+    </ul>
+  </li>
+)
+
 class Header extends Component {
   state = {
-    activePage: 'Contact'
+    activePage: 'Contact',
+    nestedMenuShown: false,
   }
 
   componentDidMount() {
@@ -34,22 +66,50 @@ class Header extends Component {
     })
   }
 
+  collapseMenu() {
+    this.setState({
+      nestedMenuShown: !this.state.nestedMenuShown
+    })
+  }
+
   render() {
     return (
       <nav id='site_navigation'>
-        <ul>
+        <ul className='nav_menu'>
           {
             NAVIGATION.map(page => {
               const { title, url } = page;
               if (title === 'logo') {
                 return (
-                  <Link to='/'>
-                    <img src={Logo} style={{ maxHeight: '30px' }} />
-                  </Link>
+                  <li key='contact'>
+                    <Link to='/' style={{ display: 'flex' }}>
+                      <img
+                        src={Logo}
+                        style={{ maxHeight: '30px' }}
+                      />
+                    </Link>
+                  </li>
+                )
+              } else if (title === 'Work') {
+                return (
+                  <NestedNavListItem
+                    key={title}
+                    submenu={NAVIGATION[3].submenu}
+                    title='Work'
+                    click={this.handleClick.bind(this)}
+                    nestedClick={this.collapseMenu.bind(this)}
+                    className={this.state.activePage === url ? 'active' : null}
+                    nestedClass={this.state.nestedMenuShown === false ? 'nested_menu_hidden' : 'nested_menu_shown'}
+                  />
                 )
               }
               return (
-                <NavListItem title={title} url={url} click={this.handleClick.bind(this)} className={this.state.activePage === url ? 'active' : null} />
+                <NavListItem
+                  key={title}
+                  title={title}
+                  url={url} click={this.handleClick.bind(this)}
+                  className={this.state.activePage === url ? 'active' : null}
+                />
               )
             })
           }
