@@ -19,9 +19,11 @@ const NestedNavListItem = props => (
     className='submenu_header'
     onClick={props.click}
   >
-    <span className={props.isActive}>
+    <span>
       {props.title}
+      <span className={`submenu_arrow_${props.submenuArrow}`} />
     </span>
+
     <ul
       className={props.className}
     >
@@ -88,6 +90,7 @@ class Header extends Component {
                     title='Work'
                     click={this.toggleSubmenu.bind(this)}
                     className={this.state.submenuShown === false ? 'submenu_hidden' : 'submenu_shown'}
+                    submenuArrow={this.state.submenuShown === false ? 'closed' : 'open'}
                   />
                 )
               }

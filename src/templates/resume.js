@@ -1,6 +1,7 @@
 import React from "react"
 import PageWrapperSlim from '../components/PageWrapperSlim'
 import Logo from '../img/logo.png'
+import RESUME from '../data/sean_lawrence_resume.pdf'
 
 export default ({ data }) => {
   const { html } = data.markdownRemark
@@ -14,6 +15,7 @@ export default ({ data }) => {
       metaDate='2017-12-11'
       url='https://seanlawrence.co/resume'
     >
+      <p>Download <a href={RESUME}>PDF version</a>.</p>
       <section
         dangerouslySetInnerHTML={{ __html: html }}
       />
