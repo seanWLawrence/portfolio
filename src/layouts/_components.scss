@@ -9,10 +9,6 @@
   right: 0;
   z-index: 2;
   max-height: 50px; 
-  @media (max-width: 450px) {
-    bottom: 0;
-    top: unset;
-  }
 
   ul {
     @include flexbox(row, space-between, center);
@@ -77,6 +73,9 @@
     max-width: 150px;
     @include flexbox(column, center, center);
     background-color: rgba(0, 0, 0, .9);
+    @media (max-width: 450px) {
+      max-width: 125px;
+    }
   }
 }
 
@@ -87,9 +86,6 @@
   margin: 100px auto;
   width: 90vw;
   max-width: 1000px;
-  @media (max-width: 450px) {
-    margin-top: 25px;
-  }
 
   .page_title {
     font-size: 48px;
