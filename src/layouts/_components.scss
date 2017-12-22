@@ -167,6 +167,7 @@
     width: 90vw;
     animation-duration: 2s;
     animation-name: slidein;
+    animation-timing-function: ease;
     @media (max-width: 750px) {
       @include flexbox(column, flex-start, center);
       min-height: 100%;
@@ -187,11 +188,19 @@
       border: 2px solid $color_primary;
     }
 
-    h2 {
-        color: $color_background;
-        padding: 10%;
-        text-align: center;
-      }
+    h2, .animation_title {
+      color: $color_background;
+      animation-name: fadein;
+      animation-duration: 5s;
+      animation-timing-function: ease;
+      margin: 10%;
+      text-align: center;
+    }
+
+    p {
+      @extend .animation_title;
+      animation-duration: 8s;
+    }
 
     &:hover {
       background-color: #111;
@@ -208,18 +217,26 @@
       border: 2px solid $color_primary;
     }
   }
+  @include keyframes( fadein ) {
+    from {
+      opacity: 0;
+    }
 
-@keyframes slidein {
-  from {
-    margin-top: 25%;
-    width: 300%; 
+    to {
+      opacity: 1;
+    }
   }
 
-  to {
-    margin-top: 0;
-    width: 90vw;
+  @include keyframes( slidein ) {
+    from {
+      margin-top: 25%;
+      width: 300%; 
+    }
+
+    to {
+      margin-top: 0;
+      width: 90vw;
+    }
   }
 }
-}
-
 
