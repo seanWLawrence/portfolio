@@ -58,11 +58,33 @@
     @media (max-width: 525px) {
       font-size: 14px;
     }
-    span:hover {
-      border-bottom: 0;
-      color: $color_hover;
-      opacity: .8;
-    } 
+    span {
+      display: flex;
+      &:hover {
+        border-bottom: 0;
+        color: $color_hover;
+        opacity: .8;
+      } 
+    }
+
+    .submenu_arrow_closed {
+      height: 10px;
+      width: 10px;
+      margin-left: 10px;
+      padding: 0;
+      border-bottom: 2px solid #fff;
+      border-left: 2px solid #fff;
+      transform: rotate(-45deg);
+      &:hover {
+        border-bottom: 2px solid #fff;
+      }
+    }
+
+    .submenu_arrow_open {
+      @extend .submenu_arrow_closed;
+        transform: rotate(135deg);
+        margin-top: 6px;
+      }
   }
 
   .submenu_hidden {
