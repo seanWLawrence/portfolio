@@ -25,7 +25,7 @@ const boxStyles = [
 ]
 
 const Box = props => (
-  <section className={`animation-${props.style}`}>
+  <section className={`box-${props.style}`}>
     <Link to={props.url}>
       <h2>{props.title}</h2>
       <p>{props.paragraph}</p>
@@ -34,7 +34,7 @@ const Box = props => (
 )
 
 export default () => (
-  <section id='animation-test'>
+  <section id='home'>
     <img src={Logo} />
     <section id='menu'>
       {
