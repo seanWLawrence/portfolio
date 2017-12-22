@@ -177,57 +177,91 @@
 // Animations 
 
 #animation-test {
-  @include flexbox(row, flex-start, center);
-  flex-wrap: wrap;
+  @include flexbox(column, flex-start, center);
   background-color: darken($color_primary, 50%);
+  height: 100vh;
+  width: 100vw;
+  padding-top: 100px;
+
+  img {
+    margin-bottom: 50px;
+  }
+
+  #menu {
+    @include flexbox(row, space-around, center);
+    width: 90vw;
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-timing-function: ease;
+    @media (max-width: 750px) {
+      @include flexbox(column, flex-start, center);
+      min-height: 100%;
+    }
+  }
 
   .animation-1 {
-  height: 400px;
-  width: 400px;
-  border: 20px solid darken($color_primary, 30%);
-  margin: 100px 20px;
-  background-color: darken($color_primary, 100%);
-  color: $color_background;
-  @include flexbox(column, center, center);
-  &:hover {
-    background-color: #111;
-    border: 20px solid $color_primary;
+    height: 300px;
+    width: 25%;
+    border: 20px solid darken($color_primary, 30%);
+    background-color: darken($color_primary, 100%);
+    color: $color_background;
+    @include flexbox(column, center, center);
+    @media (max-width: 750px) {
+      width: 100%;
+      height: 100px;
+      margin: 20px 0;
+      border: 2px solid $color_primary;
+    }
 
-    h2 {
+    h2, .animation_title {
       color: $color_background;
-      visibility: visible;
-      padding: 20px;
+      animation-name: fadein;
+      animation-duration: 5s;
+      animation-timing-function: ease;
+      margin: 10%;
       text-align: center;
     }
 
-    img {
-      color: $color_background;
-      visibility: hidden;
+    p {
+      @extend .animation_title;
+      animation-duration: 8s;
+    }
+
+    &:hover {
+      background-color: #111;
+      border: 20px solid $color_primary;
+      cursor: pointer;
     }
   }
 
-  h2 {
-      color: $color_background;
-      visibility: hidden;
+  .animation-2 {
+    @extend .animation-1;
+    height: 400px;
+    @media (max-width: 750px) {
+      height: 100px;
+      border: 2px solid $color_primary;
     }
-}
+  }
+  @include keyframes( fadein ) {
+    from {
+      opacity: 0;
+    }
 
-.animation-2 {
-  @extend .animation-1;
-  height: 500px;
-  border: 20px solid $color_primary;
-  &:hover {
-    background-color: $color_primary;
-    color: $color_background;
-    border: 20px solid darken($color_primary, 100%);
+    to {
+      opacity: 1;
+    }
+  }
+
+  @include keyframes( slidein ) {
+    from {
+      margin-top: 25%;
+      width: 300%; 
+    }
+
+    to {
+      margin-top: 0;
+      width: 90vw;
+    }
   }
 }
-
-
-.animation-3 {
-  @extend .animation-1;
-  border: 10px solid darken($color_primary, 50%);
-}
-}
-
 
