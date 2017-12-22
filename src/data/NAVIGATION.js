@@ -1,19 +1,28 @@
 const NAVIGATION = [
   {
-    title: 'SL',
-    url: '/'
+    title: 'Contact',
+    url: '/contact'
   },
   {
     title: 'About',
     url: '/about'
   },
   {
-    title: 'Services',
-    url: '/services'
+    title: 'logo',
+    url: '../img/logo.png'
   },
   {
     title: 'Work',
-    url: '/work'
+    submenu: [
+      {
+        title: 'Services',
+        url: '/services'
+      },
+      {
+        title: 'Experience',
+        url: '/experience'
+      },
+    ]
   },
   {
     title: 'Blog',
