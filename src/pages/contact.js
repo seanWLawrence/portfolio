@@ -36,7 +36,7 @@ const schema = {
 export default () => (
   <section id='contact'>
     <Helmet>
-      <title> Sean Lawrence - Modern Web Developer</title>
+      <title> Sean Lawrence - Contact</title>
       <meta charset="UTF-8" />
       <meta name="author" content="Sean Lawrence" />
       <meta name="keywords" content="HTML, CSS, React.js, JavaScript, Web Developer, Website Builder" />
