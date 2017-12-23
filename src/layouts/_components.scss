@@ -65,11 +65,12 @@
         color: $color_hover;
         opacity: .8;
       } 
-    }
+    } 
 
     .submenu_arrow_closed {
-      height: 10px;
-      width: 10px;
+      height: 6px;
+      width: 6px;
+      margin-top: 3px;
       margin-left: 10px;
       padding: 0;
       border-bottom: 2px solid #fff;

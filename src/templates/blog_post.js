@@ -6,7 +6,7 @@ import Logo from '../img/logo.png'
 export default ({ data }) => {
   const { html, frontmatter, wordCount } = data.markdownRemark
   const { title, date, description } = frontmatter
-  // props needed: id, schemaType, description, image, imageDescription, title, date, style, titleStyle, url, children
+
   const schema = {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
@@ -15,7 +15,7 @@ export default ({ data }) => {
       "@id": "https://google.com/article"
     },
     "headline": { title },
-    "image": Logo || { image },
+    "image": { image } || Logo,
     "datePublished": { date },
     "dateModified": { date },
     "author": {

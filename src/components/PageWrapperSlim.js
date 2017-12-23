@@ -35,10 +35,10 @@ const PageWrapperSlim = props => {
         {/* <base href="https://seanlawrence.co/" target="_self" /> */}
         <meta property="og:type" content={ogType} />
         <meta property="og:title" content={title || 'Sean Lawrence - Modern web developer'} />
-        <meta property="og:description" content={description} />
+        <meta property="og:description" content={description || 'Modern web developer, specializing in e-commerce.'} />
         <meta property="og:url" content={url} />
-        <meta property="og:image" content={image || '/img/logo.png'} />
-        <meta property="og:image:alt" content={imageDescription} />
+        <meta property="og:image" content={image || Logo} />
+        <meta property="og:image:alt" content={imageDescription || 'Website logo'} />
         <meta property="og:image:width" content="400" />
         <meta property="og:image:height" content="300" />
         <meta property="og:locale" content="en_US" />
