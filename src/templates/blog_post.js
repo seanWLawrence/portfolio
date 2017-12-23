@@ -15,7 +15,7 @@ export default ({ data }) => {
       "@id": "https://google.com/article"
     },
     "headline": { title },
-    "image": { image } || Logo,
+    "image": Logo,
     "datePublished": { date },
     "dateModified": { date },
     "author": {
