@@ -6,6 +6,8 @@ const ThankYou = () => (
   <PageWrapperSlim
     title='Thank you!'
     id='thank_you'
+    description='Thank you for your message!'
+    url='https://seanlawrence.co/thank-you'
   >
     <p>Your form was sent successfully and I can't wait to learn more about you and your project!</p>
     <p>Talk soon,
