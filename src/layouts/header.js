@@ -23,6 +23,7 @@ const NestedNavListItem = props => (
       {props.title}
       <span className={`submenu_arrow_${props.submenuArrow}`} />
     </span>
+
     <ul
       className={props.className}
     >

@@ -5,6 +5,10 @@ import { CANVAS_DESKTOP, CANVAS_MOBILE } from '../data/CANVAS'
 import Form from '../components/Form'
 import Helmet from 'react-helmet'
 import Logo from '../img/logo.png'
+<<<<<<< HEAD
+=======
+import ProfileImage from '../img/sean_lawrence.jpg'
+>>>>>>> feature/head/meta-info
 
 const particlesStyle = {
   position: 'fixed',
@@ -21,7 +25,11 @@ const particlesStyle = {
 const schema = {
   "@context": "https://schema.org/",
   "@type": "Organization",
+<<<<<<< HEAD
   "url": "https://seanlawrence.co",
+=======
+  "url": "https://seanlawrence.co/contact",
+>>>>>>> feature/head/meta-info
   "name": "Sean Lawrence",
   "logo": {
     "@type": "ImageObject",
@@ -41,6 +49,7 @@ export default () => (
       <meta name="author" content="Sean Lawrence" />
       <meta name="keywords" content="HTML, CSS, React.js, JavaScript, Web Developer, Website Builder" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
       <meta name="description" content='Professional JavaScript web developer that specializes in modern design, React.js and Node.js. Contact me now for free advice or a pricing quote.' />
       {/* <base href="https://seanlawrence.co/" target="_self" /> */}
       <meta property="og:type" content='website' />
@@ -48,6 +57,14 @@ export default () => (
       <meta property="og:description" content='Professional JavaScript web developer that specializes in modern design, React.js and Node.js. Contact me now for free advice or a pricing quote.' />
       <meta property="og:url" content='https://seanlawrence.co' />
       <meta property="og:image" content={'/img/sean_lawrence.jpg'} />
+=======
+      <meta name="description" content='Contact me now for a free quote.' />
+      <meta property="og:type" content='website' />
+      <meta property="og:title" content={'Sean Lawrence - Modern web developer'} />
+      <meta property="og:description" content='Contact me now for a free quote.' />
+      <meta property="og:url" content='https://seanlawrence.co/contact' />
+      <meta property="og:image" content={ProfileImage} />
+>>>>>>> feature/head/meta-info
       <meta property="og:image:alt" content='Profile image of Sean Lawrence' />
       <meta property="og:image:width" content="300" />
       <meta property="og:image:height" content="200" />

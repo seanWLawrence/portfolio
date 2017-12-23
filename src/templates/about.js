@@ -2,7 +2,6 @@ import React from "react"
 import PageWrapperSlim from '../components/PageWrapperSlim'
 import SocialMedia from '../components/SocialMedia'
 import ProfileImage from '../img/sean_lawrence.jpg'
-import Logo from '../img/logo.svg'
 
 export default ({ data }) => {
   const { html } = data.markdownRemark
@@ -11,8 +10,8 @@ export default ({ data }) => {
       title='About'
       id='about'
       ogType='article'
-      description='Professional JavaScript web developer that specializes in modern design, React.js and Node.js. Contact me now for free advice or a pricing quote.'
-      image={Logo}
+      description='Professional JavaScript web developer that specializes in modern design with React.js and Node.js.'
+      image={ProfileImage}
       imageDescription='Profile image of Sean Lawrence'
       url='https://seanlawrence.co/about'
     >

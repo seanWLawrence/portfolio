@@ -4,7 +4,12 @@ import PROJECTS from '../data/PROJECTS'
 import PageWrapperSlim from '../components/PageWrapperSlim'
 
 const Projects = () => (
-  <PageWrapperSlim title='Experience' id='experience'>
+  <PageWrapperSlim
+    title='Experience'
+    id='experience'
+    description='See my accomplishments and work history.'
+    url='https://seanlawrence.co/experience'
+  >
     {
       PROJECTS.map(project => {
         const { title, description, url, id } = project;

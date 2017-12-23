@@ -5,7 +5,13 @@ import Link from 'gatsby-link'
 export default ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
   return (
-    <PageWrapperSlim title='Blog' id='blog'>
+    <PageWrapperSlim
+      title='Blog'
+      id='blog'
+      description='A blog about modern web development.'
+      url='https://seanlawrence.co/blog'
+      ogType='https://schema.org/Blog'
+    >
       {
         posts.map(post => {
           const { template, title, path, date } = post.node.frontmatter;
