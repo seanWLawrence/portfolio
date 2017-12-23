@@ -211,6 +211,12 @@
     margin-bottom: 40px;
   }
 
+  section > p:nth-child(4) {
+    @media (max-width: 450px) {
+      display: none;
+    }
+  }
+
   a strong {
     color: $color_primary;
     font-size: $font_size_title - 24px;
