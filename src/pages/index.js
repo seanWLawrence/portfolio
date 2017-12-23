@@ -3,6 +3,7 @@ import PageWrapperSlim from '../components/PageWrapperSlim'
 import Logo from '../img/logo.png'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+import ProfileImage from '../img/sean_lawrence.jpg'
 
 const boxStyles = [
   {
@@ -51,8 +52,6 @@ const Box = props => (
 
 export default () => (
   <section id='home'>
-<<<<<<< HEAD
-=======
     <Helmet>
       <title> Sean Lawrence - Contact</title>
       <meta charset="UTF-8" />
@@ -77,7 +76,6 @@ export default () => (
         {JSON.stringify(schema)}
       </script>
     </Helmet>
->>>>>>> feature/head/meta-info
     <img src={Logo} />
     <section id='menu'>
       {
@@ -94,5 +92,5 @@ export default () => (
         })
       }
     </section>
-  </section>
+  </section >
 )

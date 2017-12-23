@@ -12,11 +12,7 @@ I build high performance websites and modern applications using React.js, Expres
 
 | Languages          | Libraries        | Tools                                  | Skills                                          |
 | :----------------: | :--------------: | :------------------------------------: | :---------------------------------------------: |
-<<<<<<< HEAD
-| JavaScript ES6     | React.js         | Git / GitHub                           | UI/UX                                           |
-=======
 | JavaScript ES6     | React.js         | Git / GitHub                           | UI / UX                                         |
->>>>>>> feature/head/meta-info
 | JSX                | React Native.js* | SCSS / Stylus                          | Wireframing / Mockups                           |
 | CSS3               | Node.js          | Babel / ES Lint (AirBnB)               | Adobe / Microsoft Suite                         |
 | HTML5              | Express.js       | Webpack                                | Cross-browser / Mobile testing                  |
