@@ -1,6 +1,6 @@
 ---
 path: "/blog/what-i-learned-from-starting-a-web-development-agency"
-date: "2017-12-7"
+date: "2017-12-07"
 title: "What I learned from becoming a developer (Pt. 1)"
 template: "blog_post"
 
