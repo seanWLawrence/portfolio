@@ -155,16 +155,13 @@
   input {
     background-color: transparent;
     padding: 8px;
-    font-size: 22px;
-    font-weight: 200;
-    color: $color_hover;
+    @include font($color_hover, $font_weight_paragraph, $font_size_paragraph + 4px, $font_line_height_paragraph, $font_family_paragraph, 1.5px);
     width: 500px;
     max-width: 30rem;
     margin: 15px 0;
     border: 0;
     border-bottom: 2px solid $color_primary;
     outline: 0;
-    letter-spacing: 1.5px;
     border-radius: 0;
     &:focus {
       outline: none;

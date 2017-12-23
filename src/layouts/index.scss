@@ -88,6 +88,9 @@ body {
 
 p {
   @include font($color_paragraph, $font_weight_paragraph, $font_size_paragraph, $font_line_height_paragraph, $font_family_paragraph, $font_letter_spacing_paragraph);
+  @media (max-width: 450px) {
+    font-weight: 200;
+  }
 }
 
 a {
