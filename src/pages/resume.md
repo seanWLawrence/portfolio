@@ -8,6 +8,11 @@ template: "resume"
 
 ## Summary
 
+Position: Web Developer <br />
+Contact: [sean.w.lawrence@gmail.com](mailto:sean.w.lawrence@gmail.com) <br />
+Resources: [GitHub](https://github.com/seanwlawrence) | [LinkedIn](https://www.linkedin.com/in/sean-lawrence-21792799/) <br />
+Languages: JavaScript (React.js, Node.js), HTML5, CSS3 
+
 I build high performance websites and modern applications using React.js, Express.js and Node.js.
 
 | **Languages**      | **Libraries**    | **Tools**                              | **Skills**                                      |
