@@ -155,7 +155,7 @@
   input {
     background-color: transparent;
     padding: 8px;
-    @include font($color_hover, $font_weight_paragraph, $font_size_paragraph + 4px, $font_line_height_paragraph, $font_family_paragraph, 1.5px);
+    @include font($color_hover, $font_weight_paragraph, $font_size_paragraph + 2px, $font_line_height_paragraph, $font_family_paragraph, 1.5px);
     width: 500px;
     max-width: 30rem;
     margin: 15px 0;
