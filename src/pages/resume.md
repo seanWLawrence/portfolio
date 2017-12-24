@@ -10,7 +10,7 @@ template: "resume"
 
 I build high performance websites and modern applications using React.js, Express.js and Node.js.
 
-| Languages          | Libraries        | Tools                                  | Skills                                          |
+| **Languages**      | **Libraries**    | **Tools**                              | **Skills**                                      |
 | :----------------: | :--------------: | :------------------------------------: | :---------------------------------------------: |
 | JavaScript ES6     | React.js         | Git / GitHub                           | UI / UX                                         |
 | JSX                | React Native.js* | SCSS / Stylus                          | Wireframing / Mockups                           |
@@ -19,7 +19,7 @@ I build high performance websites and modern applications using React.js, Expres
 | Markdown           | GraphQL          | Bash / Zsh Terminal                    | Google Material Design / Apple Design Standards |
 | C++ / WebAssembly* | Meteor.js*       | Google Analytics, Tag Manager & Trends | DRY / Functional programming                    |
 
-*Familiar/used before, beginner-intermediate level. All other mentioned skills are intermediate-expert level.
+*Early stages.
 
 <br />
 
