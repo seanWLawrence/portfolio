@@ -132,7 +132,9 @@
   .date {
     font-size: 18px;
     margin-top: 10px;
-    color: $color_paragraph;
+    color: $color_paragraph - 20%;
+    font-weight: 200;
+    font-family: sans-serif;
   }
 }
   

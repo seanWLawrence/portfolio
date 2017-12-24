@@ -56,7 +56,7 @@ const PageWrapperSlim = props => {
       >
         {title}
       </h1>
-      {date ? <span>{date}</span> : null}
+      {date ? <span className='date'>{date}</span> : null}
       {children}
     </section>
   )
