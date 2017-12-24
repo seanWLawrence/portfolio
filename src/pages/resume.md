@@ -8,12 +8,14 @@ template: "resume"
 
 ## Summary
 
+
 Position: Web Developer <br />
 Contact: [sean.w.lawrence@gmail.com](mailto:sean.w.lawrence@gmail.com) <br />
 Resources: [GitHub](https://github.com/seanwlawrence) | [LinkedIn](https://www.linkedin.com/in/sean-lawrence-21792799/) <br />
 Languages: JavaScript (React.js, Node.js), HTML5, CSS3 
 
-I build high performance websites and modern applications using React.js, Express.js and Node.js.
+
+I build high performance websites and modern applications using React.js, Node.js and Gatsby.js.
 
 | **Languages**      | **Libraries**    | **Tools**                              | **Skills**                                      |
 | :----------------: | :--------------: | :------------------------------------: | :---------------------------------------------: |
@@ -38,17 +40,17 @@ _Expected graduation in 2020_
 
 ## Experience
 
-[**Mail For Good**](https://mail-for-good.netlify.com)
+[**Mail For Good**](https://github.com/freecodecamp/mail-for-good)
 
 **(November 2017 - Current) - _Open Source Contributor_**
 
-- Built a static site with Hugo for the Mail For Good repository documentation. 
+- Built the [documentation site](http://mail-for-good.netlify.com) for the Mail For Good repository using [Hugo](https://gohugo.io/getting-started/). 
 
-- Created a single page design, using Google's Material Design Standards to enhance readability and accessability. 
+- Created a single page design, using [Google's Material Design Standards](https://material.io) to enhance readability and accessibility. 
 
 - Added modals to the application screenshots for higher resolution images and wrote the pages in Markdown for easier contributions. 
 
-- Commited to maintain and add new features to the site as needed on the core team of this repository long-term. 
+- Committed to maintaining and adding new features to the site as needed on the core team of this repository long-term. 
 
 [**Beastgrip**](https://beastgrip.com)
 
@@ -56,9 +58,9 @@ _Expected graduation in 2020_
 
 - Created new partnerships with over 10 different Fortune 500 companies. 
 
-- Designed the front end of our new, upcoming e-commerce website with Figma and modern CSS. 
+- Designed the front end of our new, upcoming e-commerce website with [Figma](https://figma.com) and modern CSS. 
 
-- Programmed 3 applications with React.js, Node.js and jQuery to lower abandoned carts and increase bundle sales and user engagement (currently in beta). 
+- Programmed 3 applications with React.js and Node.js to lower abandoned cart percentage and increase bundle sales and user engagement (currently in beta). 
 
 - Styled a [shoppable Instagram app](https://beastgrip.com/pages/inspiration-2) to match our branding and improve bundle sales.
 
@@ -87,7 +89,7 @@ _Expected graduation in 2020_
 - Traveling - I've been to over 20 destinations, such as London, Punta Cana, Cancun, Toronto, Orlando, Boston, Denver, NYC, and LA and plan to see 10+ more in 2018.
 
 #### Want to know more?
-Check out my [GitHub](https://github.com/seanwlawrence), message me on [LinkedIn](https://www.linkedin.com/in/sean-lawrence-21792799/) and/or send me a [message](/contact).
+Send me a [message](/contact).
 
 <br />
 
