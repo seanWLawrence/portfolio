@@ -1,42 +1,89 @@
 # Sean Lawrence
 
+Position: Web Developer <br />
+Contact: [sean.w.lawrence@gmail.com](mailto:sean.w.lawrence@gmail.com) <br />
+Resources: [GitHub](https://github.com/seanwlawrence) | [LinkedIn](https://www.linkedin.com/in/sean-lawrence-21792799/) <br />
+Languages: JavaScript (React.js, Node.js), HTML5, CSS3 
+
+
 ## Summary
 
-I'm a front end JavaScript Developer that designs and creates UI/UX for websites and applications using modern tools and libraries, like React.js, Express.js, Node.js, Webpack, jQuery, HTML5 and CSS3. 
+I build high performance websites and modern applications using React.js, Express.js and Node.js.
 
-| Languages      | Libraries               | Tools       | Misc.                 |
-| :------------: | :---------------------: | :---------: | :-------------------: |
-| JavaScript/ES6 | React.js                | Webpack     | SPA/PWA*              |
-| CSS3           | Express.js              | Hugo/Gatsby | Linux/Mac/Windows     |
-| HTML5          | Node.js                 | Git/GitHub  | Photoshop/GIMP/Moqups |
-| Markdown       | Jade/Pug/EJS/Handlebars | Shopify     | Figma/Inkscape        |
-|                | jQuery                  | WordPress   | REST APIs/GraphQL            |
-|                | GraphQl                 | Yaml        | AJAX                  |
+| **Languages**      | **Libraries**    | **Tools**                              | **Skills**                                      |
+| :----------------: | :--------------: | :------------------------------------: | :---------------------------------------------: |
+| JavaScript ES6     | React.js         | Git / GitHub                           | UI / UX                                         |
+| JSX                | React Native.js* | SCSS / Stylus                          | Wireframing / Mockups                           |
+| CSS3               | Node.js          | Babel / ES Lint (AirBnB)               | Adobe / Microsoft Suite                         |
+| HTML5              | Express.js       | Webpack                                | Cross-browser / Mobile testing                  |
+| Markdown           | GraphQL          | Bash / Zsh Terminal                    | Google Material Design / Apple Design Standards |
+| C++ / WebAssembly* | Meteor.js*       | Google Analytics, Tag Manager & Trends | DRY / Functional programming                    |
 
-*Stands for - Single Page Applications/Progressive Web Applications
+*Early stages.
+
+<br />
+
+## Education
+
+**San Antonio College (Online) - B.S. in Computer Science**
+
+_Expected graduation in 2020_
+
+<br />
 
 ## Experience
 
-### [Beastgrip](https://beastgrip.com)
-(January 2015 - Current) - **Front end developer / VP of Business Development** 
+[**Mail For Good**](https://mail-for-good.netlify.com)
 
-Beastgrip is a mobile photography and film making gear startup. I focus on scaling the business by creating web applications.
+**(November 2017 - Current) - _Open Source Contributor_**
 
-* [**Inspiration page**](https://beastgrip.com/pages/inspiration-2) - an Instagram-style feed, that pulls images from an Instagram feed and displays a list of products shown in the photo and links to purchase them. Tools/libraries used: Snappt, CSS3.
+- Built a static site with Hugo for the Mail For Good repository documentation. 
 
-* **E-commerce admin panel** - (in progress) - admin page that accepts data for the Media page (below), writes/edits/deletes it to a PostgreSQL database for the Media page to use. Tools/libraries used: React.js, Express.js, Webpack.
+- Created a single page design, using Google's Material Design Standards to enhance readability and accessability. 
 
-* **Media page** - (in progress) - a grid of Material Design-style cards that pull data through a REST API to display project information, such as embedded YouTube videos, products used in the project and the director's name. When clicked, a modal displays product information and an image gallery. Tools/libraries used: jQuery, WebPack, REST API, and AJAX.
+- Added modals to the application screenshots for higher resolution images and wrote the pages in Markdown for easier contributions. 
 
-* **Product bundler** - (in progress) - a SPA that walks a customer through the experience of creating their own custom camera rig. When clicked, a modal displays product information and an image gallery. Tools/libraries used: Express.js w/ ES6, Handlebars, REST API, and AJAX.
+- Commited to maintain and add new features to the site as needed on the core team of this repository long-term. 
 
-* [**Mail For Good**](https://mail-for-good.netlify.com) - An open source contribution - a static website for the [Mail For Good](https://github.com/freecodecamp/mail-for-good) repository by Free Code Camp. Tools/libraries used: Hugo, Material Design Docs theme, Yaml, and Sass.
+[**Beastgrip**](https://beastgrip.com)
 
-* [**Mobile Innovation Network Australasia**](http://mina.pro) - An informational website for a non-profit mobile film festival in Australia. Includes a Facebook and Twitter feed, Embedded LinkedIn cards, YouTube videos and Scribd iframes, as well as a film submission form. Tools/libraries used: WordPress, Shapely theme, and Twitter/Facebook/LinkedIn APIs.
+**(January 2015 - Current) - _Front End Developer / VP of Business Development_**
 
-* [**Miller Street Studios**](http:millerstreetstudios.com) - An informational website for a local music recording studio. Includes embedded content from SoundCloud, Google Map iframe showing their location and an image gallery and contact form. Tools/libraries used: WordPress, Creativo theme, Google Maps and SoundCloud APIs.
+- Created new partnerships with over 10 different Fortune 500 companies. 
 
-## Want to know more?
-Learn more about me on my [LinkedIn](https://www.linkedin.com/in/sean-lawrence-21792799/) profile. Portfolio site coming soon - see wireframing/UI/UX design [here](https://www.figma.com/file/KzrkaB45CNbULsGDmdNeMc5a/Portfolio).
+- Designed the front end of our new, upcoming e-commerce website with Figma and modern CSS. 
+
+- Programmed 3 applications with React.js, Node.js and jQuery to lower abandoned carts and increase bundle sales and user engagement (currently in beta). 
+
+- Styled a [shoppable Instagram app](https://beastgrip.com/pages/inspiration-2) to match our branding and improve bundle sales.
+
+[**Mobile Innovation Network Australasia**](http://mina.pro)
+
+**(February 2017 - August 2017) - _Web Developer_**
+
+- Created a new WordPress website to increase brand recognition and film submissions. 
+
+- Added Facebook, Twitter and LinkedIn feeds to increase user engagement and communication. 
+
+[**Miller Street Studios**](http://millerstreetstudios.com) 
+
+**(August 2016 - February 2017) - _Web Developer_**
+
+- Created a new WordPress website to increase bookings and showcase the music studio's best features. 
+
+- Incorporated SoundCloud embeds, a masonry image gallery and Google Maps for improved representation.
+
+### Other Interests
+
+- Electric guitar - I've played over 100 concerts in a metal band. 
+
+- Powerlifting - At my current weight of 165 lbs., I can squat 2.5X , deadlift 2.1X, and bench 1.2X my bodyweight.
+
+- Traveling - I've been to over 20 destinations, such as London, Punta Cana, Cancun, Toronto, Orlando, Boston, Denver, NYC, and LA and plan to see 10+ more in 2018.
+
+#### Want to know more?
+Message me on [LinkedIn](https://www.linkedin.com/in/sean-lawrence-21792799/) and/or send me a [message](https://seanlawrence.co/contact).
+
+<br />
 
 **References and code samples available upon request.**
