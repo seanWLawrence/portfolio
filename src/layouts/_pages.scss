@@ -36,9 +36,12 @@
       height: 200px;
       margin-bottom: 20px;
       border: 10px solid darken($color_primary, 30%);
+      &:active {
+      border: 10px solid $color_primary;
+    }
     }
     &:active {
-      border: 10px solid $color_primary;
+      border: 20px solid $color_primary;
     }
 
     h2, .box_title {
@@ -57,7 +60,7 @@
 
     &:hover {
       background-color: #111;
-      border: 10px solid $color_primary;
+      border: 20px solid $color_primary;
       cursor: pointer;
     }
   }
