@@ -65,7 +65,7 @@ class Header extends Component {
         <ul className='nav_menu'>
           {
             NAVIGATION.map(page => {
-              const { title, url } = page;
+              const { title, url, submenu } = page;
               if (title === 'logo') {
                 return (
                   <li key='contact'>
@@ -82,12 +82,12 @@ class Header extends Component {
                     </Link>
                   </li>
                 )
-              } else if (title === 'Work') {
+              } else if (submenu) {
                 return (
                   <NestedNavListItem
                     key={title}
-                    submenu={NAVIGATION[3].submenu}
-                    title='Work'
+                    submenu={submenu}
+                    title={title}
                     click={this.toggleSubmenu.bind(this)}
                     className={this.state.submenuShown === false ? 'submenu_hidden' : 'submenu_shown'}
                     submenuArrow={this.state.submenuShown === false ? 'closed' : 'open'}
