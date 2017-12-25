@@ -5,7 +5,7 @@ const NAVIGATION = [
   },
   {
     title: 'About',
-    url: '/about'
+    url: '/about',
   },
   {
     title: 'logo',

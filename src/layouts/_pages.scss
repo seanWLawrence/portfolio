@@ -1,4 +1,99 @@
-// Home page 
+// Home page
+
+#home {
+  @include flexbox(column, flex-start, center);
+  background-color: darken($color_primary, 50%);
+  min-height: 100vh;
+  width: 100vw;
+  padding-top: 100px;
+
+  img {
+    margin-bottom: 50px;
+  }
+
+  #menu {
+    @include flexbox(row, space-around, center);
+    width: 90vw;
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-timing-function: ease;
+    @media (max-width: 750px) {
+      @include flexbox(column, flex-start, center);
+      min-height: 100%;
+    }
+  }
+
+  .box-1 {
+    height: 300px;
+    width: 25%;
+    border: 20px solid darken($color_primary, 30%);
+    background-color: darken($color_primary, 100%);
+    color: $color_background;
+    @include flexbox(column, center, center);
+    @media (max-width: 750px) {
+      width: 90vw;
+      max-width: 400px;
+      height: 200px;
+      margin-bottom: 20px;
+      border: 10px solid darken($color_primary, 30%);
+    }
+    &:active {
+      border: 10px solid $color_primary;
+    }
+
+    h2, .box_title {
+      color: $color_background;
+      animation-name: fadein;
+      animation-duration: 5s;
+      animation-timing-function: ease;
+      margin: 10%;
+      text-align: center;
+    }
+
+    p {
+      @extend .box_title;
+      animation-duration: 8s;
+    }
+
+    &:hover {
+      background-color: #111;
+      border: 10px solid $color_primary;
+      cursor: pointer;
+    }
+  }
+
+  .box-2 {
+    @extend .box-1;
+    height: 400px;
+    @media (max-width: 750px) {
+      height: 200px;
+    }
+  }
+
+  @include keyframes( fadein ) {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @include keyframes( slidein ) {
+    from {
+      margin-top: 25%;
+      width: 300%; 
+    }
+
+    to {
+      margin-top: 0;
+      width: 90vw;
+    }
+  }
+}
+
+// Contact page 
 
 #contact {
   min-height: 100vh;
@@ -212,7 +307,6 @@
     border-left: 5px solid $color_secondary - 70%;
     padding-left: 10px;
     margin-bottom: 30px;
-    word-break: break-all;
   }
 
   p:nth-child(5) {
