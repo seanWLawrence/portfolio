@@ -10,21 +10,21 @@ template: "resume"
 
 
 Position: Web Developer <br />
-Contact: [sean.w.lawrence@gmail.com](mailto:sean.w.lawrence@gmail.com) <br />
+Contact: [Email](/contact) <br />
 Resources: [GitHub](https://github.com/seanwlawrence) | [LinkedIn](https://www.linkedin.com/in/sean-lawrence-21792799/) <br />
 Languages: JavaScript (React.js, Node.js), HTML5, CSS3 
 
 
 I build high performance websites and modern applications using React.js, Node.js and Gatsby.js.
 
-| **Languages**      | **Libraries**    | **Tools**                              | **Skills**                                      |
-| :----------------: | :--------------: | :------------------------------------: | :---------------------------------------------: |
-| JavaScript ES6     | React.js         | Git / GitHub                           | UI / UX                                         |
-| JSX                | React Native.js* | SCSS / Stylus                          | Wireframing / Mockups                           |
-| CSS3               | Node.js          | Babel / ES Lint (AirBnB)               | Adobe / Microsoft Suite                         |
-| HTML5              | Express.js       | Webpack                                | Cross-browser / Mobile testing                  |
-| Markdown           | GraphQL          | Bash / Zsh Terminal                    | Google Material Design / Apple Design Standards |
-| C++ / WebAssembly* | Meteor.js*       | Google Analytics, Tag Manager & Trends | DRY / Functional programming                    |
+| **Languages**        | **Libraries**        | **Tools**                              | **Skills**                                      |
+| :------------------: | :------------------: | :------------------------------------: | :---------------------------------------------: |
+| JavaScript ES6       | React.js             | Git / GitHub                           | UI / UX                                         |
+| CSS3                 | React Native.js*     | Babel / ES Lint (AirBnB)               | Wireframing / Mockups                           |
+| Markdown / HTML5     | Node.js / Express.js | Webpack                                | REST API / AJAX/ GraphQL                        |
+| PostgreSQL / MongoDB | Meteor.js            | Jest*                                  | Cross-browser / Mobile testing                  |
+| C++ / WebAssembly*   | Gatsby.js / Hugo     | Bash / Zsh Terminal                    | Google Material Design / Apple Design Standards |
+| --                   | SCSS / Stylus        | Google Analytics, Tag Manager & Trends | DRY / Functional Programming                    |
 
 *Early stages.
 
