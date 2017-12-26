@@ -32,7 +32,6 @@ const PageWrapperSlim = props => {
         <meta name="keywords" content="HTML, CSS, React.js, JavaScript, Web Developer, Website Builder" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content={description} />
-        {/* <base href="https://seanlawrence.co/" target="_self" /> */}
         <meta property="og:type" content={ogType} />
         <meta property="og:title" content={title || 'Sean Lawrence - Modern web developer'} />
         <meta property="og:description" content={description || 'Modern web developer, specializing in e-commerce.'} />

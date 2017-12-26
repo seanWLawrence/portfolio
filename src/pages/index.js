@@ -83,6 +83,7 @@ export default () => (
           const { title, style, url, paragraph } = boxStyle
           return (
             <Box
+              key={title}
               style={style}
               title={title}
               url={url}
