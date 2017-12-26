@@ -13,7 +13,6 @@ const TemplateWrapper = ({ children }) => (
     <Header />
     <main id='site_content'>
       {children()}
-      <img src={Favicon} />
     </main>
   </section >
 )
