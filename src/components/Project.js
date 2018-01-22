@@ -28,16 +28,6 @@ const Project = props => {
       </button>
         </a>
       </section>
-      <section className='arrow'>
-        <i />
-      </section>
-      <iframe
-        title={title}
-        src={url}
-        frameBorder="0"
-        allowFullScreen
-      >
-      </iframe>
     </section>
   )
 }
