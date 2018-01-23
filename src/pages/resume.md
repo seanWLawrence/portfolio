@@ -80,13 +80,13 @@ _Expected graduation in 2020_
 
 - Incorporated SoundCloud embeds, a masonry image gallery and Google Maps for improved representation.
 
-### Other Interests
+<!-- ### Other Interests
 
 - Electric guitar - I've played over 100 concerts in a metal band. 
 
 - Powerlifting - At my current weight of 165 lbs., I can squat 2.5X , deadlift 2.1X, and bench 1.2X my bodyweight.
 
-- Traveling - I've been to over 20 destinations, such as London, Punta Cana, Cancun, Toronto, Orlando, Boston, Denver, NYC, and LA and plan to see 10+ more in 2018.
+- Traveling - I've been to over 20 destinations, such as London, Punta Cana, Cancun, Toronto, Orlando, Boston, Denver, NYC, and LA and plan to see 10+ more in 2018. -->
 
 #### Want to know more?
 Send me a [message](/contact).
