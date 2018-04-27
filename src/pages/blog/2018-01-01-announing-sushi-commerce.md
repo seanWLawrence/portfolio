@@ -6,7 +6,7 @@ template: "blog_post"
 
 ---
 
-> TL;DR - I'm excited to say that I'm currently working on an awesome open source project for creating free ecommerce websites! 
+> TL;DR - I'm excited to say that I'm currently working on an awesome open source project for creating free ecommerce websites! **Expected release date, June 2018**
 
 #### Background
 
