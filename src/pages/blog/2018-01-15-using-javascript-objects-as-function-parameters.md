@@ -1,6 +1,6 @@
 ---
 path: "/blog/using-javascript-objects-as-function-parameters"
-date: "2018-15-01"
+date: "2018-01-15"
 title: "Using JavaScript objects as function parameters"
 template: "blog_post"
 
