@@ -8,13 +8,13 @@ template: "blog_post"
 
 # Announcing Bulma Classnames!
 
-> TL;DR - In addition to [Sushi Commerce](https://seanlawrence.co/blog/announcing-sushi-commerce), I'm working on a simple, but powerful way to write [Bulma.css](https://bulma.io/) classnames! **Expected to release in May 2018**
+> TL;DR - In addition to [Sushi Commerce](/blog/announcing-sushi-commerce), I'm working on a simple, but powerful way to write [Bulma.css](https://bulma.io/) classnames! *Expected to release in May 2018*
 
 ### The problem
 
 Bulma is very modular and powerful css framework, similar to [Bootstrap](http://getbootstrap.com/), [Foundation](https://foundation.zurb.com/), etc. One of the issues I have when using a framework like this, is the extremely long, spaghetti code-looking classnames that you have to use to create a custom component. 
 
-> Note: these examples are using JSX, a syntax usually used with React.js, though BulmaClassnames can be used anywhere that you're able to pass in JavaScript. **
+> Note: these examples are using JSX, a syntax usually used with [React.js](https://reactjs.org/), though **Bulma Classnames can be used anywhere that you're able to pass in JavaScript. **
 
 #### Simple example with Bulma.css
 
@@ -22,57 +22,57 @@ A simple button with a few style modifiers.
 
 ``` javascript
 <a 
-    href="/" 
-    className="button is-primary is-rounded is-outlined is-inverted"
+  href="/" 
+  className="button is-primary is-rounded is-outlined is-inverted"
 >
-    Click me!
+  Click me!
 </a>
 ```
 
 #### Nested example with Bulma.css
 
-A column with different sizes for different screensizes that wrapps two buttons with some style modifiers. __Note: this is only one level of nesting deep - imagine how jumbled this will look in a real application.__
+A column with different sizes for different screensizes that wrapps two buttons with some style modifiers. *Note: this is only one level of nesting deep - imagine how jumbled this will look in a real application.*
 
 ``` javascript
 <div 
-    className="column is-1-mobile is-2-tablet is-3-touch is-4-desktop is-5-widescreen is-6-fullhd"
+  className="column is-1-mobile is-2-tablet is-3-touch is-4-desktop is-5-widescreen is-6-fullhd"
 >
-    <a 
-        href="/" 
-        className="button is-primary is-rounded is-outlined"
-    >
-        Click me!
-    </a>
-    <a 
-        href="/" 
-        className="button is-danger outlined is-inverted"
-    >
-        Cancel
-    </a>
+  <a 
+    href="/" 
+    className="button is-primary is-rounded is-outlined"
+  >
+    Click me!
+  </a>
+  <a 
+    href="/" 
+    className="button is-danger outlined is-inverted"
+  >
+    Cancel
+  </a>
 </div>
 ```
 
 ### The solution
 
-Bulma Classnames is a simple helper function that allows you to create classnames for bulma with [an oject as the functions parameter](https://seanlawrence.co/blog/using-javascript-objects-as-function-parameters) is a declaritive API. 
+Bulma Classnames is a simple helper function that allows you to create classnames for bulma with [an object as the functions parameter](/blog/using-javascript-objects-as-function-parameters) is a declaritive API. 
 
-#### Simple example with BulmaClassnames
+#### Simple example with Bulma Classnames
 
 ```javascript
 imoprt bulma from 'bulma-classnames'
 
-    <a 
-        href="/" 
-        className={
-            bulma({
-                raw: 'button',
-                is: ['rounded', 'outlined'] 
-                color: 'primary'
-            })
-        }
-    >
-        Click me!
-    </a>
+<a 
+  href="/" 
+  className={
+    bulma({
+      raw: 'button',
+      is: ['rounded', 'outlined'] 
+      color: 'primary'
+    })
+  }
+>
+  Click me!
+</a>
 
 ```
 
@@ -82,73 +82,73 @@ imoprt bulma from 'bulma-classnames'
 import bulma from 'bulma-classnames'
 
 <div 
-    className={
-        bulma({
-            column: [
-                '1-mobile',
-                '2-tablet',
-                '3-touch',
-                '4-desktop',
-                '5-widescreen',
-                '6-fullhd'
-            ]
-        )}
-    }
+  className={
+    bulma({
+      column: [
+        '1-mobile',
+        '2-tablet',
+        '3-touch',
+        '4-desktop',
+        '5-widescreen',
+        '6-fullhd'
+      ]
+    )}
+  }
 >
-    <a 
-        href="/" 
-        className={
-            bulma({
-                raw: 'button',
-                is: ['rounded', 'outlined'] 
-                color: 'primary'
-            })
-        }
-    >
-        Click me!
-    </a>
-     <a 
-        href="/" 
-        className={
-            bulma({
-                raw: 'button',
-                is: ['inverted', 'outlined'] 
-                color: 'primary'
-            })
-        }
-    >
-        Cancel
-    </a>
+  <a 
+    href="/" 
+    className={
+      bulma({
+        raw: 'button',
+        is: ['rounded', 'outlined'] 
+        color: 'primary'
+      })
+    }
+  >
+    Click me!
+  </a>
+   <a 
+    href="/" 
+    className={
+      bulma({
+        raw: 'button',
+        is: ['inverted', 'outlined'] 
+        color: 'primary'
+      })
+    }
+  >
+    Cancel
+  </a>
 </div>
 ```
 
 ### API
-> The API may change, but below are the expected parameters that can be passed into BulmaClassnames helper function:
+> The API may change, but below are the expected parameters that can be passed into Bulma Classnames helper function:
 
-**is:** ```string | string[]``` - adds "is-" in front of the each string
+**is:** ```string | string[]``` - adds "is-" to the front of each string
 
 ```javascript
 bulma({
-    is: 'primary'
+  is: 'primary'
 }) 
 // => 'is-primary'
 
 bulma({
-    is: ['primary', 'capitalized']
+  is: ['primary', 'capitalized']
 }) 
 
 // => 'is-primary is-capitalized'
 ```
 
-**has:** ```string | string[]``` - adds "has-" in front of the each string
+**has:** ```string | string[]``` - adds "has-" to the front of each string
 ```javascript
 bulma({
-    has: 'text-weight-bold'
+  has: 'text-weight-bold'
 }) 
 // => 'has-text-weight-bold'
 
 bulma({
-    has: ['text-weight-bold', 'text-color-danger']
+  has: ['text-weight-bold', 'text-color-danger']
 }) 
 
 // => 'has-text-weight-bold has-text-color-danger'
@@ -156,7 +156,7 @@ bulma({
 **raw:** ```string``` - outputs the exact same string that is passed, no formatting is added
 ```javascript
 bulma({
-    raw: 'column'
+  raw: 'column'
 }) 
 // => 'column'
 ```
@@ -164,7 +164,7 @@ bulma({
 **backgroundColor:** ```string``` - adds "is-background-color-" to the front of the string
 ```javascript
 bulma({
-    backgroundColor: 'primary'
+  backgroundColor: 'primary'
 }) 
 // => 'is-background-color-primary'
 ```
@@ -172,7 +172,7 @@ bulma({
 **color:** ```string``` - adds "is-" to the front of the string
 ```javascript
 bulma({
-    color: 'primary'
+  color: 'primary'
 }) 
 // => 'is-primary
 ```
@@ -180,12 +180,12 @@ bulma({
 **column:** ```string | string[]``` - adds "is-" to the front of each string and "column" to the end
 ```javascript
 bulma({
-    column: '10-mobile'
+  column: '10-mobile'
 }) 
 // => 'is-10-mobile column'
 
 bulma({
-    column: [ '10-mobile', '11-desktop', '12-widescreen']
+  column: [ '10-mobile', '11-desktop', '12-widescreen']
 }) 
 // => 'is-10-mobile is-11-desktop is-12-widescreen column'
 ```
@@ -193,12 +193,12 @@ bulma({
 **offset:** ```string | string[]``` - adds "is-offset-" to the front of each string 
 ```javascript
 bulma({
-    offset: '10-mobile'
+  offset: '10-mobile'
 }) 
 // => 'is-offset-10-mobile'
 
 bulma({
-    offset: [ '10-mobile', '11-desktop', '12-widescreen']
+  offset: [ '10-mobile', '11-desktop', '12-widescreen']
 }) 
 // => 'is-offset-10-mobile is-offset-11-desktop is-offset-12-widescreen'
 ```
@@ -206,12 +206,12 @@ bulma({
 **flex:** ```string | string[]``` - adds "is-flex" to the front of each string
 ```javascript
 bulma({
-    flex: 'mobile'
+  flex: 'mobile'
 }) 
 // => 'is-flex-mobile'
 
 bulma({
-    flex: [ 'mobile', 'desktop', 'widescreen']
+  flex: [ 'mobile', 'desktop', 'widescreen']
 }) 
 // => 'is-flex-mobile is-flex-desktop is-flex-widescreen'
 ```
@@ -219,12 +219,12 @@ bulma({
 **inlineFlex:** ```string | string[]``` - adds "is-inline-flex" to the front of each string
 ```javascript
 bulma({
-    inlineFlex: 'mobile'
+  inlineFlex: 'mobile'
 }) 
 // => 'is-inline-flex-mobile'
 
 bulma({
-    inlineFlex: [ 'mobile', 'desktop', 'widescreen']
+  inlineFlex: [ 'mobile', 'desktop', 'widescreen']
 }) 
 // => 'is-inline-flex-mobile is-inline-flex-desktop is-inline-flex-widescreen'
 ```
@@ -232,12 +232,12 @@ bulma({
 **block:** ```string | string[]``` - adds "is-block" to the front of each string
 ```javascript
 bulma({
-    block: 'mobile'
+  block: 'mobile'
 }) 
 // => 'is-block-mobile'
 
 bulma({
-    block: [ 'mobile', 'desktop', 'widescreen']
+  block: [ 'mobile', 'desktop', 'widescreen']
 }) 
 // => 'is-block-mobile is-block-desktop is-block-widescreen'
 ```
@@ -245,7 +245,7 @@ bulma({
 **inlineBlock:** ```string | string[]``` - adds "is-inline-block" to the front of each string
 ```javascript
 bulma({
-    inlineBlock: 'mobile'
+  inlineBlock: 'mobile'
 }) 
 // => 'is-inline-block-mobile'
 
@@ -258,12 +258,12 @@ bulma({
 **inline:** ```string | string[]``` - adds "is-inline" to the front of each string
 ```javascript
 bulma({
-    inline: 'mobile'
+  inline: 'mobile'
 }) 
 // => 'is-inline-mobile'
 
 bulma({
-    inline: [ 'mobile', 'desktop', 'widescreen']
+  inline: [ 'mobile', 'desktop', 'widescreen']
 }) 
 // => 'is-inline-mobile is-inline-desktop is-inline-widescreen'
 ```
@@ -271,12 +271,12 @@ bulma({
 **hidden:** ```string | string[]``` - adds "is-dden" to the front of each string
 ```javascript
 bulma({
-    hidden: 'mobile'
+  hidden: 'mobile'
 }) 
 // => 'is-hidden-mobile'
 
 bulma({
-    hidden: [ 'mobile', 'desktop', 'widescreen']
+  hidden: [ 'mobile', 'desktop', 'widescreen']
 }) 
 // => 'is-hidden-mobile is-hidden-desktop is-hidden-widescreen'
 ```
@@ -284,7 +284,7 @@ bulma({
 **textColor:** ```string``` - adds "has-text-color" to the front of the string
 ```javascript
 bulma({
-    textColor: 'primary'
+  textColor: 'primary'
 }) 
 // => 'has-text-color-primary
 ```
@@ -292,12 +292,12 @@ bulma({
 **textSize:** ```string | string[]``` - adds "is-size-" to the front of the string
 ```javascript
 bulma({
-    textSize: '6'
+  textSize: '6'
 }) 
 // => 'is-size-6'
 
 bulma({
-    textSize: ['5-mobile', '6-desktop', '7-widescreen']
+  textSize: ['5-mobile', '6-desktop', '7-widescreen']
 }) 
 // => 'is-size-5-mobile is-size-6-desktop is-size-7-widescreen'
 ```
@@ -305,21 +305,21 @@ bulma({
 **textWeight:** ```string``` - adds "has-text-weight" to the front of the string
 ```javascript
 bulma({
-    textWeight: 'bold'
+  textWeight: 'bold'
 }) 
 // => 'has-text-weight-bold'
 
 ```
 
-**textTransformation:** ``` string | string[]``` - adds "is-" to the front of the string (slightly more semantic than just ```is```
+**textTransformation:** ``` string | string[]``` - adds "is-" to the front of the string (for better semantics than using ```is:```
 ```javascript
 bulma({
-    textTransformation: 'capitalized'
+  textTransformation: 'capitalized'
 }) 
 // => 'is-capitalized'
 
 bulma({
-    textTransformation: ['capitalized', 'italic']
+  textTransformation: ['capitalized', 'italic']
 }) 
 // => 'is-capitalized is-italic'
 ```
@@ -327,15 +327,15 @@ bulma({
 **textAlign:** ``` string | string[]``` - adds "has-text-" to the front of the string
 ```javascript
 bulma({
-    textAlign: 'left'
+  textAlign: 'left'
 }) 
 // => 'has-text-left'
 
 bulma({
-    textAlign: ['left-mobile', 'right-desktop', 'center-widescreen']
+  textAlign: ['left-mobile', 'right-desktop', 'center-widescreen']
 }) 
 // => 'has-text-left-mobile has-text-right-desktop has-text-center-widescreen'
 ```
 
 ### Conclusion
-This project is super simple, but incredibly helpful - at least in my other project [Sushi Commerce](https://seanlawrence.co/blog/announcing-sushi-commerce) that relies heavily on Bulma.css for styling. Let me know your thoughts on the API and stay tuned for it be on NPM and GitHub very soon! **SL**
+This project is super simple, but incredibly helpful - at least in my other project [Sushi Commerce](/blog/announcing-sushi-commerce) that relies heavily on Bulma.css for styling. Let me know your thoughts on the API and stay tuned for it be on NPM and GitHub very soon, as well as more parameters! **SL**
