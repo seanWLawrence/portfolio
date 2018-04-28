@@ -14,13 +14,11 @@ This is a very simple function and with no reason to use an object for passing i
 
 ```javascript
 let getMarried = (personOne, personTwo) => 
-    console.log(
-        `${personOne} and ${personTwo}, I now pronounce you married!`
-    )
+  `${personOne} and ${personTwo}, I now pronounce you married!`
 
-getMarried('Jackson', 'Maxon')  
+getMarried('Jim', 'Pam')  
 
-// Jackson and Maxon, I now pronounce you married!
+// Jim and Pam, I now pronounce you married!
 ```
 
 ### Without using an object as a parameter (more complex example)
@@ -29,13 +27,11 @@ Here's a more complex example that can get tricky to maintain, especially in a l
 
 ```javascript
 let sendWeddingInvitations = (personOne, personTwo, date, time, location) => 
-    console.log(
-        `${personOne} and ${personTwo} are getting married ${date} at ${time} in ${location}!
-    )
+  `${personOne} and ${personTwo} are getting married ${date} at ${time} ${location}!
 
-getMarried('Williamson', 'Juanita', 'tomorrow', '3PM', 'the backyard') 
+getMarried('Jim', 'Pam', 'tomorrow', '3PM', 'in the office') 
 
-// Jackson and Maxon are getting married tomorrow at 3PM in the backyard!
+// Jim and Pam are getting married tomorrow at 3PM in the office!
 ```
 
 ### Using an object as a parameter
@@ -45,25 +41,23 @@ It can get really tricky to remember the order of each parameter and the exact a
 ```javascript
 
 let sendWeddingInvitations = ({
-    personOne, 
-    personTwo, 
-    date, 
-    time, 
-    location
+  personOne, 
+  personTwo, 
+  date, 
+  time, 
+  location
 }) => 
-    console.log(
-        `${personOne} and ${personTwo} are getting married ${date} at ${time} in ${location}!
-    )
+  `${personOne} and ${personTwo} are getting married ${date} at ${time} ${location}!
 
 getMarried({
-    personOne: 'William Williamson', 
-    personTwo: 'Juanita Juanitas', 
-    date: 'tomorrow', 
-    time: '3PM', 
-    location: 'the backyard'
+  personOne: 'Jim', 
+  personTwo: 'Pam', 
+  date: 'tomorrow', 
+  time: '3PM', 
+  location: ' in the office'
 }) 
 
-// Jackson and Maxon are getting married tomorrow at 3PM in the backyard!
+// Jim and Pam are getting married tomorrow at 3PM in the the office!
 ```
 
 Much easier to read right, right? 
@@ -74,25 +68,23 @@ To make things even more flexible, you can even call the function with the argum
 ```javascript
 
 let sendWeddingInvitations = ({
-    personOne, 
-    personTwo, 
-    date, 
-    time, 
-    location
+  personOne, 
+  personTwo, 
+  date, 
+  time, 
+  location
 }) => 
-    console.log(
-        `${personOne} and ${personTwo} are getting married ${date} at ${time} in ${location}!
-    )
+  `${personOne} and ${personTwo} are getting married ${date} at ${time} ${location}!
 
 getMarried({
-    date: 'tomorrow', 
-    time: '3PM', 
-    location: 'the backyard'
-    personOne: 'William Williamson', 
-    personTwo: 'Juanita Juanitas', 
+  date: 'tomorrow', 
+  time: '3PM', 
+  location: 'in the office'
+  personOne: 'Jim', 
+  personTwo: 'Pam', 
 }) 
 
-// Jackson and Maxon are getting married tomorrow at 3PM in the backyard!
+// Jim and Pam are getting married tomorrow at 3PM in the offce!
 ```
 
 #### Omitting parameters
@@ -101,26 +93,24 @@ You can even **omit** certain parameters in the object and the function will sti
 ```javascript
 
 let sendWeddingInvitations = ({
-    personOne, 
-    personTwo, 
-    date, 
-    time, 
-    location
+  personOne, 
+  personTwo, 
+  date, 
+  time, 
+  location
 }) => 
-    console.log(
-        `${personOne} and ${personTwo} are getting married ${date} at ${time} ${location}!
-    )
+  `${personOne} and ${personTwo} are getting married ${date} at ${time} ${location}!
 
 getMarried({
-    personOne: 'Williamson', 
-    personTwo: 'Juanita', 
-    date: 'tomorrow', 
-    time: '3PM' 
+  personOne: 'Jim', 
+  personTwo: 'Pam', 
+  date: 'tomorrow', 
+  time: '3PM' 
 }) 
 
-// Jackson and Maxon are getting married tomorrow at 3PM!
+// Jim and Pam are getting married tomorrow at 3PM!
 ```
 
 ### Conclusion
 
-Not every function needs an object as a parameter, and not every function doesn't. The point is, an object is an extremely convenient way to pass values into a function - it's more flexible, easy to read, easy to remember, and an overall better API in my opinion. Think of it as another powerful tool for you to use in your toolbox. **SL**
+Not every function needs an object as a parameter, but it's an extremely convenient way to pass values into a function since it's much more flexible, easier to read, easier to remember, and is an overall better API in my opinion. Think of it as another powerful tool for you to use in your JavaScript toolbox. **SL**
