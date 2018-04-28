@@ -1,5 +1,6 @@
 import React from 'react'
 import PageWrapperSlim from '../components/PageWrapperSlim'
+import Link from 'gatsby-link'
 
 const NotFoundPage = () => (
   <PageWrapperSlim
@@ -8,8 +9,8 @@ const NotFoundPage = () => (
     description='Page not found, please visit https://seanlawrence.co'
 
   >
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+  <h1>Whoops! Wrong page, sorry about that...</h1>
+  <p>Go back to the <Link to="/">home page</Link> or check out my <Link to="/blog">blog</Link> though while you're here!</p>
   </PageWrapperSlim>
 )
 

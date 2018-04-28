@@ -6,8 +6,6 @@ template: "blog_post"
 
 ---
 
-# Announcing Bulma Classnames!
-
 > TL;DR - In addition to [Sushi Commerce](/blog/announcing-sushi-commerce), I'm working on a simple, but powerful way to write [Bulma.css](https://bulma.io/) classnames! *Expected to release in May 2018*
 
 ### The problem
@@ -59,7 +57,7 @@ Bulma Classnames is a simple helper function that allows you to create classname
 #### Simple example with Bulma Classnames
 
 ```javascript
-imoprt bulma from 'bulma-classnames'
+import bulma from 'bulma-classnames'
 
 <a 
   href="/" 

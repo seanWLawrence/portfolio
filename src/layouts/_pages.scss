@@ -286,6 +286,58 @@
       margin-bottom: 0;
     }
   }
+
+  blockquote p {
+    font-size: 18px;
+  }
+
+  h3, h4 {
+    font-size: 28px;
+  }
+
+  pre.language-javascript {
+    margin: 25px auto 50px auto;
+    width: 80vw;
+    max-width: 750px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+
+  .token.operator, .token.entity, .token.url {
+    color: #333;
+  }
+
+  .token.string, .token.char, .token.attr-value, .token.regex, .token.variable {
+    color: $color_primary;
+  }
+
+  code {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace;
+    line-height: 20px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: #555;
+  }
+
+  .token.boolean, .token.number, .token.function {
+    color:  lighten(rebeccapurple, 15%);
+  }
+
+  .token.keyword {
+    color: darken(palevioletred, 15%);
+  }
+
+  .token.comment {
+    color: #888;
+  }
+
+
+  .token.punctuation {
+    color: #666;
+  }
 }
 
 .breadcrumb {

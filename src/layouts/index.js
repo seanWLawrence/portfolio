@@ -3,7 +3,7 @@ import Header from './header'
 import Helmet from 'react-helmet'
 
 import './index.scss'
-import 'prismjs/themes/prism.css'
+import 'prismjs/themes/prism-tomorrow.css'
 
 const TemplateWrapper = ({ children }) => (
   <section id='site_wrapper'>
