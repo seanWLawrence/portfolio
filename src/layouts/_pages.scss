@@ -295,7 +295,7 @@
     font-size: 28px;
   }
 
-  pre.language-javascript {
+  pre.language-javascript, pre.language-css {
     margin: 25px auto 50px auto;
     width: 80vw;
     max-width: 750px;
@@ -304,13 +304,64 @@
     background-color: #f9f9f9;
   }
 
-  .token.operator, .token.entity, .token.url {
-    color: #333;
+  pre.language-css {
+    .token.operator, .token.entity, .token.url {
+      color: $color_primary;
+    }
+
+    .token.string, .token.char, .token.attr-value, .token.regex, .token.variable {
+      color: $color_primary;
+    }
+
+    .token.boolean, .token.number, .token.function {
+      color:  lighten(rebeccapurple, 15%);
+    }
+
+    .token.keyword {
+      color: $color_primary;
+    }
+
+    .token.comment {
+      color: #888;
+    }
+
+    .token.selector {
+      color: $color_primary;
+    }
+
+
+    .token.punctuation, .token.property {
+      color: rebeccapurple;
+    }
   }
 
-  .token.string, .token.char, .token.attr-value, .token.regex, .token.variable {
-    color: $color_primary;
+  pre.language-javascript {
+    .token.operator, .token.entity, .token.url {
+      color: #333;
+    }
+
+    .token.string, .token.char, .token.attr-value, .token.regex, .token.variable, .token.property {
+      color: $color_primary;
+    }
+
+    .token.boolean, .token.number, .token.function {
+      color:  lighten(rebeccapurple, 15%);
+    }
+
+    .token.keyword {
+      color: darken(palevioletred, 15%);
+    }
+
+    .token.comment {
+      color: #888;
+    }
+
+
+    .token.punctuation {
+      color: #666;
+    }
   }
+  
 
   code {
     font-size: 14px;
@@ -320,24 +371,12 @@
     white-space: pre-wrap;
     word-break: break-word;
     color: #555;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
   }
 
-  .token.boolean, .token.number, .token.function {
-    color:  lighten(rebeccapurple, 15%);
-  }
-
-  .token.keyword {
-    color: darken(palevioletred, 15%);
-  }
-
-  .token.comment {
-    color: #888;
-  }
-
-
-  .token.punctuation {
-    color: #666;
-  }
+ 
 }
 
 .breadcrumb {
