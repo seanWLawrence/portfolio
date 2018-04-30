@@ -35,7 +35,7 @@ let html = Prism.highlight(code, Prism.languages.javascript, 'javascript');
 ```
 
 3: Now we can customize the theme in our app's scss file. These are my settings in SCSS:
-```css
+```scss
 $color_primary: #2D9CDB;
 $color_secondary: rebeccapurple;
 $color_tertiary: palevioletred;
@@ -50,20 +50,26 @@ code {
     white-space: pre-wrap;
     word-break: break-word;
     color: #555;
+    padding: 10px;
   }
   
   pre.language-javascript, 
-  pre.language-css {
+  pre.language-css,
+  pre.language-scss {
     margin: 25px auto 50px auto;
     width: 80vw;
     max-width: 750px;
     padding: 20px;
     border-radius: 10px;
     background-color: #f9f9f9;
+
+    code {
+      padding: 0;
+    }
   }
 
-  pre.language-css {
-  
+  pre.language-css,
+  pre.language-scss {
     .token.operator, 
     .token.entity, 
     .token.url {

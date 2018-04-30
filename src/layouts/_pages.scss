@@ -295,16 +295,20 @@
     font-size: 28px;
   }
 
-  pre.language-javascript, pre.language-css {
+  pre.language-javascript, pre.language-css, pre.language-scss, pre.language-reason {
     margin: 25px auto 50px auto;
     width: 80vw;
     max-width: 750px;
     padding: 20px;
     border-radius: 10px;
     background-color: #f9f9f9;
+
+    code {
+      padding: 0;
+    }
   }
 
-  pre.language-css {
+  pre.language-css, pre.language-scss {
     .token.operator, .token.entity, .token.url {
       color: $color_primary;
     }
@@ -335,7 +339,8 @@
     }
   }
 
-  pre.language-javascript {
+  pre.language-javascript,
+  pre.language-reason {
     .token.operator, .token.entity, .token.url {
       color: #333;
     }
@@ -372,8 +377,8 @@
     word-break: break-word;
     color: #555;
     background-color: #f9f9f9;
-    padding: 10px;
     border-radius: 5px;
+    padding: 10px;
   }
 
  
