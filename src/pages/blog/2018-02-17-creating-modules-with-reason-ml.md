@@ -1,11 +1,11 @@
 ---
 path: "/blog/creating-modules-with-reason-ml"
-date: "2018-02-17"
+date: "2018-02-19"
 title: "Creating modules with ReasonML"
 template: "blog_post"
 ---
 
-As we briedly discussed in my [previous blog post about pattern matching in ReasonML](/blog/pattern-matching-with-reason-ml), ReasonML is really powerful syntax for JavaScript with a lot of extra functionality to make your code more straightforward. One of the most important concepts to learn in ReasonML are ```modules```, which we'll be discussing today.
+As we briefly discussed in my [previous blog post about pattern matching in ReasonML](/blog/pattern-matching-with-reason-ml), ReasonML is really powerful syntax for JavaScript with a lot of extra functionality to make your code more straightforward. One of the most important concepts to learn in ReasonML are ```modules```, which we'll be discussing today.
 
 ### What is a module?
 A module in Reason is just like a module in JavaScript, a block or scope of code that you can reuse as needed. Unlike JavaScript modules, ReasonML modules and variables, types and functions within them are all accessible from every file by default. **This means that every variable, function and module can be accessed from anywhere in the app, including other files.**
