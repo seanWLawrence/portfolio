@@ -124,6 +124,36 @@ This purely a personal preference, but I prefer to organize my file as shown abo
 **The default props are also helpful as documentation to know what the component's default values right away.**
 Seeing the defaults not only reiterates that these props are not required, but also what the values will be if they're not passed into the component when you use it somehwere else.
 
+### Using PropTypes with class components
+If you have something like [Babel transform class properties](https://babeljs.io/docs/plugins/transform-class-properties/) set up in your build process, you can use a newer syntax by declaring by propTypes and defaultProps as static class property. This is a much simpler syntax and assigns them to the component more concisely.
+
+```javascript
+
+export default class MagicWand extends Component {
+
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired
+      styles: PropTypes.objectOf(
+      PropTypes.string
+    )
+  }
+
+  static defaultProps = {
+    styles: {}
+  }
+
+  render() {
+    return (
+      <div style={styles}>
+        <h1>{title}</h1>
+        <p>{text}</p>
+      </div>
+    )
+  }
+}
+```
+
 
 ### Tips
 **Required props (PropTypes with the ```.isRequired``` suffix) should be at the top.**
