@@ -37,7 +37,7 @@ Sometimes you want to check if a prop exists before actually rendering a compone
 > Notice how we're adding a pair of ```{}``` and are ```return```ing the JSX that we're rendering, since we're adding logic to the function and not just returning JSX.
 
 ```javascript
-let Title = ({text}) => {
+let displayTitle = ({text}) => {
   if (text) {
     return (
       <h1>{text}</h1>
@@ -45,8 +45,16 @@ let Title = ({text}) => {
   }
 }
 
-// Usage: <Title text='Harry Potter and the Chamber of Beaches' />
+/* Usage: 
+  {
+    displayTitle({
+      text: 'Harry Potter and the Chamber of Beaches'
+    })
+  }
+*/
 ```
+
+> Note: although it's not *required* to name a component with conditional rendering in this way, I prefer it because it makes it obvious at a glance that there's a chance that this component will not be rendered, rather than simply naming it 'Title' like you would with any other component. 
 
 ### Components with conditional rendering and error handling
 Here we're adding a simple error message that will be rendered if the ```text``` prop was not passed. 
@@ -54,7 +62,7 @@ Here we're adding a simple error message that will be rendered if the ```text```
 > Note: You can (and should) also use something like [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html), [Flow](https://flow.org/) or [TypeScript](http://www.typescriptlang.org/) for error messages regarding props. In most cases, using at least PropTypes (a simpler and milder version of Flow and TypeScript) is recommend as it provides documentation of what props are expected and required, and gives specific error messages in the console if the worng "type" of prop was passed, i.e. a boolean was passed instead of a number, etc.
 
 ```javascript
-let Title = ({text}) => {
+let displayTitle = ({text}) => {
   if (text) {
     return (
       <h1>{text}</h1>
@@ -63,7 +71,12 @@ let Title = ({text}) => {
   return 'Sorry, no title was given!'
 }
 
-// Usage: <Title text='Harry Potter and the Chamber of Beaches' />
+/* Usage: 
+  {
+    displayTitle({
+      text: 'Harry Potter and the Chamber of Beaches'
+    })
+  }
 ```
 
 ### Components that map over props
@@ -89,7 +102,7 @@ And here we're going to pass in an array and map over it for a much more concise
 
 
 ```javascript
-let Titles = ({titles}) => {
+let displayTitles = ({titles}) => {
   if (titles) {
     titles.map(title =>
       <h1>{title}</h1>
@@ -104,7 +117,12 @@ let movieTitles = [
   'Harry Potter and the Goblet of Tire',
 ]
 
-// Usage: <Titles titles={movieTitles} />
+/* Usage: 
+  {
+    displayTitles({
+      titles: movieTitles
+    }) 
+  }
 ```
 
 ### Conclusion 
