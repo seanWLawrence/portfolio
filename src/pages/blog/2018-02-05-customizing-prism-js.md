@@ -54,6 +54,9 @@ code {
   }
   
   pre.language-javascript, 
+  pre.language-jsx,
+  pre.language-reason,
+  pre.language-html,
   pre.language-css,
   pre.language-scss {
     margin: 25px auto 50px auto;
@@ -108,7 +111,10 @@ code {
     }
   }
 
-  pre.language-javascript {
+  pre.language-javascript,
+  pre.language-jsx,
+  pre.language-reason,
+  pre.language-html {
   
     .token.operator, 
     .token.entity, 
