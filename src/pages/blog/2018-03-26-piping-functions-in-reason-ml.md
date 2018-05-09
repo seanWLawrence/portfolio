@@ -10,13 +10,13 @@ If you've read through the [ReasonML docs](https://reasonml.github.io/) before, 
 The pipe operator `|>` allows you to chain function calls together in a much simpler syntax than you may be used to using when using higher order functions in JavaScript. Let's see the normal/expected way of doing this.
 
 ```reason
-let example = doThisLast(doThisSecond(doThisFirst(variableName))) // hard to read
+let example = doThisLast(doThisSecond(doThisFirst(variableName))) /* hard to read */
 ```
 
 and here's the same function chain with the `|>` pipe operator:
 
 ```reason
-let example = variableName |> doThisFirst |> doThisSecond |> doThisLast // much easier to read
+let example = variableName |> doThisFirst |> doThisSecond |> doThisLast /* much easier to read */
 
 ```
 
@@ -49,7 +49,7 @@ Js.log(mammal)
 
 ```
 
-### Strings
+**Strings**
 
 ```reason 
 let man = "Johnathan";

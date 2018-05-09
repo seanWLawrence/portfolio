@@ -13,15 +13,15 @@ A module in Reason is just like a module in JavaScript, a block or scope of code
 By default, every file is its own module and you access variables, functions and types from that module with dot notation like you would access a value in a JavaScript object.
 
 ```reason
-// file named Guitar.re
+/* file named Guitar.re */
 
 let brand = "Fender";
 ```
 
 ```reason
-// file named index.re
+/* file named index.re */
 
-Js.log(Guitar.brand); // "Fender"
+Js.log(Guitar.brand); /* "Fender" */
 ```
 
 > Note: this is a very neat and handy feature from ReasonML, though it's worth noting that because every file is imported/exported by default, you can't have two .re (Reason file name extension) files with the same name. A common convention to file prevent naming clashes with similar files is to add an additional identifier to the end of the file name, i.e. ```Guitar.re``` and ```Guitar_Electric.re```. 
@@ -42,17 +42,17 @@ module Model = {
 ```
 
 ```reason
-// file named index.re
+/* file named index.re */
 
-Js.log(Guitar.brand); // "Fender"
-Js.log(Guitar.Model.name); // "Stratocaster"
+Js.log(Guitar.brand); /* "Fender" */
+Js.log(Guitar.Model.name); /* "Stratocaster" */
 ```
 
 ### Opening modules
 You can also "open" another module to access all of the variables, functions and types in another file without having to prefix the module name first, i.e. instead of useing ```Guitar.brand```, you can simply use ```brand``` in that file. 
 
 ```reason
-// file named Guitar.re
+/* file named Guitar.re */
 
 let brand = "Fender"
 
@@ -62,12 +62,12 @@ module Model = {
 ```
 
 ```reason
-// file named index.re
+/* file named index.re */
 
 open Guitar;
 
-Js.log(brand); // "Fender"
-Js.log(Model.name); // "Stratocaster"
+Js.log(brand); /* "Fender" */
+Js.log(Model.name); /* "Stratocaster" */
 ```
 
 ### Tip on importing/exporting types
@@ -83,7 +83,7 @@ type guitarist =
 ```
 
 ```reason
-// file named index.re
+/* file named index.re */
 
 open Global;
 
@@ -96,7 +96,7 @@ let isPlaying = (guitarist: guitarist) =>
 
 Js.log(JimiHendrix |> isPlaying);
 
-// "Jimi Hendrix is playing his guitar!"
+/* "Jimi Hendrix is playing his guitar!" */
 ```
 
 ### Conclusion 

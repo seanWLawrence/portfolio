@@ -32,9 +32,9 @@ let makeCar = (car: car) =>
 ### Why pattern matching is useful
 Besides the cooler syntax, pattern matching is a much stricter way to use a switch statement. So if you were to call the function ```makeCar``` with a value other than ```Honda```, ```Chevy``` or ```Lamborghini``` like we specified, your Reason code would not compile and the consle would give you a detailed error message.
 ```reason
-makeCar(Honda) // works, outputs "Honda"
+makeCar(Honda) /* works, outputs "Honda" */
 
-makeCar(Ford) // doesn't work since 'Ford' was not specified in the type
+makeCar(Ford) /* doesn't work since 'Ford' was not specified in the type */
 ```
 > Note how there are no ```""``` around the value passed into the function, i.e. ```Honda```.
 
@@ -58,7 +58,7 @@ let makeCar = (~make: make) =>
     | Lamborghini(model) => createNewCar(~make="Lamborghini", ~model)
   };
 
-makeCar(~make=Honda("Civic")) // "Honda Civic"
+makeCar(~make=Honda("Civic")) /* "Honda Civic" */
 ```
 
 ### Adding ```when``` clauses to the output
@@ -81,8 +81,8 @@ let makeCar = (~make: make) =>
     | Lamborghini(model) => createNewCar(~make="Lamborghini", ~model)
   };
 
-makeCar(~make=Honda("CR-V")); // "Honda CR-V SUV"
-makeCar(~make=Honda("Civic")); // "Honda Civic"
+makeCar(~make=Honda("CR-V")); /* "Honda CR-V SUV" */
+makeCar(~make=Honda("Civic")); /* "Honda Civic" */
 ```
 
 ### Conclusion
