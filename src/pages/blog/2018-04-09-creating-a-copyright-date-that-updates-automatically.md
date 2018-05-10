@@ -55,7 +55,7 @@ What's happening here is the following:
 ```
 
 
-### Option 2 - insert with JSX
+### Option 2 - insert it with JSX
 If you're already using a library that uses JSX, such as [React.js](https://reactjs.org), then you can go about this in a simpler way that's much more readable.
 
 ```jsx
