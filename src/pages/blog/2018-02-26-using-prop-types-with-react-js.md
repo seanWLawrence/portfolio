@@ -119,9 +119,10 @@ export default MagicWand
 ### Organization
 This purely a personal preference, but I prefer to organize my file as shown above for the following reasons:
 
-**The component's props are obvious and the first thing you read when viewing the file.** This acts as a great form of documentation for you (and more importantly, other developers) to know what this component does and requires everytime you look at this file.
+#### The component's props are obvious and the first thing you read when viewing the file.
+This acts as a great form of documentation for you (and more importantly, other developers) to know what this component does and requires everytime you look at this file.
 
-**The default props are also helpful as documentation to know what the component's default values right away.**
+####The default props are also helpful as documentation to know what the component's default values right away.
 Seeing the defaults not only reiterates that these props are not required, but also what the values will be if they're not passed into the component when you use it somehwere else.
 
 ### Using PropTypes with class components
@@ -156,10 +157,10 @@ export default class MagicWand extends Component {
 
 
 ### Tips
-**Required props (PropTypes with the ```.isRequired``` suffix) should be at the top.**
+#### Required props (PropTypes with the ```.isRequired``` suffix) should be at the top.
 These are the props that **need** to be passed into the component for it to render correctly. Since they are critical for your component to render, they should be the first thing you look at.
 
-**Only set default props for props that are **not** required.**
+#### Only set default props for props that are **not** required.
 The ```.isRequired``` suffix is designed to alert you if a prop that is neccesary for the component to render correctly was not passed. If your prop *can* have a default value, then add it to the ```defaultProps``` object and make sure it doesn't have the ```.isRequired``` suffix on it. A common convention for default prop values are the empty of version of it.
 
 ```javascript
@@ -180,7 +181,7 @@ let defaultProps = {
 }
 ```
 
-**Be as specific as possible**
+#### Be as specific as possible
 Instead of using ```PropTypes.object```, use something more specific like 
 ```javascript
 PropTypes.objectOf(
@@ -204,7 +205,7 @@ let propTypes = {
 
 > Note: in this example, we're saying that the prop object ```profile``` and the name inside of it are required, but the ```age``` and ```house``` are not (since we did not put the ```.isRequired``` suffix on them specifically.
 
-**Boolean props should be false by default**
+#### Boolean props should be false by default
 This way you can simply pass the prop in *if it is needed* and not force yourself to specify that it is false. 
 
 ```javascript
@@ -215,10 +216,10 @@ This way you can simply pass the prop in *if it is needed* and not force yoursel
 <Wizard isAWizard /> // good, setting value to true is concise and easier to read
 ```
 
-**Keep props to a minimum**
+#### Keep props to a minimum
 Chances are, if you don't *need* that prop, you should remove it. It's better to keep things simple and avoid premature optimization like the plague. If you try to have your component do too much, it will be clunky and more prone to bugs. As with everything in programming, simple functions are better. This is actually the core concept of React.js - breaking up functionality into small "components" that handle one thing really well and can be used together to accomplish things better.
 
-**Always check your console**
+#### Always check your console
 The errors that PropTypes throws are always shown in your console. If you don't look, you won't see them. 
 
 ### Conclusion

@@ -38,15 +38,15 @@ Now we can see the layout of everything, *and* how the element that we're debugg
 
 <h3 style="margin-top: 30px;">Caveats</h3>
 
-**It's only helpful for CSS layouts**
+#### It's only helpful for CSS layouts
 
 This will just outline your HTML elements, so if you're having trouble with something other than the layout, this won't help you very much. But in my experience, layout in a responsive website or application is one of the most common pitfalls for developers and accounts for the vast majority of bugs and frustration.
 
-**You can only use this in development**
+#### You can only use this in development
 
 Although this is pretty obvious, I'm mentioning it to make sure this post doesn't cause anyone to add this to a live site and freak out their visitors. I strongly recommend to only add this CSS code in a development environment that is only seen by the developer(s) working on the site's CSS. 
 
-<div style="background-color: #eee; padding: 20px; margin: 20px 0; border-left: 5px solid #555; color: #444; line-height: 30px;">Make sure to comment out or remove the <code>*</code> CSS selector and remove the <code>.debug</code> class from your CSS element before deploying your site to production!</div>
+<div style="background-color: #eee; padding: 20px; margin: 20px 0; border-left: 5px solid #555; color: #444; line-height: 30px; font-weight: 100; font-size: 18px;">Make sure to comment out or remove the <code>*</code> CSS selector and remove the <code>.debug</code> class from your CSS element before deploying your site to production!</div>
 
 
 ### Conclusion

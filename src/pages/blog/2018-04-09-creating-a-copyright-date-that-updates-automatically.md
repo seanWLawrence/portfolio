@@ -13,13 +13,13 @@ This is the simplest method and requires no other frameworks or coding knowledge
 
 > Note: the `&copy` that we include in the text will display the copyright symbol: &copy.
 
-**1. Insert the text**
+#### 1. Insert the text
 
 ```html
 <span>Copyright <span id="copyright-date"></span> &copy</span>
 ```
 
-**2. Insert the JavaScript snippet at the bottom of the `</body>` HTML tag** 
+#### 2. Insert the JavaScript snippet at the bottom of the `</body>` HTML tag
 
 ```html
 <script>
@@ -34,7 +34,7 @@ What's happening here is the following:
 - we're creating a variable to store the date and a variable to store the HTML element that will contain the date
 - then, we're assigning the date variable to display inside of the HTML element so it will be shown on the page and formatting it to only show the year
 
-**Here's a full example for some context on how it will look in your HTML code:**
+#### Here's a full example for some context on how it will look in your HTML code
 
 ```html
 

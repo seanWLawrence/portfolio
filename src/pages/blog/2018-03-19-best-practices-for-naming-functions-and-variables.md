@@ -49,7 +49,7 @@ let hasName = person => person.name !== true ? sayHello(person.name) : runAway()
 let isHuman = person => person.type === 'human' ? sayHello(person.name) : null
 ```
 
-**Naming boolean props in React.js**
+#### Naming boolean props in React.js
 I like to name props with a boolean value in a way that [makes them false by default](/blog/using-prop-types-with-react-js).
 
 ```javascript

@@ -16,7 +16,7 @@ While "smart" components are neccessary in any living, breathing application bui
 ### Dumb components
 Dumb components are simple: they accept props and render them. That's it, just a simple function. You can add logic inside of them as needed, such as [checking that props exist before rendering them](/blog/tips-for-creating-react-stateless-functional-components), but other than that they're as easy as it gets.
 
-**Simple example**
+#### Simple example
 
 ```javascript
 import React from 'react'
@@ -28,7 +28,7 @@ let Title = ({title}) => (
 // Usage: <Title title="Harry Potter and the Sorcerer's Phone" />
 ```
 
-**With conditional rendering**
+#### With conditional rendering
 
 ```javascript
 import React from 'react'

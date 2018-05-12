@@ -23,7 +23,7 @@ let example = variableName |> doThisFirst |> doThisSecond |> doThisLast /* much 
 ### Piping lists, arrays and more
 Just like chaining built-in functions like `.map`, `.filter` and `.reduce` in JavaScript, you can use the `|>` pipe operator in ReasonML on all of their data types to accomplish the same thing. here are a few examples:
 
-**Lists**
+#### Lists
 
 ```reason 
 let mammal = ["cat", "dog", "turtle"]
@@ -37,7 +37,7 @@ Js.log(mammal)
 
 > Note: a `list` in ReasonML works differently than a JavaScript array. You can learn more about the difference between lists and arrays in the [ReasonML docs].(https://reasonml.github.io/docs/en/list-and-array.html)
 
-**Arrays**
+#### Arrays
 
 ```reason 
 let mammal = [|"cat", "dog", "turtle"|]
@@ -49,7 +49,7 @@ Js.log(mammal)
 
 ```
 
-**Strings**
+#### Strings
 
 ```reason 
 let man = "Johnathan";
