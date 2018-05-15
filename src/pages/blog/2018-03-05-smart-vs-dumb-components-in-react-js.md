@@ -5,7 +5,7 @@ title: "Smart vs. Dumb components in React.js"
 template: "blog_post"
 ---
 
- probably heard the term "smart" and "dumb" in React.js before. "Smart" components are written as JavaScript classes and contain things like state and lifecycle hooks (such as ```componentDidMount()```, etc.) and usually contain a variety of other components that it controls via props and state. "Dumb" components are simple functions that accept props and render them. 
+You've probably heard the term "smart" and "dumb" in React.js before. "Smart" components are written as JavaScript classes and contain things like state and lifecycle hooks (such as ```componentDidMount()```, etc.) and usually contain a variety of other components that it controls via props and state. "Dumb" components are simple functions that accept props and render them. 
 
 While "smart" components are neccessary in any living, breathing application built with React.js, it's best to keep them at a minimum for the following reasons:
 
