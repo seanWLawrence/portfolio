@@ -1,9 +1,11 @@
 ---
-path: "/blog/shorter-syntax-for-state-and-bind-event-handler-functions-in-react-js-classes"
 date: "2018-03-12"
 title: "Shorter syntax for state and bind/event handler functions in React.js classes"
 template: "blog_post"
-
+featuredImage: "2018-03-12.jpg"
+photoCredit: 
+  name: Ambreen Hasan
+  unsplashUrl: https://unsplash.com/@ambreenhasan
 ---
 
 If you've ever seen an older React.js component that contains [state](https://reactjs.org/docs/state-and-lifecycle.html) and/or an [event handler function](https://reactjs.org/docs/handling-events.html), i.e. ```handleClick```, ```handleChange```, etc. then you've probably seen the class written something like the example below:

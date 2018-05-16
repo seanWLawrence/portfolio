@@ -3,6 +3,8 @@ module.exports = {
     title: `Sean Lawrence - Modern web developer`
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     'gatsby-plugin-catch-links',
@@ -11,6 +13,13 @@ module.exports = {
       options: {
         trackingId: "UA-111283098-1",
       },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,

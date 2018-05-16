@@ -14,8 +14,16 @@ export default ({ data }) => {
     >
       {
         posts.map(post => {
-          const { template, title, path, date } = post.node.frontmatter;
-          const { excerpt, wordCount } = post.node;
+          const { template, title, date } = post.node.frontmatter;
+          const { 
+            timeToRead,
+            excerpt, 
+            wordCount, 
+            fields: {
+              slug
+            } 
+          } = post.node;
+          console.log(slug)
           if (template === 'blog_post') {
             return (
               <section
@@ -23,12 +31,12 @@ export default ({ data }) => {
                 className='blog_post_preview'
                 key={title}
               >
-                <Link to={path}>
+                <Link to={slug}>
                   <h3>{title}</h3>
                 </Link>
-                <p className='post_preview_meta'>{date}</p>
+                <p className='post_preview_meta'>{date} - {timeToRead} min read</p>
                 <p>{excerpt}</p>
-                <Link to={path}>
+                <Link to={slug}>
                   <button className='button_secondary'>Read more</button>
                 </Link>
               </section>
@@ -45,6 +53,9 @@ export const query = graphql`
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }){
       edges {
         node {
+          fields {
+            slug
+          }
           html
           excerpt(pruneLength: 300)
           timeToRead
@@ -53,7 +64,6 @@ export const query = graphql`
           }
           frontmatter {
             title
-            path
             date(formatString: "MMMM DD, YYYY")
             template
           }

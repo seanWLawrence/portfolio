@@ -1,9 +1,11 @@
 ---
-path: "/blog/best-pratices-for-naming-functions-and-variables"
 date: "2018-03-19"
 title: "Best practices for naming functions and variables"
 template: "blog_post"
-
+featuredImage: "2018-03-19.jpg"
+photoCredit: 
+  name: Jake Ingle
+  unsplashUrl: https://unsplash.com/@ingle_jake
 ---
 
 Naming things is hard. It's easy to remember what your functions, variables and files do/are without a good name in the moment that it's fresh in your mind, but it gets exponentially more difficult to remember as time passes by. Here are a few tricks that I've picked up that have saved me from hours of headaches.

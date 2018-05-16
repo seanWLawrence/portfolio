@@ -280,15 +280,28 @@
 // Blog post template 
 
 .blog_post {
+
+  .page_title { 
+    font-size: 48px;
+    width: 100%;
+    border-bottom: 5px solid $color_primary;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+
+  .date {
+    font-size: 18px;
+    margin-top: 10px;
+    color: $color_paragraph - 20%;
+    font-weight: 200;
+    font-family: sans-serif;
+  }
+
   h4 {
     font-size: 22px;
   }
 
-  p {
-    &:last-of-type {
-      margin-bottom: 35px;
-    }
-  }
 
   blockquote p {
     font-size: 18px;
@@ -405,7 +418,8 @@
   }
   
 
-  code {
+  code,
+  code[class*="language-"] {
     font-size: 14px;
     font-weight: 400;
     font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace;
@@ -424,7 +438,7 @@
 .breadcrumb {
   background-color: $color_background;
   color: $color_primary;
-  margin: 40px 0 10px 0;
+  margin: 20px 0 20px 0;
   padding: 0;
 }
 

@@ -1,8 +1,11 @@
 ---
-path: "/blog/a-simple-line-of-code-to-help-you-debug-your-css-layout"
 date: "2018-04-16"
 title: A simple line of code to help you debug your CSS layout
 template: "blog_post"
+featuredImage: "2018-04-16.jpg"
+photoCredit: 
+  name: Haley Phelps
+  unsplashUrl: https://unsplash.com/@haleyephelps
 ---
 As the name of the title suggests, this will be a very short post, though it's saved me countless hours of trying to see exactly where your HTML is laid out on your page.
 

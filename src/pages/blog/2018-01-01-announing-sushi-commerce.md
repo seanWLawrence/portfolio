@@ -1,9 +1,11 @@
 ---
-path: "/blog/announcing-sushi-commerce"
 date: "2018-01-01"
 title: "Announcing Sushi Commerce!"
 template: "blog_post"
-
+featuredImage: "2018-01-01.jpg"
+photoCredit: 
+  name: Antonio Lainez
+  unsplashUrl: https://unsplash.com/@antoniolainez
 ---
 
 > TL;DR - I'm excited to say that I'm currently working on an awesome open source project for creating free ecommerce websites! **Expected release date, June 2018**

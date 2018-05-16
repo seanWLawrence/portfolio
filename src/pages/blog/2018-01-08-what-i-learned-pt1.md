@@ -1,9 +1,11 @@
 ---
-path: "/blog/what-i-learned-from-starting-a-web-development-agency"
 date: "2018-01-08"
 title: "What I learned from becoming a developer"
 template: "blog_post"
-
+featuredImage: "2018-01-08.jpg"
+photoCredit: 
+  name: Ali Yahya
+  unsplashUrl: https://unsplash.com/@ayahya09
 ---
 
 > TL;DR — <span itemprop="articleSection">Forget about competition. We all have unique skills that add  value to what you’re doing — stay different. Talent comes from doing something you love.</span>

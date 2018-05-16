@@ -1,9 +1,11 @@
 ---
-path: "/blog/customizing-prism-js"
 date: "2018-02-05"
 title: "Customizing Prism.js"
 template: "blog_post"
-
+featuredImage: "2018-02-05.jpg"
+photoCredit: 
+  name: Ankush Minda
+  unsplashUrl: https://unsplash.com/@an_ku_sh
 ---
 
 [Prism.js](http://prismjs.com/) is a syntax highlighter for code blocks on webpages. It's what I (and most other developers) use for sharing code blocks online when it's not embedded from a service like GitHub.

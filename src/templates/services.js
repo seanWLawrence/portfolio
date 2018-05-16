@@ -1,6 +1,6 @@
 import React from 'react'
 import PageWrapperSlim from '../components/PageWrapperSlim'
-import Logo from '../img/logo.png'
+import Logo from '../images/logo.png'
 
 // props needed: description, image, imageDescription, title, date, style, titleStyle, url, children
 export default ({ data }) => {

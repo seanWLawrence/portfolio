@@ -4,8 +4,8 @@ import Particles from 'react-particles-js'
 import { CANVAS_DESKTOP, CANVAS_MOBILE } from '../data/CANVAS'
 import Form from '../components/Form'
 import Helmet from 'react-helmet'
-import Logo from '../img/logo.png'
-import ProfileImage from '../img/sean_lawrence.jpg'
+import Logo from '../images/logo.png'
+import ProfileImage from '../images/sean_lawrence.jpg'
 
 const particlesStyle = {
   position: 'fixed',

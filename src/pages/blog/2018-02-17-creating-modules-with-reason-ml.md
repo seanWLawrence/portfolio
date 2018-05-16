@@ -1,8 +1,11 @@
 ---
-path: "/blog/creating-modules-with-reason-ml"
-date: "2018-02-19"
+date: "2018-02-17"
 title: "Creating modules with ReasonML"
 template: "blog_post"
+featuredImage: "2018-02-17.jpg" 
+photoCredit: 
+  name: Matty Adame
+  unsplashUrl: https://unsplash.com/@omgitsmattyvee 
 ---
 
 As we briefly discussed in my [previous blog post about pattern matching in ReasonML](/blog/pattern-matching-with-reason-ml), ReasonML is really powerful syntax for JavaScript with a lot of extra functionality to make your code more straightforward. One of the most important concepts to learn in ReasonML are ```modules```, which we'll be discussing today.

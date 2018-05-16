@@ -1,6 +1,6 @@
 import React from "react"
 import PageWrapperSlim from '../components/PageWrapperSlim'
-import Logo from '../img/logo.png'
+import Logo from '../images/logo.png'
 import RESUME from '../data/sean_lawrence_resume_web_developer.pdf'
 
 export default ({ data }) => {

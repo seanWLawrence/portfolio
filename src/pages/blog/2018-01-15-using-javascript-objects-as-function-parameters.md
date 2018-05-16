@@ -1,9 +1,11 @@
 ---
-path: "/blog/using-javascript-objects-as-function-parameters"
 date: "2018-01-15"
 title: "Using JavaScript objects as function parameters"
 template: "blog_post"
-
+featuredImage: "2018-01-15.jpg"
+photoCredit:
+  name: Evi Radauscher
+  unsplashUrl: https://unsplash.com/@eviradauscher
 ---
 
 > TL;DR Using an object as a parameter instead of individual values can make it easier to read and call functions, especially when there are a lot of parameters.

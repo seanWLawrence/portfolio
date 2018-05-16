@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Logo from '../img/logo.png'
+import Logo from '../images/logo.png'
 
 const defaultSchema = {
   "@context": "https://schema.org/",

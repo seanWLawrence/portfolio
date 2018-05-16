@@ -1,8 +1,11 @@
 ---
-path: "/blog/creating-a-copyright-date-that-updates-automatically"
 date: "2018-04-09"
 title: Creating a copyright date that updates automatically
 template: "blog_post"
+featuredImage: "2018-04-09.jpg"
+photoCredit: 
+  name: Sander Crombach
+  unsplashUrl: https://unsplash.com/@sandercrombach
 ---
 Practically every website has a footer with a copyright message at the bottom and a date for the copyright. On many of the websites that I've redesigned, there wasn't a simple function that updated the date for the copyright's year automatically. That means someone familiar with coding in HTML was having to manually edit the code each year and change the date themselves. 
 

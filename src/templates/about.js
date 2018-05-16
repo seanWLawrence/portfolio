@@ -1,10 +1,13 @@
 import React from "react"
 import PageWrapperSlim from '../components/PageWrapperSlim'
 import SocialMedia from '../components/SocialMedia'
-import ProfileImage from '../img/sean_lawrence.jpg'
+import ProfileImage from '../images/sean_lawrence.jpg'
+import Img from 'gatsby-image'
 
 export default ({ data }) => {
   const { html } = data.markdownRemark
+  console.log(data)
+  let { featuredImage } = data
   return (
     <PageWrapperSlim
       title='About'
@@ -16,7 +19,7 @@ export default ({ data }) => {
       url='https://seanlawrence.co/about'
     >
       <section id='bio'>
-        <img src={ProfileImage} style={{ width: '100%' }} />
+        <Img sizes={featuredImage.sizes} />
         <section dangerouslySetInnerHTML={{ __html: html }} />
         <SocialMedia />
       </section>
@@ -25,11 +28,17 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query AboutPageQuery($path: String!) {
-        markdownRemark(frontmatter: {path: {eq: $path } }) {
-        html
+  query AboutPageQuery($slug: String!, $featuredImage: String) {
+    markdownRemark(fields: { slug: {eq: $slug } }) {
+      html
       frontmatter {
         title
       }
+    }
+    featuredImage: imageSharp(id: { regex: $featuredImage}) {
+      sizes(maxWidth: 700, quality: 100 ) {
+        ...GatsbyImageSharpSizes_withWebp_tracedSVG
       }
-}`
+    }
+  }
+`

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import NAVIGATION from '../data/NAVIGATION'
 import Link from 'gatsby-link'
-import Logo from '../img/logo.png'
+import Logo from '../images/logo.png'
 
 const NavListItem = props => (
   <li>

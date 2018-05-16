@@ -1,9 +1,9 @@
 import React from 'react'
 import PageWrapperSlim from '../components/PageWrapperSlim'
-import Logo from '../img/logo.png'
+import Logo from '../images/logo.png'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import ProfileImage from '../img/sean_lawrence.jpg'
+import ProfileImage from '../images/sean_lawrence.jpg'
 
 const boxStyles = [
   {

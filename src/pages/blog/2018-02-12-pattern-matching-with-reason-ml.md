@@ -1,8 +1,11 @@
 ---
-path: "/blog/pattern-matching-with-reason-ml"
 date: "2018-02-12"
 title: "Pattern matching with ReasonML"
 template: "blog_post"
+featuredImage: "2018-02-12.jpg"
+photoCredit: 
+  name: Elizeu Dias
+  unsplashUrl: https://unsplash.com/@zeuthvision
 ---
 
 [ReasonML](https://reasonml.github.io/) is a hot new JavaScript-like syntax with types, pattern matching, functional programming patterns built-in and much, much more. It's an incredible API from the brilliant minds at Facebook and I highly recommend trying it out if you haven't already. 

@@ -1,8 +1,11 @@
 ---
-path: "/blog/using-native-system-fonts-on-your-websites-and-applications"
 date: "2018-04-30"
 title: Using native system fonts on your websites and applications
 template: "blog_post"
+featuredImage: "2018-04-30.jpg"
+photoCredit: 
+  name: Huyen Nguyen
+  unsplashUrl: https://unsplash.com/@huyennguyen
 ---
 
 Here's the native system font stack that I use for all of my projects, unless the client has a preference to something else.

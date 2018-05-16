@@ -1,8 +1,11 @@
 ---
-path: "/blog/labeling-function-arguments-and-parameters-in-reason-ml.md"
 date: "2018-04-02"
 title: Labeling function arguments/parameters in ReasonML
 template: "blog_post"
+featuredImage: "2018-04-02.jpg"
+photoCredit: 
+  name: Martin Castro
+  unsplashUrl: https://unsplash.com/@martin_castro
 ---
 A common source of confusion for many people writing JavaScript applications are function arguments. Unless you use the [object as a parameter pattern](/blog/using-javascript-objects-as-function-parameters), it can get really difficult, really fast to remember how many arguments your function accepts and what order they should be passed in.
 

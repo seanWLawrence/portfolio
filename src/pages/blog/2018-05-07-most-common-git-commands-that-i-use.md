@@ -1,8 +1,11 @@
 ---
-path: "/blog/most-common-git-commands-that-i-use"
 date: "2018-05-07"
 title: A short list of the most common git commands that I use
 template: "blog_post"
+featuredImage: "2018-05-07.jpg"
+photoCredit: 
+  name: Jared Sluyter
+  unsplashUrl: https://unsplash.com/@jaredsluyter
 ---
 
 [Git](https://git-scm.com/) is a powerful version control system that allows people and teams to collaborate on source codes more efficiently and effectively. It saves history, allows you to work on features or bugs in parallel, peer review code before saving it to production, and much more. 

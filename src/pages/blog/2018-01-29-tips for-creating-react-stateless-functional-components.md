@@ -1,9 +1,11 @@
 ---
-path: "/blog/tips-for-creating-react-stateless-functional-components"
 date: "2018-01-29"
 title: "Tips for creating React.js stateless functional components"
 template: "blog_post"
-
+featuredImage: "2018-01-29.jpg"
+photoCredit: 
+  name: Kike Algarra
+  unsplashUrl: https://unsplash.com/@bykike
 ---
 Unless your component has internal state that it needs to manage, it's better to use a simpler type of component called "stateless functional components." Here are a few tips on using these in your application.
 

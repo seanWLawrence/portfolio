@@ -1,9 +1,11 @@
 ---
-path: "/blog/announcing-bulma-classnames"
 date: "2018-01-22"
 title: "Announcing Bulma Classnames!"
 template: "blog_post"
-
+featuredImage: "2018-01-22.jpg"
+photoCredit: 
+  name: Connor Jalbert
+  unsplashUrl: https://unsplash.com/@connor_jalbert
 ---
 
 > TL;DR - In addition to [Sushi Commerce](/blog/announcing-sushi-commerce), I'm working on a simple, but powerful way to write [Bulma.css](https://bulma.io/) classnames! *Expected to release in May 2018*

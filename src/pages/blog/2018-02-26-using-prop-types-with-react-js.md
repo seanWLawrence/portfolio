@@ -1,8 +1,11 @@
 ---
-path: "/blog/using-prop-types-with-react-js"
 date: "2018-02-26"
 title: "Using PropTypes with React.js"
 template: "blog_post"
+featuredImage: "2018-02-26.jpg"
+photoCredit: 
+  name: Nghia Le
+  unsplashUrl: https://unsplash.com/@lephunghia
 ---
 
 [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html) are an indispensable tool for declaring the types for your React.js component's props so that when the application is running and an incorrect type is passed, you'll see an error warning in the console. 

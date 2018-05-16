@@ -1,8 +1,11 @@
 ---
-path: "/blog/piping-functions-with-reason-ml"
 date: "2018-03-26"
 title: "Piping functions with ReasonML"
 template: "blog_post"
+featuredImage: "2018-03-26.jpg"
+photoCredit: 
+  name: Matt Lamers
+  unsplashUrl: https://unsplash.com/@lamerbrain
 ---
 If you've read through the [ReasonML docs](https://reasonml.github.io/) before, you may have noticed that there's no too much information available on their syntax sugar for piping functions, which is one of my personal favorite features of using ReasonML. 
 

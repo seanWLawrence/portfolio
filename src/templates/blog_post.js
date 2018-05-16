@@ -1,12 +1,13 @@
 import React from "react"
 import PageWrapperSlim from '../components/PageWrapperSlim'
 import Link from 'gatsby-link'
-import Logo from '../img/logo.png'
+import Logo from '../images/logo.png'
+import Img from "gatsby-image"
 
 export default ({ data }) => {
-  const { html, frontmatter, wordCount } = data.markdownRemark
-  const { title, date, description } = frontmatter
-
+  const { html, frontmatter, wordCount, timeToRead } = data.markdownRemark
+  const { title, date, description, photoCredit: { name, unsplashUrl} } = frontmatter
+  const { sizes } = data.featuredImage
   const schema = {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
@@ -38,43 +39,59 @@ export default ({ data }) => {
   }
 
   return (
-    <PageWrapperSlim
-      title={title}
-      id={title}
-      schema={schema}
-      titleStyle={{ fontSize: '34px', lineHeight: '40px' }}
-      description={description}
-      date={date}
-    >
-      <Link to='/blog'>
-        <button className='breadcrumb'>
-          &#8656; All posts
-        </button>
-      </Link>
+    <article className="blog_post" style={{width: '90vw', maxWidth: '700px', display: 'flex', flexDirection: 'column', margin: '100px auto 50px auto', overflow: 'hidden'}}>
+      <Img sizes={data.featuredImage.sizes} style={{ maxHeight: 400}}/>
+      <p style={{color: '#555', fontSize: 12, fontWeight: 100, textAlign: 'center', marginBottom: '20px'}}>
+        Photo credit: 
+        <a style={{fontSize: 12}} href={unsplashUrl} target="_blank" rel="noopenner noferrer nofollow">      {name}
+        </a>
+      </p>
+      <h1
+        className='page_title'
+        style={{fontSize: '34px', lineHeight: '40px'}}
+      >
+        {title}
+      </h1>
+      {date ? <p className='date'>{`${date} - ${timeToRead} min read`}</p> : null}
       <section
         className='blog_post'
         dangerouslySetInnerHTML={{ __html: html }}
       />
+
       <Link to='/blog'>
         <button className='breadcrumb'>
           &#8656; All posts
         </button>
       </Link>
-    </PageWrapperSlim>
+    </article>
   )
 }
 
 export const query = graphql`
-  query BlogPostQuery($path: String!) {
-    markdownRemark(frontmatter: {path: {eq: $path } }) {
+  query BlogPostQuery($slug: String!, $featuredImage: String ) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      fields {
+        slug
+      }
       html
       wordCount {
-          words
+        words
+      }
+      timeToRead
+      frontmatter {
+        title
+        path
+        date(formatString: "MMMM DD, YYYY")
+        photoCredit {
+          name
+          unsplashUrl
         }
-    frontmatter {
-      title
-      path
-      date(formatString: "MMMM DD, YYYY")
+      }
+    }
+    featuredImage: imageSharp(id: { regex: $featuredImage}) {
+      sizes(maxWidth: 700, quality: 65) {
+        ...GatsbyImageSharpSizes_withWebp_tracedSVG
+      }
     }
   }
-}` 
+` 
