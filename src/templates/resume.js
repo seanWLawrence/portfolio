@@ -24,8 +24,8 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query ResumePageQuery($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query ResumePageQuery($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
     }
 }`

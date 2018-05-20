@@ -4,7 +4,6 @@ date: "2017-08-10"
 title: "About"
 template: "about"
 featuredImage: "sean_lawrence.jpg"
-
 ---
 
 For detailed information, visit my [resume](/resume).
