@@ -3,7 +3,6 @@ path: "/services"
 date: "2017-08-10"
 title: "Services"
 template: "services"
-featuredImage: ""
 ---
 
 ## Design
