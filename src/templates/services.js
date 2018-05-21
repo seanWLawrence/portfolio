@@ -23,8 +23,8 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query ServicesPageQuery($path: String!) {
-    markdownRemark(frontmatter: {path: {eq: $path } }) {
+  query ServicesPageQuery($slug: String!) {
+    markdownRemark(fields: {slug: {eq: $slug } }) {
     html
   }
 }`
