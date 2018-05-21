@@ -5,8 +5,7 @@ import ProfileImage from '../images/sean_lawrence.jpg'
 import Img from 'gatsby-image'
 
 export default ({ data }) => {
-  const { html } = data.markdownRemark
-  console.log(data)
+  let { html } = data.markdownRemark
   let { featuredImage } = data
   return (
     <PageWrapperSlim
