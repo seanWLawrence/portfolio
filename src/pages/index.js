@@ -76,7 +76,6 @@ export default () => (
         {JSON.stringify(schema)}
       </script>
     </Helmet>
-    <img src={Logo} />
     <section id='menu'>
       {
         boxStyles.map(boxStyle => {

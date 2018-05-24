@@ -1,15 +1,15 @@
 const NAVIGATION = [
   {
+    title: 'logo',
+    url: '../img/logo.png'
+  },
+  {
     title: 'Contact',
     url: '/contact'
   },
   {
     title: 'About',
     url: '/about',
-  },
-  {
-    title: 'logo',
-    url: '../img/logo.png'
   },
   {
     title: 'Work',
