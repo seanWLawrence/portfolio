@@ -6,21 +6,30 @@ import Img from 'gatsby-image'
 export default ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
   let { featuredImages: {edges: images}} = data
+  let dateRegEx = /(\d{4})-(\d{2})-(\d{2})/
 
   let imagesWithId = images.map(image => {
-    let endOfDate = image.node.id.indexOf('.')
-    let startOfDate = endOfDate - 10
-    let id = image.node.id.slice(startOfDate, endOfDate)
-    return {...image.node, id}
+    let {id} = image.node
+    if (dateRegEx.test(id)) {
+      let endOfDate = id.indexOf('.')
+      let startOfDate = endOfDate - 10
+      let newId = id.slice(startOfDate, endOfDate)
+      return {...image.node, id: newId}
+    }
+    return 
+  }).filter(Boolean)
+
+  let postsWithId = posts
+  .filter(post => {
+    let {template, featuredImage} = post.node.frontmatter
+    return template === "blog_post" && featuredImage
   })
-
-  let postsWithFeaturedImages = posts.filter(post => post.node.frontmatter.featuredImage)
-
-  let postsWithId = postsWithFeaturedImages.map(post => {
-    let endOfDate = post.node.frontmatter.featuredImage.indexOf('.')
+  .map(post => {
+    let { frontmatter: {featuredImage}, id} = post.node
+    let endOfDate = featuredImage.indexOf('.')
     let startOfDate = endOfDate - 10
-    let id = post.node.frontmatter.featuredImage.slice(startOfDate, endOfDate)
-    return {...post.node, id}
+    let newId = featuredImage.slice(startOfDate, endOfDate)
+    return {...post.node, id: newId}
   })
 
   let imagesAndPosts = [...imagesWithId, ...postsWithId]
@@ -35,7 +44,7 @@ export default ({ data }) => {
     return 0;
   })
 
-  let mergedImagesAndPosts = sortedImagesAndPosts.map(node => {
+  let newPosts = sortedImagesAndPosts.map(node => {
     let indexOfThisNode = sortedImagesAndPosts.indexOf(node)
     let isOdd = ({index, fn}) => index % 2 === 0 ? fn : null
     let mergedPost = isOdd({
@@ -43,7 +52,8 @@ export default ({ data }) => {
       fn: {...node, ...sortedImagesAndPosts[indexOfThisNode + 1]}
     })
     return mergedPost
-  }).filter(node => node !== null && node.frontmatter && node.frontmatter.template === "blog_post" ? node : null)
+  })
+  .filter(node => node !== null && node.frontmatter && node.frontmatter.template === "blog_post" ? node : null)
 
   return (
     <PageWrapperSlim
@@ -54,7 +64,7 @@ export default ({ data }) => {
       ogType='https://schema.org/Blog'
     >
       {
-        mergedImagesAndPosts.map(post => {
+        newPosts.map(post => {
           let { 
             timeToRead,
             excerpt, 
