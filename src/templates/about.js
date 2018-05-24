@@ -6,7 +6,6 @@ import Img from 'gatsby-image'
 
 export default ({ data }) => {
   const { html } = data.markdownRemark
-  console.log(data)
   let { featuredImage } = data
   return (
     <PageWrapperSlim
