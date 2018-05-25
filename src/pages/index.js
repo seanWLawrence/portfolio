@@ -3,7 +3,7 @@ import PageWrapperSlim from '../components/PageWrapperSlim'
 import Logo from '../images/logo.png'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import ProfileImage from '../images/sean_lawrence.jpg'
+import ProfileImage from '../images/sean-lawrence.jpg'
 
 const boxStyles = [
   {

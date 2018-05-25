@@ -1,8 +1,8 @@
 import React from "react"
 import PageWrapperSlim from '../components/PageWrapperSlim'
 import SocialMedia from '../components/SocialMedia'
-import ProfileImage from '../images/sean_lawrence.jpg'
 import Img from 'gatsby-image'
+import ProfileImage from '../images/sean-lawrence.jpg'
 
 export default ({ data }) => {
   const { html } = data.markdownRemark
